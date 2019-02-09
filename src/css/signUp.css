@@ -1,0 +1,82 @@
+.containerSignUp {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(188, 207, 207, 0.479);
+  overflow: auto;
+}
+
+.signUpForm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px rgb(140, 185, 182);
+  background-color: #ffffff;
+}
+
+.signUpForm h1 {
+  text-align: center;
+  width: 100%;
+  color: rgb(24, 24, 24);
+  font-weight: lighter;
+}
+
+.signUpForm label {
+  font-size: 1em;
+  color: #222;
+  text-align: left;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin: 0.4em 0 0.25em 0;
+}
+
+input.firstname,
+input.lastname,
+input.email,
+input.password,
+input.repeatPassword {
+  padding: 7px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+input::placeholder {
+  font-size: 1.1em;
+  color: #999;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+button.registrationButton {
+  background-color: #519e8a;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 100%;
+  margin: 7px 0;
+  padding: 8px 0px;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+button.registrationButton:hover {
+  color: #519e8a;
+  background-color: #fff;
+  border: 1px solid #519e8a;
+}
+small {
+  color: rgb(66, 94, 90);
+  text-align: center;
+}

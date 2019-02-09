@@ -1,0 +1,9 @@
+.headerNavBar div.logo {
+  float: left;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.headerNavBar div.navBar {
+  float: right;
+}
