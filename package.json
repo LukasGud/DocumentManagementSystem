@@ -9,6 +9,9 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.1",
     "draft-js": "^0.10.5",
+    "draft-js-alignment-plugin": "^2.0.5",
+    "draft-js-focus-plugin": "^2.2.0",
+    "draft-js-plugins-editor": "^2.1.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
@@ -28,5 +31,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "style-loader": "^0.23.1"
+  }
 }

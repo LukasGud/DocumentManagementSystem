@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
@@ -22,9 +22,9 @@ class LogIn extends Component {
 
   handleSubmitLogIn = e => {
     e.preventDefault();
-    // fetch("http://localhost:3000/login", {
+    // fetch("http://localhost:8080/LoginPage", {
     //   method: "POST",
-    //   body: JSON.stringify(userData),
+    //   body: JSON.stringify(data),
     //   headers: {
     //     // Accept: "application/json",
     //     "Content-Type": "application/json"

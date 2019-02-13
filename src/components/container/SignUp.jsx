@@ -161,7 +161,7 @@ class SignUp extends Component {
               placeholder="El. paštas"
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="elektroninio pašto formatas yra example@example.com"
+              title="elektroninio pašto formatas yra pavyzdys@pavyzdys.lt"
               value={email}
               onChange={this.handleChange}
               required
