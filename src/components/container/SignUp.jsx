@@ -127,7 +127,7 @@ class SignUp extends Component {
               placeholder="Vardas"
               name="firstname"
               pattern="^[a-zA-Z]+$"
-              title="Jūsų vardą gal sudaryti tik raidės"
+              title="Jūsų vardą gali sudaryti tik raidės"
               value={firstname}
               onChange={this.handleChange}
               required
@@ -144,7 +144,7 @@ class SignUp extends Component {
               placeholder="Pavardė"
               name="lastname"
               pattern="^[A-Za-z]+$"
-              title="Jūsų pavardę gal sudaryti tik raidės"
+              title="Jūsų pavardę gali sudaryti tik raidės"
               value={lastname}
               onChange={this.handleChange}
               required
@@ -178,7 +178,7 @@ class SignUp extends Component {
               placeholder="Slaptažodis"
               name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              title="Slaptažodį turi sudaryti ne mažiau 8 simboliai iš jų viena didžioji raidė, viena mažoji ir skaičius"
+              title="Slaptažodį turi sudaryti ne mažiau 8 simboliai iš jų viena bent didžioji raidė, viena mažoji ir skaičius"
               value={password}
               onChange={this.handleChange}
               required

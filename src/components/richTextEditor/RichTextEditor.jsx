@@ -1,9 +1,15 @@
 import React, { Component } from "react";
-import { EditorState, RichUtils, getDefaultKeyBinding } from "draft-js";
+import {
+  EditorState,
+  RichUtils,
+  getDefaultKeyBinding,
+  convertFromRaw,
+  convertToRaw
+} from "draft-js";
 import InlineStyleControls from "./InlineStyleControls";
 import BlockStyleControls from "./BlockStyleControls";
 import Editor from "draft-js-plugins-editor";
-import "../../css/editor.css";
+import "./editorCss/editor.css";
 // import "draft-js-alignment-plugin/lib/plugin.css";
 // import "draft-js-image-plugin/lib/plugin.css";
 
@@ -12,21 +18,40 @@ class RichEditorExample extends Component {
     super(props);
     this.state = { editorState: EditorState.createEmpty() };
     this.focus = () => this.refs.editor.focus();
-    this.onChange = editorState => this.setState({ editorState });
-    this.handleKeyCommand = this._handleKeyCommand.bind(this);
-    this.mapKeyToEditorCommand = this._mapKeyToEditorCommand.bind(this);
-    this.toggleBlockType = this._toggleBlockType.bind(this);
-    this.toggleInlineStyle = this._toggleInlineStyle.bind(this);
+
+    const content = window.localStorage.getItem("content");
+
+    if (content) {
+      this.state.editorState = EditorState.createWithContent(
+        convertFromRaw(JSON.parse(content))
+      );
+    } else {
+      this.state.editorState = EditorState.createEmpty();
+    }
   }
-  _handleKeyCommand(command, editorState) {
+
+  saveContent = content => {
+    window.localStorage.setItem(
+      "content",
+      JSON.stringify(convertToRaw(content))
+    );
+  };
+  onChange = editorState => {
+    const contentState = editorState.getCurrentContent();
+    // console.log("content state", convertToRaw(contentState));
+    this.saveContent(contentState);
+    this.setState({ editorState });
+  };
+
+  handleKeyCommand = (command, editorState) => {
     const newState = RichUtils.handleKeyCommand(editorState, command);
     if (newState) {
       this.onChange(newState);
       return true;
     }
     return false;
-  }
-  _mapKeyToEditorCommand(e) {
+  };
+  mapKeyToEditorCommand = e => {
     if (e.keyCode === 9 /* TAB */) {
       const newEditorState = RichUtils.onTab(
         e,
@@ -39,15 +64,15 @@ class RichEditorExample extends Component {
       return;
     }
     return getDefaultKeyBinding(e);
-  }
-  _toggleBlockType(blockType) {
+  };
+  toggleBlockType = blockType => {
     this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
-  }
-  _toggleInlineStyle(inlineStyle) {
+  };
+  toggleInlineStyle = inlineStyle => {
     this.onChange(
       RichUtils.toggleInlineStyle(this.state.editorState, inlineStyle)
     );
-  }
+  };
   render() {
     const { editorState } = this.state;
     // If the user changes block type before entering any text, we can
@@ -99,6 +124,7 @@ const styleMap = {
     padding: 2
   }
 };
+
 function getBlockStyle(block) {
   switch (block.getType()) {
     case "blockquote":

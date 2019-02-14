@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import Footer from "../container/Footer";
-import DefaultBody from "../container/DefaultBody";
 import UserBoardHeader from "../container/UserBoardHeader";
+import Footer from "../container/Footer";
+import RichTextEditor from "../richTextEditor/RichTextEditor";
+import Header from "../container/Header";
 
 class UserBoard extends Component {
   render() {
     return (
       <div>
         <UserBoardHeader />
-        <DefaultBody />
+        <RichTextEditor />
         <Footer />
       </div>
     );

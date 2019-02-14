@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import Footer from "../container/Footer";
-import DefaultBody from "../container/DefaultBody";
 import UserBoardHeader from "../container/UserBoardHeader";
+import DocumentsNavContainer from "../container/DocumentsNavContainer";
 
-class UserBoard extends Component {
+class DocumentsBoard extends Component {
   render() {
     return (
       <div>
         <UserBoardHeader />
-        <DefaultBody />
+        <DocumentsNavContainer />
         <Footer />
       </div>
     );
   }
 }
 
-export default UserBoard;
+export default DocumentsBoard;
