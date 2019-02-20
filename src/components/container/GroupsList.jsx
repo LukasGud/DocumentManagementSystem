@@ -1,58 +1,65 @@
 import React, { Component } from "react";
-import "../../css/docNavContainer.css";
+import "../../css/groupsList.css";
 import { Link } from "react-router-dom";
 
-class DocumentsNavContainer extends Component {
+// Sudeti visus elementus i sarasa ir ismapinti.
+
+class GroupsList extends Component {
   render() {
     return (
-      <div className="documentsContainer">
+      <div className="groupsContainer groups">
         <div className="list-group-doc" style={{ width: "18rem" }}>
           <div className="list-group-item bg-dark text-light">
-            <h4>Mano dokumentai</h4>
+            <h4>Grupės</h4>
           </div>
           <div>
-            <Link to="/kurtiDokumenta">
+            <Link to="/grupe/kurtiNauja" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                disabled={true}
+                title="Jūs neturite reikiamų teisių kurti grupę"
+                style={{ fontWeight: "bold" }}
               >
-                <strong>+ Kurti dokumentą</strong>
+                + Kurti naują grupę
               </button>
             </Link>
-            <Link to="/vartotojoLangas">
+            <Link to="/grupe:administracija" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                disabled={true}
+                title="Jūs nepriklausote šiai grupei"
               >
-                Sukurti dokumentai{" "}
-                <span className="badge badge-dark badge-pill">0</span>
+                Administracija
               </button>
             </Link>
-            <Link to="/vartotojoLangas">
+            <Link to="/grupe:sekretoriatas" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                disabled={true}
+                title="Jūs nepriklausote šiai grupei"
               >
-                Pateikti dokumentai{" "}
-                <span className="badge badge-dark badge-pill">0</span>
+                Sekretoriatas
               </button>
             </Link>
-            <Link to="/vartotojoLangas">
+            <Link to="/grupe/darbuotojai" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
               >
-                Patvirtinti dokumentai{" "}
-                <span className="badge badge-dark badge-pill">0</span>
+                Darbuotojai
               </button>
             </Link>
-            <Link to="/vartotojoLangas">
+            <Link to="/grupe:personalas" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                disabled={true}
+                title="Jūs nepriklausote šiai grupei"
               >
-                Atmesti dokumentai{" "}
-                <span className="badge badge-dark badge-pill">0</span>
+                Personalas
               </button>
             </Link>
           </div>
@@ -62,4 +69,4 @@ class DocumentsNavContainer extends Component {
   }
 }
 
-export default DocumentsNavContainer;
+export default GroupsList;

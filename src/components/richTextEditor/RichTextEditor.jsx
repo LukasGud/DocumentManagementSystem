@@ -38,7 +38,7 @@ class RichEditorExample extends Component {
   };
   onChange = editorState => {
     const contentState = editorState.getCurrentContent();
-    // console.log("content state", convertToRaw(contentState));
+    console.log("content state", convertToRaw(contentState));
     this.saveContent(contentState);
     this.setState({ editorState });
   };

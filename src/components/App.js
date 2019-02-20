@@ -6,6 +6,8 @@ import SignUpPage from "./presentational/SignUpPage";
 import CreateDocument from "./presentational/CreateDocument";
 import UserBoard from "./presentational/UserBoard";
 import DocumentsBoard from "./presentational/DocumentsBoard";
+import GroupsListTable from "./presentational/GroupsListTable";
+import GroupViewPage from "./presentational/GroupViewPage";
 
 class App extends Component {
   render() {
@@ -13,11 +15,13 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/login" component={LogInPage} />
-          <Route path="/signup" component={SignUpPage} />
-          <Route path="/createDocument" component={CreateDocument} />
-          <Route path="/userBoard" component={UserBoard} />
-          <Route path="/documentsBoard" component={DocumentsBoard} />
+          <Route path="/prisijungti" component={LogInPage} />
+          <Route path="/registruotis" component={SignUpPage} />
+          <Route path="/kurtiDokumenta" component={CreateDocument} />
+          <Route path="/vartotojoLangas" component={UserBoard} />
+          <Route path="/manoDokumentai" component={DocumentsBoard} />
+          <Route path="/grupes" component={GroupsListTable} />
+          <Route path="/grupe/darbuotojai" component={GroupViewPage} />
         </Switch>
       </Router>
     );

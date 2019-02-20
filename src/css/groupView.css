@@ -1,0 +1,19 @@
+.groupviewContainer {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(188, 207, 207, 0.479);
+  height: 100vh;
+}
+
+.navBar .nav .nav-item {
+  padding: 6px 12px;
+}
+.groupHeader {
+  text-align: center;
+  padding: 2px;
+}
+.navBar ul {
+  text-align: justify;
+}

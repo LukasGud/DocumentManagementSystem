@@ -110,7 +110,7 @@ class LogIn extends Component {
           <button type="submit" className="logInButton">
             Prisijungti
           </button>
-          <Link to="/signup">
+          <Link to="/registruotis">
             <small>Naujas narys? Registruokis čia</small>
           </Link>
         </form>
