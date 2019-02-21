@@ -5,6 +5,7 @@
   justify-content: center;
   background-color: rgba(188, 207, 207, 0.479);
   height: 100vh;
+  width: 70%;
 }
 
 .navBar .nav .nav-item {

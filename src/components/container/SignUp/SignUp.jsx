@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../css/signUp.css";
+import "./signUp.css";
 
 // letterValidationRegex - only letters
 const letterValidationRegex = /^[a-zA-Z]+$/;

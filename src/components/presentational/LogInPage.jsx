@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from "../container/Header";
-import LogIn from "../container/LogIn";
+import Header from "../container/Header/Header";
+import LogIn from "../container/LogIn/LogIn";
 import Footer from "../container/Footer";
 
 class LogInPage extends Component {

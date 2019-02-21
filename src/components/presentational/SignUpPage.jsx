@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Header from "../container/Header";
-import SignUp from "../container/SignUp";
+import Header from "../container/Header/Header";
+import SignUp from "../container/SignUp/SignUp";
 import Footer from "../container/Footer";
 
 class SignUpPage extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Footer from "../container/Footer";
-import UserBoardHeader from "../container/UserBoardHeader";
-import DocumentsNavContainer from "../container/DocumentsNavContainer";
+import UserBoardHeader from "../container/UserBoardHeader/UserBoardHeader";
+import DocumentsNavContainer from "../container/DocumentsNavContainer/DocumentsNavContainer";
 
 class DocumentsBoard extends Component {
   render() {

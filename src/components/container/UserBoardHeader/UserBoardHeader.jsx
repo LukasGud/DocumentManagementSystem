@@ -3,7 +3,7 @@ import { Link, BrowserRouter as Router, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faFileAlt, faUsers } from "@fortawesome/free-solid-svg-icons";
-import "../../css/userBoardNav.css";
+import "./userBoardNav.css";
 
 library.add(faHome, faFileAlt, faUsers);
 

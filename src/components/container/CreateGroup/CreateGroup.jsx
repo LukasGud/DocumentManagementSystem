@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../css/createGroup.css";
+import "./createGroup.css";
 import Picky from "react-picky";
 import "react-picky/dist/picky.css";
 

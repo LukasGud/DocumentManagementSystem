@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../../css/defaultBody.css";
+import "./defaultBody.css";
 
 class DefaultBody extends Component {
   constructor(props) {

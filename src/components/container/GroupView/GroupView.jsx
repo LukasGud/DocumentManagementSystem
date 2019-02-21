@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../css/groupView.css";
+import "./groupView.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,8 +8,8 @@ import {
   faUser,
   faFolderOpen
 } from "@fortawesome/free-solid-svg-icons";
-import GroupsList from "./GroupsList";
-import UsersTable from "./UsersTable";
+import GroupsList from "../GroupsList/GroupsList";
+import UsersTable from "../UsersTable";
 
 library.add(faUsers, faUser, faFolderOpen);
 
@@ -26,7 +26,7 @@ class GroupView extends Component {
           <Link className="text-light" to="/prisijungti">
             <h3 className="text-dark">
               <FontAwesomeIcon icon="users" className="text-dark" />{" "}
-              <strong> Darbuotojai</strong>
+              <strong>IT Skyrius</strong>
             </h3>
           </Link>
         </div>
