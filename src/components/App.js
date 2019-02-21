@@ -24,6 +24,7 @@ class App extends Component {
           <Route path="/grupe/darbuotojai" component={GroupViewPage} />
         </Switch>
       </Router>
+
     );
   }
 }
