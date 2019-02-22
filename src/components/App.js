@@ -8,6 +8,10 @@ import UserBoard from "./presentational/UserBoard";
 import DocumentsBoard from "./presentational/DocumentsBoard";
 import GroupsListTable from "./presentational/GroupsListTable";
 import GroupViewPage from "./presentational/GroupViewPage";
+import CreateGroupPage from "./presentational/CreateGroupPage";
+import AdministratorBord from "./presentational/AdministratorBoard";
+import AdminGroupsListPage from "./presentational/AdminGroupsList";
+import AdminDocumentBoard from "./presentational/AdminDocumentBoard";
 
 class App extends Component {
   render() {
@@ -22,9 +26,12 @@ class App extends Component {
           <Route path="/manoDokumentai" component={DocumentsBoard} />
           <Route path="/grupes" component={GroupsListTable} />
           <Route path="/grupe/darbuotojai" component={GroupViewPage} />
+          <Route path="/kurtigrupe" component={CreateGroupPage} />
+          <Route path="/adminLangas" component={AdministratorBord} />
+          <Route path="/adminGrupes" component={AdminGroupsListPage} />
+          <Route path="/adminDokumentai" component={AdminDocumentBoard} />
         </Switch>
       </Router>
-
     );
   }
 }

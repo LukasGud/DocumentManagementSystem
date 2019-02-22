@@ -6,10 +6,12 @@
   align-items: center;
   background-color: rgba(188, 207, 207, 0.479);
   overflow: auto;
+  width: 80%;
+  float: right;
 }
 
 .groupCreationForm {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   padding: 15px 40px;

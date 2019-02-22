@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./groupsList.css";
+import "./adminGroupList.css";
 import { Link } from "react-router-dom";
 
 // Sudeti visus elementus i sarasa ir ismapinti.
 
-class GroupsList extends Component {
+class AdminGroupsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,11 +40,11 @@ class GroupsList extends Component {
             <h4>Grupės</h4>
           </div>
           <div>
-            <Link to="/kurtigrupe">
+            <Link to="/kurtigrupe" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                disabled={true}
+                disabled={false}
                 title="Jūs neturite reikiamų teisių kurti grupę"
                 style={{ fontWeight: "bold" }}
               >
@@ -55,7 +55,7 @@ class GroupsList extends Component {
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                disabled={true}
+                disabled={false}
                 title="Jūs nepriklausote šiai grupei"
                 key={groupname.id}
                 onClick={this.handleOpenClick}
@@ -70,4 +70,4 @@ class GroupsList extends Component {
   }
 }
 
-export default GroupsList;
+export default AdminGroupsList;

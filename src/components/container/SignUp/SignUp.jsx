@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./signUp.css";
+import Alert from "react-bootstrap/Alert";
 
 // letterValidationRegex - only letters
 const letterValidationRegex = /^[a-zA-Z]+$/;
@@ -50,7 +51,7 @@ class SignUp extends Component {
       case "email":
         formErrors.email = emailRegex.test(value)
           ? ""
-          : "El. pašto formatas netinkamas (pavyzdys@pavyzdys.lt)";
+          : "El. pašto formatas netinkamas (pavyzdys@paštas.lt)";
         break;
       case "password":
         formErrors.password = passwordRegex.test(value)
@@ -73,7 +74,8 @@ class SignUp extends Component {
 
   handleSubmitSignUp = event => {
     event.preventDefault();
-    this.validateForm() ? console.log("yep true") : console.log("fuck no");
+    this.emptyfields();
+    this.validateForm() ? console.log("uzregistruota") : console.log("nepaejo");
   };
 
   validateForm() {
@@ -119,6 +121,9 @@ class SignUp extends Component {
       <div className="containerSignUp">
         <form className="signUpForm" onSubmit={this.handleSubmitSignUp}>
           <h1>Sukurti paskyrą</h1>
+          {this.state.formErrors && (
+            <Alert variant="danger">Užpildykite visus laukus</Alert>
+          )}
           <div>
             <label htmlFor="firstName">Vardas</label>
             <input
@@ -130,6 +135,7 @@ class SignUp extends Component {
               title="Jūsų vardą gali sudaryti tik raidės"
               value={firstname}
               onChange={this.handleChange}
+              maxLength="30"
               required
             />
             {formErrors.firstname.length > 0 && (
@@ -145,6 +151,7 @@ class SignUp extends Component {
               name="lastname"
               pattern="^[A-Za-z]+$"
               title="Jūsų pavardę gali sudaryti tik raidės"
+              maxLength="40"
               value={lastname}
               onChange={this.handleChange}
               required
@@ -161,7 +168,8 @@ class SignUp extends Component {
               placeholder="El. paštas"
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="elektroninio pašto formatas yra pavyzdys@pavyzdys.lt"
+              title="elektroninio pašto formatas yra pavyzdys@paštas.lt"
+              maxLength="50"
               value={email}
               onChange={this.handleChange}
               required
@@ -178,6 +186,7 @@ class SignUp extends Component {
               placeholder="Slaptažodis"
               name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              maxLength="40"
               title="Slaptažodį turi sudaryti ne mažiau 8 simboliai iš jų viena bent didžioji raidė, viena mažoji ir skaičius"
               value={password}
               onChange={this.handleChange}
@@ -194,6 +203,7 @@ class SignUp extends Component {
               className="repeatPassword"
               placeholder="Pakartoti slaptažodį"
               name="repeatPassword"
+              maxLength="40"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="pakartokite slaptažodį"
               value={repeatPassword}

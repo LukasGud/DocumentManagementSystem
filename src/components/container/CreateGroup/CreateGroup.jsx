@@ -10,15 +10,15 @@ class CreateGroup extends Component {
       rights: [
         {
           id: 1,
-          right: "Patvirtinti"
+          right: "Dokumentų tvirtinimas"
         },
         {
           id: 2,
-          right: "Atmesti"
+          right: "Dokumentų atmetimas"
         },
         {
           id: 3,
-          right: "Kurti najus dokumentus"
+          right: "Naujų dokumentų šablonų kūrimas"
         }
       ],
       members: [
@@ -75,7 +75,6 @@ class CreateGroup extends Component {
               className="description"
               placeholder="Trumpai apie grupę.."
               name="description"
-              required
             />
           </div>
           <div>

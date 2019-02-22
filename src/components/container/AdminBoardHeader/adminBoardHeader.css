@@ -1,0 +1,12 @@
+.adminNavBar {
+  float: left;
+  font-size: 2em;
+  border-radius: 5px;
+}
+.adminNavBar .text-light {
+  margin: 0 10px;
+}
+
+.headerNavBar div.navBar {
+  float: right;
+}

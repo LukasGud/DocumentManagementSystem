@@ -80,3 +80,11 @@ small {
   color: rgb(66, 94, 90);
   text-align: center;
 }
+
+#alertMessage {
+  padding: 3px;
+  padding-left: 5px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
