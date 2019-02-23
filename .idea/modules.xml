@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/dalykai.iml" filepath="$PROJECT_DIR$/.idea/dalykai.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dalykai/spring-security-demo.iml" filepath="$PROJECT_DIR$/dalykai/spring-security-demo.iml" />
     </modules>
   </component>
 </project>
