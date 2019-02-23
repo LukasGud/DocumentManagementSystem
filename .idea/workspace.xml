@@ -6,8 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35f7335f-84eb-4cef-8fb1-13ab4ae77c63" name="Default Changelist" comment="// Added connection to mysql database&#10;_______________________&#10;SQL code to generate required tables:&#10;&#10;table 1 : &#10;CREATE TABLE users (&#10;username varchar(50) not null,&#10;password varchar(50) not null,&#10;enabled tinyint(1) not null,&#10;&#10;primary key (username))&#10;&#10;_____&#10;&#10;INSERT INTO users VALUES&#10;('john','{noop}test',1),&#10;('mary','{noop}test',1),&#10;('susan','{noop}test',1);&#10;&#10;&#10;&#10;&#10;table 2:&#10;&#10;CREATE TABLE authorities (&#10;username varchar(50) not null,&#10;authority varchar(50) not null,&#10;&#10;unique key authorities_idx_1 (username, authority),&#10;&#10;constraint authorities_ibfk_1&#10;foreign key (username)&#10;references users (username));&#10;&#10;___&#10;&#10;INSERT INTO authorities values&#10;('john','ROLE_EMPLOYEE'),&#10;('mary','ROLE_EMPLOYEE'),&#10;('susan','ROLE_EMPLOYEE'),&#10;('mary','ROLE_MANAGER'),&#10;('susan','ROLE_ADMIN')" />
+    <list default="true" id="35f7335f-84eb-4cef-8fb1-13ab4ae77c63" name="Default Changelist" comment="// Added connection to mysql database&#10;_______________________&#10;SQL code to generate required tables:&#10;&#10;table 1 : &#10;CREATE TABLE users (&#10;username varchar(50) not null,&#10;password varchar(50) not null,&#10;enabled tinyint(1) not null,&#10;&#10;primary key (username))&#10;&#10;_____&#10;&#10;INSERT INTO users VALUES&#10;('john','{noop}test',1),&#10;('mary','{noop}test',1),&#10;('susan','{noop}test',1);&#10;&#10;&#10;&#10;&#10;table 2:&#10;&#10;CREATE TABLE authorities (&#10;username varchar(50) not null,&#10;authority varchar(50) not null,&#10;&#10;unique key authorities_idx_1 (username, authority),&#10;&#10;constraint authorities_ibfk_1&#10;foreign key (username)&#10;references users (username));&#10;&#10;___&#10;&#10;INSERT INTO authorities values&#10;('john','ROLE_EMPLOYEE'),&#10;('mary','ROLE_EMPLOYEE'),&#10;('susan','ROLE_EMPLOYEE'),&#10;('mary','ROLE_MANAGER'),&#10;('susan','ROLE_ADMIN')">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_security_demo_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/spring_security_demo_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/projektas.iml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/dalykai/target/" />
+    <ignored path="$PROJECT_DIR$/projektas/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,92 +68,51 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-897992627">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="50" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="50" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginAppConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="52" column="79" lean-forward="true" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/projektas/src/main/java/com/dalykai/ProjektasApplication.java">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/home.jsp">
+        <entry file="file://$PROJECT_DIR$/projektas/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginSecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/resources/persistence-mysql.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/SecurityWebApplicationInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/SpringMvcDispatcherServletInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/LeadersController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="129">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -190,6 +155,7 @@
         <option value="$PROJECT_DIR$/dalykai/src/main/resources/persistence-mysql.properties" />
         <option value="$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginAppConfig.java" />
         <option value="$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/projektas/pom.xml" />
       </list>
     </option>
   </component>
@@ -206,6 +172,12 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="683" />
     <option name="height" value="768" />
@@ -218,62 +190,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="dalykai" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="dalykai" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="dalykai" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="dalykai" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="dalykai" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ourWebApp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="dalykai" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ourWebApp" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -323,12 +239,50 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projektaas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projektaas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projektaas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projektaas" type="462c0819:PsiDirectoryNode" />
+              <item name="projektas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projektaas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projektaas" type="462c0819:PsiDirectoryNode" />
+              <item name="projektas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projektaas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projektaas" type="462c0819:PsiDirectoryNode" />
+              <item name="projektas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projektaas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projektaas" type="462c0819:PsiDirectoryNode" />
+              <item name="projektas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549810842134" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projektas/pom.xml" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -347,7 +301,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.ProjektasApplication">
+    <configuration name="ProjektasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="projektas" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dalykai.ProjektasApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="start" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.14" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -414,11 +375,13 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method v="2">
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="spring-security-demo:war" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.start" />
+      <item itemvalue="Spring Boot.ProjektasApplication" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -431,6 +394,7 @@
       <option name="presentableId" value="Default" />
       <updated>1549748308689</updated>
       <workItem from="1549748310994" duration="12104000" />
+      <workItem from="1550923830078" duration="721000" />
     </task>
     <task id="LOCAL-00001" summary="// Added connection to mysql database&#10;_______________________&#10;SQL code to generate required tables:&#10;&#10;table 1 : &#10;CREATE TABLE users (&#10;username varchar(50) not null,&#10;password varchar(50) not null,&#10;enabled tinyint(1) not null,&#10;&#10;primary key (username))&#10;&#10;_____&#10;&#10;INSERT INTO users VALUES&#10;('john','{noop}test',1),&#10;('mary','{noop}test',1),&#10;('susan','{noop}test',1);&#10;&#10;&#10;&#10;&#10;table 2:&#10;&#10;CREATE TABLE authorities (&#10;username varchar(50) not null,&#10;authority varchar(50) not null,&#10;&#10;unique key authorities_idx_1 (username, authority),&#10;&#10;constraint authorities_ibfk_1&#10;foreign key (username)&#10;references users (username));&#10;&#10;___&#10;&#10;INSERT INTO authorities values&#10;('john','ROLE_EMPLOYEE'),&#10;('mary','ROLE_EMPLOYEE'),&#10;('susan','ROLE_EMPLOYEE'),&#10;('mary','ROLE_MANAGER'),&#10;('susan','ROLE_ADMIN')">
       <created>1549809490218</created>
@@ -443,29 +407,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12104000" />
+    <option name="totallyTimeSpent" value="12825000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Learn" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23113964" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23071104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32872504" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32104453" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Learn" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3448819" />
@@ -473,15 +428,24 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32872504" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32872504" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32104453" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="5" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,79 +459,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="// Added connection to mysql database&#10;_______________________&#10;SQL code to generate required tables:&#10;&#10;table 1 : &#10;CREATE TABLE users (&#10;username varchar(50) not null,&#10;password varchar(50) not null,&#10;enabled tinyint(1) not null,&#10;&#10;primary key (username))&#10;&#10;_____&#10;&#10;INSERT INTO users VALUES&#10;('john','{noop}test',1),&#10;('mary','{noop}test',1),&#10;('susan','{noop}test',1);&#10;&#10;&#10;&#10;&#10;table 2:&#10;&#10;CREATE TABLE authorities (&#10;username varchar(50) not null,&#10;authority varchar(50) not null,&#10;&#10;unique key authorities_idx_1 (username, authority),&#10;&#10;constraint authorities_ibfk_1&#10;foreign key (username)&#10;references users (username));&#10;&#10;___&#10;&#10;INSERT INTO authorities values&#10;('john','ROLE_EMPLOYEE'),&#10;('mary','ROLE_EMPLOYEE'),&#10;('susan','ROLE_EMPLOYEE'),&#10;('mary','ROLE_MANAGER'),&#10;('susan','ROLE_ADMIN')" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/leaders.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/loginPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="77" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/loginWithBootstrap.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/SecurityWebApplicationInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/SpringMvcDispatcherServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/LeadersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/leaders.jsp" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/loginPage.jsp" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/loginWithBootstrap.jsp" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/HomeController.java" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/SecurityWebApplicationInitializer.java" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/SpringMvcDispatcherServletInitializer.java" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/webapp/WEB-INF/view/home.jsp" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/LoginController.java" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/controller/LeadersController.java" />
+    <entry file="file://$PROJECT_DIR$/dalykai/pom.xml" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -578,29 +479,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/resources/persistence-mysql.properties">
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/resources/persistence-mysql.properties" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginSecurityConfig.java" />
+    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginAppConfig.java" />
+    <entry file="file://$PROJECT_DIR$/projektas/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="129">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dalykai/src/main/java/com/spring/ourWebApp/config/LoginAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="52" column="79" lean-forward="true" selection-start-line="52" selection-start-column="79" selection-end-line="52" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/projektas/src/main/java/com/dalykai/ProjektasApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
