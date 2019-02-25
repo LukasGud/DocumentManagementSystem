@@ -1,0 +1,46 @@
+.containerLogIn {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  background-color: #bccfcf7a;
+  padding: 100px;
+  overflow: auto;
+}
+
+.containerLogIn span {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.containerLogIn input {
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin: 0;
+}
+
+span.loginErrorMessage {
+  color: red;
+  font-size: 0.75em;
+  display: relative;
+}
+
+.containerLogIn button {
+  padding: 4px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin: 0 10px;
+  background-color: #519e8a;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+button.logInButton:hover {
+  color: #519e8a;
+  background-color: #fff;
+  border: 1px solid #519e8a;
+}

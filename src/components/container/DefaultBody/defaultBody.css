@@ -1,0 +1,18 @@
+.containerDefaultBody {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(188, 207, 207, 0.479);
+}
+
+.mainInfo {
+  float: left;
+  justify-content: center;
+  padding: 100px 30px;
+}
+
+.intro {
+  float: right;
+}
