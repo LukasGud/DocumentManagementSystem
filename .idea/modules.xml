@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dalykai.iml" filepath="$PROJECT_DIR$/.idea/dalykai.iml" />
-      <module fileurl="file://$PROJECT_DIR$/projektas/projektas.iml" filepath="$PROJECT_DIR$/projektas/projektas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/projektas.iml" filepath="$PROJECT_DIR$/projektas.iml" />
     </modules>
   </component>
 </project>
