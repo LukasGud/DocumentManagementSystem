@@ -6,7 +6,61 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5f3ea91-c4b2-43eb-9011-94caee217b1b" name="Default Changelist" comment="" />
+    <list default="true" id="d5f3ea91-c4b2-43eb-9011-94caee217b1b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/AdminBoardHeader/AdminBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/AdminBoardHeader/AdminBoardHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/AdminBoardHeader/adminBoardHeader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/AdminBoardHeader/adminBoardHeader.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/AdminGroupList/AdminGroupList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/AdminGroupList/AdminGroupList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/AdminGroupList/adminGroupList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/AdminGroupList/adminGroupList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/CreateGroup/CreateGroup.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/CreateGroup/CreateGroup.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/CreateGroup/createGroup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/CreateGroup/createGroup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/DefaultBody/DefaultBody.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/DefaultBody/DefaultBody.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/DefaultBody/defaultBody.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/DefaultBody/defaultBody.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/DocumentsNavContainer/DocumentsNavContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/DocumentsNavContainer/DocumentsNavContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/DocumentsNavContainer/docNavContainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/DocumentsNavContainer/docNavContainer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/GroupView/GroupView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/GroupView/GroupView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/GroupView/groupView.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/GroupView/groupView.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/GroupsList/GroupsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/GroupsList/GroupsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/GroupsList/groupsList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/GroupsList/groupsList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/Header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/Header/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/LogIn/LogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/LogIn/LogIn.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/LogIn/logIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/LogIn/logIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/SignUp/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/SignUp/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/SignUp/signUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/SignUp/signUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/UserBoardHeader/UserBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/UserBoardHeader/UserBoardHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/UserBoardHeader/userBoardNav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/UserBoardHeader/userBoardNav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/container/UsersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/container/UsersTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/AdminDocumentBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/AdminDocumentBoard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/AdminGroupsList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/AdminGroupsList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/AdministratorBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/AdministratorBoard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/CreateDocument.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/CreateDocument.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/CreateGroupPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/CreateGroupPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/DocumentsBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/DocumentsBoard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/GroupViewPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/GroupViewPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/GroupsListTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/GroupsListTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/LogInPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/LogInPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/SignUpPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/SignUpPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/presentational/UserBoard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/presentational/UserBoard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/richTextEditor/BlockStyleControls.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/richTextEditor/BlockStyleControls.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/richTextEditor/InlineStyleControls.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/richTextEditor/InlineStyleControls.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/richTextEditor/RichTextEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/richTextEditor/RichTextEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/richTextEditor/StyleButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/richTextEditor/StyleButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/richTextEditor/editorCss/editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/components/richTextEditor/editorCss/editor.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/dms.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/images/dms.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/dms2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/images/dms2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/React/serviceWorker.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,20 +86,7 @@
     <favorites_list name="projektas" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -156,6 +197,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1067" />
+    <option name="y" value="230" />
     <option name="width" value="683" />
     <option name="height" value="768" />
   </component>
@@ -225,7 +268,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550936005438" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551117481456" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -233,10 +276,6 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\tomas\Desktop\projektas\SQL" />
-      <recent name="C:\Users\tomas\Desktop\projektas\src\main\webapp\view\jsp" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.dalykai" />
     </key>
@@ -245,6 +284,13 @@
       <recent name="C:\Users\Lukas\Desktop\Projects\projektas\src\main" />
       <recent name="C:\Users\Lukas\Desktop\Projects\projektas\src\main\java\com\dalykai\controller" />
       <recent name="C:\Users\Lukas\Desktop\Projects\projektas\src\main\java\com\dalykai" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\React\src" />
+      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final" />
+      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\src\React" />
+      <recent name="C:\Users\tomas\Desktop\projektas\SQL" />
+      <recent name="C:\Users\tomas\Desktop\projektas\src\main\webapp\view\jsp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -426,7 +472,7 @@
       <workItem from="1550929430266" duration="5245000" />
       <workItem from="1551115903876" duration="502000" />
       <workItem from="1551116444171" duration="8000" />
-      <workItem from="1551116567875" duration="258000" />
+      <workItem from="1551116567875" duration="771000" />
     </task>
     <task id="LOCAL-00001" summary="roles, no csrf">
       <created>1550920453306</created>
@@ -456,16 +502,32 @@
       <option name="project" value="LOCAL" />
       <updated>1551116808093</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="clean up">
+      <created>1551116892184</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1551116892184</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72168000" />
+    <option name="totallyTimeSpent" value="72681000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.24253732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.24253732" />
       <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -480,7 +542,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32998884" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32913387" />
       <window_info anchor="bottom" id="Terminal" order="9" />
@@ -574,14 +636,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="roles, no csrf" />
     <MESSAGE value="Spring boot rest api, login, auth, react" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spring boot rest api, login, auth, react" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1242" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WEB-INF/servlet.tld" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mchange/v2/c3p0/ComboPooledDataSource.java" />
     <entry file="file://$PROJECT_DIR$/WEB-INF/application-context.xml" />
@@ -841,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projektas.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/SpringMvcDispatcherServletInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -897,6 +948,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/React/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -905,6 +964,21 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projektas.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2326">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mvnw">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3519" />
       </provider>
     </entry>
   </component>
