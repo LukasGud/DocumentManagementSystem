@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="projektas" options="-parameters" />
+      <module name="projektas" options="" />
     </option>
   </component>
 </project>
