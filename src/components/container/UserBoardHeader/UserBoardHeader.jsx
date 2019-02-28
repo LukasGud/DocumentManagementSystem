@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faFileAlt, faUsers } from "@fortawesome/free-solid-svg-icons";
@@ -16,13 +16,13 @@ class UserBoardHeader extends Component {
     return (
       <nav className="headerNavBar navbar fixed-top bg-dark">
         <div className="userNavBar">
-          <Link to="/vartotojoLangas">
+          <Link to="/userBoard">
             <FontAwesomeIcon icon="home" className="text-light" />
           </Link>
-          <Link to="/manoDokumentai">
+          <Link to="/myDocuments">
             <FontAwesomeIcon icon="file-alt" className="text-light" />
           </Link>
-          <Link to="/grupes">
+          <Link to="/groups">
             <FontAwesomeIcon icon="users" className="text-light" />
           </Link>
         </div>

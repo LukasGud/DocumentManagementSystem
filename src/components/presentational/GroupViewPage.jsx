@@ -4,15 +4,17 @@ import UserBoardHeader from "../container/UserBoardHeader/UserBoardHeader";
 import GroupsList from "../container/GroupsList/GroupsList";
 import GroupView from "../container/GroupView/GroupView";
 import CreateGroup from "../container/CreateGroup/CreateGroup";
+import { bodyStyle } from "./DocumentsBoard";
 
 class GroupsListTable extends Component {
   render() {
     return (
       <div>
         <UserBoardHeader />
-        <GroupView />
-        <GroupsList />
-        <CreateGroup />
+        <div style={bodyStyle}>
+          <GroupView />
+          <GroupsList />
+        </div>
         <Footer />
       </div>
     );

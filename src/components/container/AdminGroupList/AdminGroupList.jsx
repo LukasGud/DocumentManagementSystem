@@ -40,7 +40,7 @@ class AdminGroupsList extends Component {
             <h4>Grupės</h4>
           </div>
           <div>
-            <Link to="/kurtigrupe" style={{ textDecoration: "none" }}>
+            <Link to="/createGroup" style={{ textDecoration: "none" }}>
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"

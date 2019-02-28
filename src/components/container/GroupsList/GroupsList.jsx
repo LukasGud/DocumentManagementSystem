@@ -35,7 +35,7 @@ class GroupsList extends Component {
   render() {
     return (
       <div className="groupsContainer groups">
-        <div className="list-group-doc" style={{ width: "18rem" }}>
+        <div className="list-group-doc">
           <div className="list-group-item bg-dark text-light">
             <h4>Grupės</h4>
           </div>

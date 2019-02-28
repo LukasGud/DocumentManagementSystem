@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "babel-polyfill";
 import "./index.css";
-import App from "./components/App";
+import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
+import DocumentsList from "./components/container/DocumentsList/DocumentsList";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
