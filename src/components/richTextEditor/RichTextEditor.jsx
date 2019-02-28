@@ -1,23 +1,13 @@
 import React, { Component } from "react";
-import {
-  EditorState,
-  RichUtils,
-  getDefaultKeyBinding,
-  convertFromRaw,
-  convertToRaw
-} from "draft-js";
-import InlineStyleControls from "./InlineStyleControls";
-import BlockStyleControls from "./BlockStyleControls";
-import Editor from "draft-js-plugins-editor";
-import "./editorCss/editor.css";
-// import "draft-js-alignment-plugin/lib/plugin.css";
-// import "draft-js-image-plugin/lib/plugin.css";
+import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import "./textEditor.css";
 
-class RichEditorExample extends Component {
+class RichTextEditor extends Component {
   constructor(props) {
     super(props);
     this.state = { editorState: EditorState.createEmpty() };
-    this.focus = () => this.refs.editor.focus();
 
     const content = window.localStorage.getItem("content");
 
@@ -36,6 +26,7 @@ class RichEditorExample extends Component {
       JSON.stringify(convertToRaw(content))
     );
   };
+
   onChange = editorState => {
     const contentState = editorState.getCurrentContent();
     console.log("content state", convertToRaw(contentState));
@@ -43,71 +34,40 @@ class RichEditorExample extends Component {
     this.setState({ editorState });
   };
 
-  handleKeyCommand = (command, editorState) => {
-    const newState = RichUtils.handleKeyCommand(editorState, command);
-    if (newState) {
-      this.onChange(newState);
-      return true;
-    }
-    return false;
-  };
-  mapKeyToEditorCommand = e => {
-    if (e.keyCode === 9 /* TAB */) {
-      const newEditorState = RichUtils.onTab(
-        e,
-        this.state.editorState,
-        4 /* maxDepth */
-      );
-      if (newEditorState !== this.state.editorState) {
-        this.onChange(newEditorState);
-      }
-      return;
-    }
-    return getDefaultKeyBinding(e);
-  };
-  toggleBlockType = blockType => {
-    this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
-  };
-  toggleInlineStyle = inlineStyle => {
-    this.onChange(
-      RichUtils.toggleInlineStyle(this.state.editorState, inlineStyle)
-    );
-  };
   render() {
     const { editorState } = this.state;
-    // If the user changes block type before entering any text, we can
-    // either style the placeholder or hide it. Let's just hide it now.
-    let className = "RichEditor-editor";
-    var contentState = editorState.getCurrentContent();
-    if (!contentState.hasText()) {
-      if (
-        contentState
-          .getBlockMap()
-          .first()
-          .getType() !== "unstyled"
-      ) {
-        className += " RichEditor-hidePlaceholder";
-      }
-    }
+
     return (
-      <div className="RichEditor-root">
-        <BlockStyleControls
-          editorState={editorState}
-          onToggle={this.toggleBlockType}
-        />
-        <InlineStyleControls
-          editorState={editorState}
-          onToggle={this.toggleInlineStyle}
-        />
-        <div className={className} onClick={this.focus}>
+      <div className="editorWrapper">
+        <div>
+          <button
+            type="button"
+            className="btn btn-light btn-sm"
+            style={{ margin: "0 5px 5px 0" }}
+          >
+            Saugoti
+          </button>
+          <button
+            type="button"
+            className="btn btn-light btn-sm"
+            style={{ margin: "0 5px 5px 0" }}
+          >
+            Pateikti
+          </button>
+          <button
+            type="button"
+            className="btn btn-danger btn-sm"
+            style={{ marginBottom: "5px" }}
+          >
+            Atšaukti
+          </button>
+        </div>
+        <div className="editorStyle">
           <Editor
-            blockStyleFn={getBlockStyle}
-            customStyleMap={styleMap}
-            editorState={editorState}
-            handleKeyCommand={this.handleKeyCommand}
-            keyBindingFn={this.mapKeyToEditorCommand}
-            onChange={this.onChange}
-            ref="editor"
+            editorState={this.state.editorState}
+            wrapperClassName="demo-wrapper"
+            editorClassName="editer-content"
+            onEditorStateChange={this.onChange}
             spellCheck={true}
           />
         </div>
@@ -116,28 +76,4 @@ class RichEditorExample extends Component {
   }
 }
 
-const styleMap = {
-  CODE: {
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
-    fontFamily: '"Inconsolata", "Menlo", "Consolas", monospace',
-    fontSize: 16,
-    padding: 2
-  }
-};
-
-function getBlockStyle(block) {
-  switch (block.getType()) {
-    case "blockquote":
-      return "RichEditor-blockquote";
-    case "left":
-      return "align-left";
-    case "center":
-      return "align-center";
-    case "right":
-      return "align-right";
-    default:
-      return null;
-  }
-}
-
-export default RichEditorExample;
+export default RichTextEditor;

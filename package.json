@@ -19,6 +19,7 @@
     "react-bootstrap-table2-paginator": "^2.0.3",
     "react-bootstrap-table2-toolkit": "^1.3.1",
     "react-dom": "^16.8.1",
+    "react-draft-wysiwyg": "^1.13.1",
     "react-picky": "^4.1.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5"
