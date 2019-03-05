@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
@@ -23,12 +23,12 @@ class Header extends Component {
         <div className="navBar">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/prisijungti">
+              <Link className="nav-link text-light" to="/login">
                 Prisijungti
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/registruotis">
+              <Link className="nav-link text-light" to="/signup">
                 Registruotis
               </Link>
             </li>

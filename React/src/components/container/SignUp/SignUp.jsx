@@ -108,6 +108,18 @@ class SignUp extends Component {
     return passwordRegex.test(password) && password !== "";
   }
 
+  emptyfields() {
+    const { firstname, lastname, email, password, repeatPassword } = this.state;
+
+    return (
+      firstname !== "" &&
+      lastname !== "" &&
+      email !== "" &&
+      password !== "" &&
+      repeatPassword !== ""
+    );
+  }
+
   render() {
     let {
       firstname,
@@ -121,7 +133,7 @@ class SignUp extends Component {
       <div className="containerSignUp">
         <form className="signUpForm" onSubmit={this.handleSubmitSignUp}>
           <h1>Sukurti paskyrą</h1>
-          {this.state.formErrors && (
+          {this.emptyfields && (
             <Alert variant="danger">Užpildykite visus laukus</Alert>
           )}
           <div>

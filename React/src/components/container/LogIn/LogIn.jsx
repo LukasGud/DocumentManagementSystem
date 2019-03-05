@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
@@ -13,10 +13,27 @@ class LogIn extends Component {
     this.state = {
       email: "",
       password: "",
-      formErrors: {
-        email: "",
-        password: ""
-      }
+      errorMessage: "Neteisingi prisijungimo duomenys",
+      users: [
+        {
+          id: "1",
+          email: "user@pastas.lt",
+          password: "Useruser1",
+          role: "user"
+        },
+        {
+          id: "2",
+          email: "user2@pastas.lt",
+          password: "Useruser2",
+          role: "user"
+        },
+        {
+          id: "3",
+          email: "root@root.lt",
+          password: "Rootroot0",
+          role: "admin"
+        }
+      ]
     };
   }
 
@@ -35,40 +52,29 @@ class LogIn extends Component {
     //     console.log("success: " + data);
     //   });
     console.log(this.state);
+    this.verifyUser();
+  };
+
+  //funkcija turetu grazinti true arba false. Jeigu true -> nuoroda i admin/user board, jeigu false -> error message
+  verifyUser = () => {
+    const { email, password, users } = this.state;
+    for (let i = 0; i < this.state.users.length; i++) {
+      if (email === users[i].email && password === users[i].password) {
+        return console.log("sutampa");
+      }
+    }
   };
 
   handleChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
-    let formErrors = { ...this.state.formErrors };
-    //emailValidationRegex - example@example.lt - two letters after .
-    const emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-    //passValidationRegex - at least 8 characters, one capital, one regular letter and numebr
-    const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-    //error zinutes laikinos. Klaidos pranesimas bus kitoks, atsizvelgiant kaip pavyks pasiekt viska is db
-    switch (name) {
-      case "email":
-        formErrors.email = emailRegex.test(value)
-          ? ""
-          : "Neteisingas prisijungimo vardas";
-        break;
-      case "password":
-        formErrors.password = passwordRegex.test(value)
-          ? ""
-          : "Neteisingas slaptazodis";
-        break;
-      default:
-        break;
-    }
 
     this.setState({
-      formErrors,
       [name]: value
     });
   };
 
   render() {
-    const { formErrors } = this.state;
     return (
       <div className="containerLogIn">
         <h1>Prisijunkite prie sistemos</h1>
@@ -86,15 +92,11 @@ class LogIn extends Component {
               value={this.state.email}
               onChange={this.handleChange}
             />
-            {formErrors.email.length > 0 && (
-              <span className="loginErrorMessage">{formErrors.email}</span>
-            )}
           </div>
           <div className="form-group">
             <span>
               <FontAwesomeIcon className="icon" icon="key" />
             </span>
-
             <input
               className="form-conrol"
               name="password"
@@ -103,9 +105,6 @@ class LogIn extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            {formErrors.password.length > 0 && (
-              <span className="loginErrorMessage">{formErrors.password}</span>
-            )}
           </div>
           <button type="submit" className="logInButton">
             Prisijungti

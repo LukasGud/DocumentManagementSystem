@@ -6,12 +6,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUsers,
   faUser,
-  faFolderOpen
+  faFolderOpen,
+  faCog
 } from "@fortawesome/free-solid-svg-icons";
-import GroupsList from "../GroupsList/GroupsList";
-import UsersTable from "../UsersTable";
+import DocumentsList from "../DocumentsList/DocumentsList";
+import { hasRole } from "../../presentational/Auth";
 
-library.add(faUsers, faUser, faFolderOpen);
+const user = {
+  roles: ["user", "admin"]
+};
+
+library.add(faUsers, faUser, faFolderOpen, faCog);
 
 class GroupView extends Component {
   constructor(props) {
@@ -22,59 +27,57 @@ class GroupView extends Component {
   render() {
     return (
       <div className="groupviewContainer">
-        <div className="groupHeader">
-          <Link className="text-light" to="/prisijungti">
+        <div className="contentTogether">
+          <div className="groupHeader">
             <h3 className="text-dark">
               <FontAwesomeIcon icon="users" className="text-dark" />{" "}
               <strong>IT Skyrius</strong>
             </h3>
-          </Link>
-        </div>
-        <div className="navBar">
-          <ul className="nav">
-            <li className="nav-item">
-              <Link className="text-light" to="/prisijungti">
+          </div>
+          <div className="navBar">
+            <ul className="nav">
+              <li className="nav-item">
                 <button className="btn btn-dark">
                   <FontAwesomeIcon icon="user" className="text-light" /> Grupės
                   nariai
                 </button>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="text-light" to="/registruotis">
+              </li>
+              <li className="nav-item">
                 <button className="btn btn-dark">
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Pateikti dokumentai
                 </button>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="text-light" to="/registruotis">
+              </li>
+              <li className="nav-item">
                 <button className="btn btn-dark">
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Priimti dokumentai
                 </button>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="text-light" to="/registruotis">
+              </li>
+              <li className="nav-item">
                 <button className="btn btn-dark">
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Atmesti dokumentai
                 </button>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="text-light" to="/registruotis">
+              </li>
+              <li className="nav-item">
                 <button className="btn btn-dark">
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Visi dokumentai
                 </button>
-              </Link>
-            </li>
-          </ul>
+              </li>
+              {hasRole(user, ["admin"]) && (
+                <li className="nav-item">
+                  <button className="btn btn-dark">
+                    <FontAwesomeIcon icon="cog" className="text-light" />{" "}
+                    Administruoti grupę
+                  </button>
+                </li>
+              )}
+            </ul>
+          </div>
         </div>
-        <UsersTable />
+        <DocumentsList />
       </div>
     );
   }
