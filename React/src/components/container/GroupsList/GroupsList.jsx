@@ -4,13 +4,12 @@ import { Link } from "react-router-dom";
 import GroupView from "../GroupView/GroupView";
 import CreateGroup from "../CreateGroup/CreateGroup";
 
-// Sudeti visus elementus i sarasa ir ismapinti.
 
 class GroupsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isCreateionButtonClicked: false,
+      isCreationButtonClicked: false,
       groups: [
         {
           name: "Vadovybė",
@@ -32,22 +31,26 @@ class GroupsList extends Component {
           name: "Personalo skyrius",
           id: 5
         }
-      ]
+      ],
+      groupSelected: "",
+      isGroupViewButtonClicked: false,
     };
   }
 
   handleClick = e => {
-    this.setState({ isCreateionButtonClicked: true });
+    this.setState({ isCreationButtonClicked: true});
   };
+
+  handleOpenClick = (groupSelected) => {
+    this.setState({groupSelected, isGroupViewButtonClicked: true})
+  }
+
+
   render() {
     return (
       <div className="groupsView groups">
         <div className="groupTableContainer">
-          {this.state.isCreateionButtonClicked ? (
-            <CreateGroup />
-          ) : (
-            <GroupView />
-          )}
+          { this.state.isCreationButtonClicked ? <CreateGroup /> : this.state.isGroupViewButtonClicked ? <GroupView group={this.state.groupSelected}/> : null}
         </div>
         <div className="groupListContainer">
           <div className="list-group-doc">
@@ -55,7 +58,6 @@ class GroupsList extends Component {
               <h4>Grupės</h4>
             </div>
             <div>
-              {/* <Link to="/creategroup"> */}
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
@@ -66,7 +68,6 @@ class GroupsList extends Component {
               >
                 + Kurti naują grupę
               </button>
-              {/* </Link> */}
               {this.state.groups.map(groupname => (
                 <button
                   type="button"
@@ -74,7 +75,7 @@ class GroupsList extends Component {
                   disabled={false}
                   title="Jūs nepriklausote šiai grupei"
                   key={groupname.id}
-                  onClick={this.handleOpenClick}
+                  onClick={() => this.handleOpenClick(groupname.name)}
                 >
                   {groupname.name}
                 </button>

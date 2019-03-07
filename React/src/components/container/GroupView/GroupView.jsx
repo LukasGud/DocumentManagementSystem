@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import DocumentsList from "../DocumentsList/DocumentsList";
 import { hasRole } from "../../presentational/Auth";
+import GroupMembers from "../GroupMembers/GroupMembers";
 
 const user = {
   roles: ["user", "admin"]
@@ -21,47 +22,202 @@ library.add(faUsers, faUser, faFolderOpen, faCog);
 class GroupView extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      documents: [
+        {
+          id: 123,
+          name: "Ana",
+          surname: "Taurienė",
+          type: "Atostogos",
+          status: "Pateiktas",
+          date: "2018-09-06"
+        },
+        {
+          id: 191,
+          name: "Daliene",
+          surname: "Daliene",
+          type: "Komandiruote",
+          status: "Sukurtas",
+          date: "2019-01-06"
+        },
+        {
+          id: 161,
+          name: "Marius",
+          surname: "Karininkas",
+          type: "šaukimas",
+          status: "Atmestas",
+          date: "2019-03-04"
+        },
+        {
+          id: 761,
+          name: "Vardeliokas",
+          surname: "Pavardziokas",
+          type: "Liga",
+          status: "Atmestas",
+          date: "2017-09-06"
+        },
+        {
+          id: 91,
+          name: "Kotletas",
+          surname: "Kijevas",
+          type: "Komandiruote",
+          status: "Patvirtintas",
+          date: "2018-12-09"
+        },
+        {
+          id: 171,
+          name: "Helio",
+          surname: "Dasviduli",
+          type: "Atostogos",
+          status: "Pateiktas",
+          date: "2018-11-25"
+        },
+        {
+          id: 133,
+          name: "Jurgis",
+          surname: "Antanela",
+          type: "Komandiruote",
+          status: "Atmestas",
+          date: "2017-04-07"
+        },
+        {
+          id: 871,
+          name: "Gedvilas",
+          surname: "Grazulaitis",
+          type: "Atostogos",
+          status: "pateiktas",
+          date: "2018-10-06"
+        },
+        {
+          id: 124,
+          name: "Tadas",
+          surname: "Vailokas",
+          type: "Atostogos",
+          status: "Atmestas",
+          date: "2018-11-23"
+        },
+        {
+          id: 176,
+          name: "Pumpurelis",
+          surname: "Pumpurelis",
+          type: "Komandiruote",
+          status: "Atmestas",
+          date: "2019-01-22"
+        },
+        {
+          id: 189,
+          name: "Angele",
+          surname: "Nailoniene",
+          type: "Atostogos",
+          status: "Sukurtas",
+          date: "2018-05-06"
+        },
+        {
+          id: 7446,
+          name: "Pim",
+          surname: "Piririm",
+          type: "Atostogos",
+          status: "Sukurtas",
+          date: "2016-05-06"
+        },
+        {
+          id: 199,
+          name: "Liutauras",
+          surname: "Pal",
+          type: "Liga",
+          status: "Pateiktas",
+          date: "2019-05-06"
+        },
+        {
+          id: 109,
+          name: "Jonas",
+          surname: "Vadelionis",
+          type: "Atostogos",
+          status: "Atmestas",
+          date: "2017-05-06"
+        }
+      ],
+      acceptedDocuments: [],
+      pendingDocuments: [],
+      declinedDocuments: [],
+      selected: [],
+      isButtonClicked: false,
+      isGroupsButtonClicked: false
+    };
+  }
+
+  openDocumentsTable = selected => {
+    this.setState({ selected });
+  };
+
+  componentDidMount() {
+    this.setDifferentDocType();
+  }
+
+  setDifferentDocType = (e) => {
+
+    const acceptedDocuments = this.state.documents.filter(docs => {
+      return docs.status === "Patvirtintas";
+    });
+
+    const pendingDocuments = this.state.documents.filter(docs => {
+      return docs.status === "Pateiktas";
+    });
+
+    const declinedDocuments = this.state.documents.filter(docs => {
+      return docs.status === "Atmestas";
+    });
+    this.setState({
+      acceptedDocuments: acceptedDocuments,
+      pendingDocuments: pendingDocuments,
+      declinedDocuments: declinedDocuments,
+      isButtonClicked: true
+    });
+  };
+
+  handleButtonClick = (e) =>{
+    this.setState({isGroupsButtonClicked: true})
   }
 
   render() {
+    const { acceptedDocuments,pendingDocuments, declinedDocuments, documents } = this.state;
     return (
       <div className="groupviewContainer">
         <div className="contentTogether">
           <div className="groupHeader">
             <h3 className="text-dark">
               <FontAwesomeIcon icon="users" className="text-dark" />{" "}
-              <strong>IT Skyrius</strong>
+              <strong>{this.props.group}</strong>
             </h3>
           </div>
           <div className="navBar">
             <ul className="nav">
               <li className="nav-item">
-                <button className="btn btn-dark">
+                <button className="btn btn-dark" onClick={this.handleButtonClick} >
                   <FontAwesomeIcon icon="user" className="text-light" /> Grupės
                   nariai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark">
+                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(pendingDocuments)}>
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Pateikti dokumentai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark">
+                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(acceptedDocuments)}>
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Priimti dokumentai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark">
+                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(declinedDocuments)}>
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Atmesti dokumentai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark">
+                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(documents)}>
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Visi dokumentai
                 </button>
@@ -77,7 +233,7 @@ class GroupView extends Component {
             </ul>
           </div>
         </div>
-        <DocumentsList />
+        { this.state.isGroupsButtonClicked ? <GroupMembers /> : this.state.isButtonClicked ? <DocumentsList documents={this.state.selected} /> : null}
       </div>
     );
   }

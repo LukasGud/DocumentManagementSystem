@@ -3,6 +3,11 @@ import "./createDocument.css";
 import Picky from "react-picky";
 import "react-picky/dist/picky.css";
 import RichTextEditor from "../../richTextEditor/RichTextEditor";
+import { hasRole } from "../../presentational/Auth";
+
+const user = {
+  roles: ["user", "admin"]
+};
 
 class CreateGroup extends Component {
   constructor(props) {
@@ -66,8 +71,11 @@ class CreateGroup extends Component {
               includeFilter={true}
             />
           </div>
+          {hasRole(user, ["admin"]) && <button className="creationButton">
+            Kurti naują dokumento šabloną
+          </button>}
           <button type="submit" className="creationButton">
-            Kurti
+            Pildyti dokumentą
           </button>
         </form>
         {this.state.displayEditor && (

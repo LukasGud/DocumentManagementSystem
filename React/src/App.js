@@ -29,24 +29,12 @@ class App extends Component {
               <Route exact path="/" component={DefaultBody} />
               <Route path="/login" component={LogIn} />
               <Route path="/signup" component={SignUp} />
-              {hasRole(user, ["user"]) && (
-                <Route path="/createdocument" component={CreateDocument} />
-              )}
-              {hasRole(user, ["user"]) && (
-                <Route path="/userboard" component={DefaultBody} />
-              )}
-              {hasRole(user, ["user"]) && (
-                <Route path="/mydocuments" component={DocumentsNavContainer} />
-              )}
-              {hasRole(user, ["user"]) && (
-                <Route path="/groups" component={GroupsList} />
-              )}
-              {hasRole(user, ["admin"]) && (
-                <Route path="/creategroup" component={CreateGroupPage} />
-              )}
-              {hasRole(user, ["admin"]) && (
-                <Route path="/adminboard" component={DefaultBody} />
-              )}
+              {hasRole(user, ["user"]) && (<Route path="/createdocument" component={CreateDocument} />)}
+              {hasRole(user, ["user"]) && (<Route path="/userboard" component={DefaultBody} />)}
+              {hasRole(user, ["user"]) && (<Route path="/mydocuments" component={DocumentsNavContainer} />)}
+              {hasRole(user, ["user"]) && (<Route path="/groups" component={GroupsList} />)}
+              {hasRole(user, ["admin"]) && (<Route path="/creategroup" component={CreateGroupPage} />)}
+              {hasRole(user, ["admin"]) && (<Route path="/adminboard" component={DefaultBody} />)}
             </Switch>
             <Footer />
           </div>
