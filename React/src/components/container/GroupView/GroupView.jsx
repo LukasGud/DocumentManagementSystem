@@ -12,6 +12,7 @@ import {
 import DocumentsList from "../DocumentsList/DocumentsList";
 import { hasRole } from "../../presentational/Auth";
 import GroupMembers from "../GroupMembers/GroupMembers";
+import GroupAdministration from "../GroupAdministration/GroupAdministration";
 
 const user = {
   roles: ["user", "admin"]
@@ -147,15 +148,14 @@ class GroupView extends Component {
   }
 
   openDocumentsTable = selected => {
-    this.setState({ selected });
+    this.setState({ selected, isButtonClicked: true });
   };
 
   componentDidMount() {
     this.setDifferentDocType();
   }
 
-  setDifferentDocType = (e) => {
-
+  setDifferentDocType = e => {
     const acceptedDocuments = this.state.documents.filter(docs => {
       return docs.status === "Patvirtintas";
     });
@@ -170,17 +170,22 @@ class GroupView extends Component {
     this.setState({
       acceptedDocuments: acceptedDocuments,
       pendingDocuments: pendingDocuments,
-      declinedDocuments: declinedDocuments,
-      isButtonClicked: true
+      declinedDocuments: declinedDocuments
     });
   };
 
-  handleButtonClick = (e) =>{
-    this.setState({isGroupsButtonClicked: true})
-  }
+  handleButtonClick = e => {
+    this.setState({ isGroupsButtonClicked: true });
+  };
 
   render() {
-    const { acceptedDocuments,pendingDocuments, declinedDocuments, documents } = this.state;
+    const {
+      acceptedDocuments,
+      pendingDocuments,
+      declinedDocuments,
+      documents
+    } = this.state;
+
     return (
       <div className="groupviewContainer">
         <div className="contentTogether">
@@ -193,31 +198,46 @@ class GroupView extends Component {
           <div className="navBar">
             <ul className="nav">
               <li className="nav-item">
-                <button className="btn btn-dark" onClick={this.handleButtonClick} >
+                <button
+                  className="btn btn-dark"
+                  onClick={this.handleButtonClick}
+                >
                   <FontAwesomeIcon icon="user" className="text-light" /> Grupės
                   nariai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(pendingDocuments)}>
+                <button
+                  className="btn btn-dark"
+                  onClick={() => this.openDocumentsTable(pendingDocuments)}
+                >
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Pateikti dokumentai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(acceptedDocuments)}>
+                <button
+                  className="btn btn-dark"
+                  onClick={() => this.openDocumentsTable(acceptedDocuments)}
+                >
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Priimti dokumentai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(declinedDocuments)}>
+                <button
+                  className="btn btn-dark"
+                  onClick={() => this.openDocumentsTable(declinedDocuments)}
+                >
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Atmesti dokumentai
                 </button>
               </li>
               <li className="nav-item">
-                <button className="btn btn-dark" onClick={() => this.openDocumentsTable(documents)}>
+                <button
+                  className="btn btn-dark"
+                  onClick={() => this.openDocumentsTable(documents)}
+                >
                   <FontAwesomeIcon icon="folder-open" className="text-light" />{" "}
                   Visi dokumentai
                 </button>
@@ -233,7 +253,12 @@ class GroupView extends Component {
             </ul>
           </div>
         </div>
-        { this.state.isGroupsButtonClicked ? <GroupMembers /> : this.state.isButtonClicked ? <DocumentsList documents={this.state.selected} /> : null}
+        {this.state.isGroupsButtonClicked ? (
+          <GroupMembers />
+        ) : this.state.isButtonClicked ? (
+          <DocumentsList documents={this.state.selected} />
+        ) : null}
+        <GroupAdministration />
       </div>
     );
   }
