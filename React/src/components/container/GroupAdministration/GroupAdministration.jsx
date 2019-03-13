@@ -122,7 +122,7 @@ class GroupAdministration extends Component {
           </div>
           <div />
           <div>
-            <ToolkitProvider
+            {/* <ToolkitProvider
               keyField="id"
               data={this.state.users}
               columns={columns}
@@ -158,7 +158,7 @@ class GroupAdministration extends Component {
                   />
                 </div>
               )}
-            </ToolkitProvider>
+            </ToolkitProvider> */}
           </div>
         </div>
       </div>

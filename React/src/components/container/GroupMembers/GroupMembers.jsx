@@ -12,21 +12,24 @@ class GroupMemeber extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [
-        {
-          name: "Jonas",
-          surname: "Jonaitis",
-          email: "jonaitis@gmail.com ",
-          isActive: "Prisijungęs"
-        },
-        {
-          name: "Petras",
-          surname: "Petras",
-          email: "petras@gmail.com ",
-          isActive: "Prisijungęs"
-        }
-      ]
+      users: []
     };
+  }
+
+  async componentDidMount() {
+    try {
+      const response = await fetch("http://localhost:8080/api/users", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      const data = await response.json();
+      this.setState({ users: data });
+    } catch (error) {
+      console.error(error);
+    }
+    console.log(this.state.users);
   }
 
   render() {
@@ -62,12 +65,20 @@ class GroupMemeber extends Component {
       }
     ];
 
+
     return (
       <div className="listContainer">
         <div className="listBox">
           <ToolkitProvider
             keyField="id"
-            data={this.state.users}
+            data={this.state.users.map(user => {
+              return {
+                name: user.firstName,
+                surname: user.lastName,
+                email: user.email,
+                isActive: user.enabled
+              };
+            })}
             columns={columns}
             search
           >
@@ -86,6 +97,7 @@ class GroupMemeber extends Component {
             )}
           </ToolkitProvider>
         </div>
+        {console.log(this.state.users)}
       </div>
     );
   }

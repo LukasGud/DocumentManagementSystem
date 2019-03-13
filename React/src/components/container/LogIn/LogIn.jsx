@@ -14,56 +14,28 @@ class LogIn extends Component {
       email: "",
       password: "",
       errorMessage: "Neteisingi prisijungimo duomenys",
-      users: [
-        {
-          id: "1",
-          email: "user@pastas.lt",
-          password: "Useruser1",
-          role: "user"
-        },
-        {
-          id: "2",
-          email: "user2@pastas.lt",
-          password: "Useruser2",
-          role: "user"
-        },
-        {
-          id: "3",
-          email: "root@root.lt",
-          password: "Rootroot0",
-          role: "admin"
-        }
-      ]
     };
   }
 
-  handleSubmitLogIn = e => {
-    e.preventDefault();
-    // fetch("http://localhost:8080/LoginPage", {
-    //   method: "POST",
-    //   body: JSON.stringify(data),
-    //   headers: {
-    //     // Accept: "application/json",
-    //     "Content-Type": "application/json"
-    //   }
-    // })
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     console.log("success: " + data);
-    //   });
-    console.log(this.state);
-    this.verifyUser();
-  };
-
-  //funkcija turetu grazinti true arba false. Jeigu true -> nuoroda i admin/user board, jeigu false -> error message
-  verifyUser = () => {
-    const { email, password, users } = this.state;
-    for (let i = 0; i < this.state.users.length; i++) {
-      if (email === users[i].email && password === users[i].password) {
-        return console.log("sutampa");
-      }
-    }
-  };
+  // handleSubmitLogIn = e => {
+  //   e.preventDefault();
+  //   fetch("http://localhost:8080/authenticateTheUser", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/x-www-form-urlencoded"
+  //     },
+  //     body: JSON.stringify({
+  //       username: this.state.email,
+  //       password: this.state.password
+  //     })
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log("success: " + data);
+  //     })
+  //     .catch(err => console.log(err));
+  //   console.log(this.state);
+  // };
 
   handleChange = e => {
     e.preventDefault();
@@ -109,7 +81,7 @@ class LogIn extends Component {
           <button type="submit" className="logInButton">
             Prisijungti
           </button>
-          <Link to="/registruotis">
+          <Link to="/signup">
             <small>Naujas narys? Registruokis čia</small>
           </Link>
         </form>

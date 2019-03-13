@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import CreateDocument from "./components/container/CreateDocument/CreateDocument";
 import CreateGroupPage from "./components/presentational/CreateGroupPage";
 import { hasRole, isAllowed } from "./components/presentational/Auth";
@@ -11,6 +11,10 @@ import LogIn from "./components/container/LogIn/LogIn";
 import SignUp from "./components/container/SignUp/SignUp";
 import DocumentsNavContainer from "./components/container/DocumentsNavContainer/DocumentsNavContainer";
 import GroupsList from "./components/container/GroupsList/GroupsList";
+import { Router } from "react-router";
+import createBrowserHistory from "history/createBrowserHistory";
+
+const history = createBrowserHistory()
 
 const user = {
   roles: ["user", "admin"],
@@ -21,7 +25,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <Router history={history}>
           <div>
             <Header />
             {hasRole(user, ["user"]) && <UserBoardHeader />}
