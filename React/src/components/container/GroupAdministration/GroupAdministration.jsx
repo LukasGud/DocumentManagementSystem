@@ -103,7 +103,7 @@ class GroupAdministration extends Component {
               <FontAwesomeIcon icon="edit" className="text-dark" />
             </button>
             <label htmlFor="rights" style={{ fontWeight: "bold" }}>
-              Grupei suteiktos teisės:
+              Grupei suteiktos teisės:{" "}
             </label>
             <div className=" form-check-inline">
               {this.state.rights.map(right => (
@@ -122,7 +122,7 @@ class GroupAdministration extends Component {
           </div>
           <div />
           <div>
-            {/* <ToolkitProvider
+            <ToolkitProvider
               keyField="id"
               data={this.state.users}
               columns={columns}
@@ -158,7 +158,7 @@ class GroupAdministration extends Component {
                   />
                 </div>
               )}
-            </ToolkitProvider> */}
+            </ToolkitProvider>
           </div>
         </div>
       </div>

@@ -13,29 +13,32 @@ class LogIn extends Component {
     this.state = {
       email: "",
       password: "",
-      errorMessage: "Neteisingi prisijungimo duomenys",
+      errorMessage: "Neteisingi prisijungimo duomenys"
     };
   }
 
-  // handleSubmitLogIn = e => {
-  //   e.preventDefault();
-  //   fetch("http://localhost:8080/authenticateTheUser", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/x-www-form-urlencoded"
-  //     },
-  //     body: JSON.stringify({
-  //       username: this.state.email,
-  //       password: this.state.password
-  //     })
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log("success: " + data);
-  //     })
-  //     .catch(err => console.log(err));
-  //   console.log(this.state);
-  // };
+  handleSubmitLogIn = async e => {
+    e.preventDefault();
+
+    try {
+      const loginData = await fetch("http://localhost:8080/LoginPage", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          username: this.state.email,
+          password: this.state.password
+        })
+      });
+      const data = await loginData.json();
+      console.log(data);
+      alert("Sveikiname prisijungus");
+      this.props.history.push("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   handleChange = e => {
     e.preventDefault();
@@ -58,7 +61,7 @@ class LogIn extends Component {
             <input
               className="form-conrol"
               name="email"
-              type="email"
+              type="text"
               placeholder="El. paštas"
               aria-describedby="sizing-addon1"
               value={this.state.email}

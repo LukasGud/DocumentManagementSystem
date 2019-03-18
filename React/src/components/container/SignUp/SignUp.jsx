@@ -73,12 +73,10 @@ class SignUp extends Component {
   };
 
   handleSubmitSignUp = event => {
-    this.props.history.push('/login');
     event.preventDefault();
     this.emptyfields();
     this.validateForm() ? console.log("uzregistruota") : console.log("nepaejo");
     this.fetchUserToDb();
-
   };
 
   validateForm() {
@@ -127,23 +125,22 @@ class SignUp extends Component {
       const userData = await fetch("http://localhost:8080/api/users", {
         method: "POST",
         headers: {
-          "accept": "application/json",
+          accept: "application/json",
           "content-type": "application/json"
         },
         body: JSON.stringify({
           username: this.state.email,
-          authority: "ROLE_EMPLOYEE",
           firstName: this.state.firstname,
           lastName: this.state.lastname,
           email: this.state.email,
-          password: this.state.repeatPassword,
-          enabled: 1
+          password: this.state.repeatPassword
         })
       });
-      const data = await userData.json()
-      console.log(data)
+      const data = await userData.json();
+      console.log(data);
+      this.props.history.push("/login");
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   };
 

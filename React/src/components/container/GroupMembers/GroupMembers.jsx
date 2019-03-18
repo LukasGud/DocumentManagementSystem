@@ -21,7 +21,7 @@ class GroupMemeber extends Component {
       const response = await fetch("http://localhost:8080/api/users", {
         method: "GET",
         headers: {
-          "Content-Type": "application/json"
+          "content-type": "application/json"
         }
       });
       const data = await response.json();
@@ -30,6 +30,16 @@ class GroupMemeber extends Component {
       console.error(error);
     }
     console.log(this.state.users);
+    this.setState({
+      users: [
+        {
+          firstName: "Jonas",
+          lastName: "Jonis",
+          email: "email@email.com",
+          enabled: "1"
+        }
+      ]
+    });
   }
 
   render() {
@@ -65,7 +75,6 @@ class GroupMemeber extends Component {
       }
     ];
 
-
     return (
       <div className="listContainer">
         <div className="listBox">
@@ -97,7 +106,6 @@ class GroupMemeber extends Component {
             )}
           </ToolkitProvider>
         </div>
-        {console.log(this.state.users)}
       </div>
     );
   }

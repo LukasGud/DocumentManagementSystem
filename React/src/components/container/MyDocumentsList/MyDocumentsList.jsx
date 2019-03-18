@@ -7,11 +7,18 @@ import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
 import "./myDocumentsList.css";
+import Modal from "react-bootstrap/Modal";
+import "../../richTextEditor/RichTextEditor";
+
+import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 class DocumentsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      modalShow: false,
       documentsList: []
     };
   }
@@ -65,6 +72,7 @@ class DocumentsList extends Component {
       bgColor: "#edeeeebe"
     };
 
+    let modalClose = () => this.setState({ modalShow: false });
 
     return (
       <div className="myDocsListContainer">
@@ -77,13 +85,51 @@ class DocumentsList extends Component {
           >
             {props => (
               <div>
-                <button className="btn btn-dark" style={{ marginRight: "5px" }}>
+                <button
+                  className="btn btn-dark"
+                  style={{ marginRight: "5px" }}
+                  onClick={() => this.setState({ modalShow: true })}
+                >
                   Peržiūrėti
                 </button>
                 <button className="btn btn-dark" style={{ marginRight: "5px" }}>
                   Pateikti
                 </button>
                 <button className="btn btn-danger">Pašalinti</button>
+                <Modal
+                  size="lg"
+                  show={this.state.modalShow}
+                  onHide={modalClose}
+                  aria-labelledby="contained-modal-title-vcenter"
+                  centered
+                >
+                  <Editor />
+                  {/* <Modal.Header closeButton>
+                    <Modal.Title id="contained-modal-title-vcenter">
+                      Dokumentas
+                    </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Editor
+                      editorState={this.state.editorState}
+                      wrapperClassName="demo-wrapper"
+                      editorClassName="editer-content"
+                      onEditorStateChange={this.onChange}
+                      spellCheck={true}
+                    />
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <button className="btn btn-danger" onClick={modalClose}>
+                      Atmesti
+                    </button>
+                    <button className="btn btn-dark" onClick={modalClose}>
+                      Patvirtinti
+                    </button>
+                    <button className="btn btn-dark" onClick={modalClose}>
+                      Close
+                    </button>
+                  </Modal.Footer> */}
+                </Modal>
                 <SearchBar
                   {...props.searchProps}
                   style={{ width: "40%", marginBottom: "10px", float: "right" }}
