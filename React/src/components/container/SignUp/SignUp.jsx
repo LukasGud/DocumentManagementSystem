@@ -122,7 +122,7 @@ class SignUp extends Component {
 
   fetchUserToDb = async () => {
     try {
-      const userData = await fetch("http://localhost:8080/api/users", {
+      const userData = await fetch("http://localhost:8080/api/auth/signup", {
         method: "POST",
         headers: {
           accept: "application/json",
@@ -130,8 +130,8 @@ class SignUp extends Component {
         },
         body: JSON.stringify({
           username: this.state.email,
-          firstName: this.state.firstname,
-          lastName: this.state.lastname,
+          name: this.state.firstname,
+          // lastName: this.state.lastname,
           email: this.state.email,
           password: this.state.repeatPassword
         })

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import GroupView from "../GroupView/GroupView";
 import CreateGroup from "../CreateGroup/CreateGroup";
 
-
 class GroupsList extends Component {
   constructor(props) {
     super(props);
@@ -13,44 +12,58 @@ class GroupsList extends Component {
       groups: [
         {
           name: "Vadovybė",
-          id: 1
+          id: 1,
+          isClicked: false
         },
         {
           name: "Sekretoriatas",
-          id: 2
+          id: 2,
+          isClicked: false
         },
         {
           name: "Teisės skyrius",
-          id: 3
+          id: 3,
+          isClicked: false
         },
         {
           name: "IT skyrius",
-          id: 4
+          id: 4,
+          isClicked: false
         },
         {
           name: "Personalo skyrius",
-          id: 5
+          id: 5,
+          isClicked: false
         }
       ],
       groupSelected: "",
-      isGroupViewButtonClicked: false,
+      isGroupViewButtonClicked: false
     };
   }
 
   handleClick = e => {
-    this.setState({ isCreationButtonClicked: true});
+    this.setState({
+      isCreationButtonClicked: true,
+      isGroupViewButtonClicked: false
+    });
   };
 
-  handleOpenClick = (groupSelected) => {
-    this.setState({groupSelected, isGroupViewButtonClicked: true})
-  }
-
+  handleOpenClick = groupSelected => {
+    this.setState({
+      groupSelected,
+      isGroupViewButtonClicked: true,
+      isCreationButtonClicked: false
+    });
+  };
 
   render() {
     return (
       <div className="groupsView groups">
         <div className="groupTableContainer">
-          { this.state.isCreationButtonClicked ? <CreateGroup /> : this.state.isGroupViewButtonClicked ? <GroupView group={this.state.groupSelected}/> : null}
+          {this.state.isCreationButtonClicked && <CreateGroup />}
+          {this.state.isGroupViewButtonClicked && (
+            <GroupView group={this.state.groupSelected} />
+          )}
         </div>
         <div className="groupListContainer">
           <div className="list-group-doc">
@@ -62,7 +75,6 @@ class GroupsList extends Component {
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
                 disabled={false}
-                title="Jūs neturite reikiamų teisių kurti grupę"
                 style={{ fontWeight: "bold" }}
                 onClick={this.handleClick}
               >
@@ -73,7 +85,6 @@ class GroupsList extends Component {
                   type="button"
                   className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
                   disabled={false}
-                  title="Jūs nepriklausote šiai grupei"
                   key={groupname.id}
                   onClick={() => this.handleOpenClick(groupname.name)}
                 >

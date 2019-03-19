@@ -21,13 +21,13 @@ class LogIn extends Component {
     e.preventDefault();
 
     try {
-      const loginData = await fetch("http://localhost:8080/LoginPage", {
+      const loginData = await fetch("http://localhost:8080/api/auth/signin", {
         method: "POST",
         headers: {
           "content-type": "application/json"
         },
         body: JSON.stringify({
-          username: this.state.email,
+          usernameOrEmail: this.state.email,
           password: this.state.password
         })
       });

@@ -15,7 +15,8 @@ class DocumentsNavContainer extends Component {
           surname: "Pavardenis",
           type: "Atostogos",
           status: "Pateiktas",
-          date: "2018-09-06"
+          date: "2018-09-06",
+          text: "tekstas tekstas tekstas kazkoks tekstas"
         },
         {
           id: 191,

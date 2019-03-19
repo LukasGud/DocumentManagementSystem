@@ -19,9 +19,16 @@ class DocumentsList extends Component {
     super(props);
     this.state = {
       modalShow: false,
-      documentsList: []
+      documentsList: [],
+      selected: {}
     };
   }
+
+  handleOnSelect = (row, isSelect) => {
+    if (isSelect) {
+      this.setState({ selected: row });
+    }
+  };
 
   render() {
     const bgStyle = {
@@ -67,9 +74,12 @@ class DocumentsList extends Component {
       }
     ];
     const selectRow = {
-      mode: "checkbox",
+      mode: "radio",
       clickToSelect: true,
-      bgColor: "#edeeeebe"
+      bgColor: "#edeeeebe",
+      onSelect: (row, isSelect, rowIndex, e) => {
+        this.handleOnSelect(row, isSelect);
+      }
     };
 
     let modalClose = () => this.setState({ modalShow: false });
@@ -103,20 +113,27 @@ class DocumentsList extends Component {
                   aria-labelledby="contained-modal-title-vcenter"
                   centered
                 >
-                  <Editor />
-                  {/* <Modal.Header closeButton>
+                  <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                      Dokumentas
+                      Peržiūrimas dokumentas
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
-                    <Editor
+                    {/* <Editor
                       editorState={this.state.editorState}
                       wrapperClassName="demo-wrapper"
                       editorClassName="editer-content"
                       onEditorStateChange={this.onChange}
                       spellCheck={true}
-                    />
+                      readOnly
+                    /> */}
+                    <p>Dokumento numeris: {this.state.selected.id}</p>
+                    <p>Pateikėjo vardas: {this.state.selected.name}</p>
+                    <p>Pateikėjo pavardė: {this.state.selected.surname}</p>
+                    <p>Šablono tipas: {this.state.selected.type}</p>
+                    <p>Dokumento statusas: {this.state.selected.status}</p>
+                    <p>Dokumento statuso data: {this.state.selected.date}</p>
+                    <p>Dokumento teksto laukas: {this.state.selected.text}</p>
                   </Modal.Body>
                   <Modal.Footer>
                     <button className="btn btn-danger" onClick={modalClose}>
@@ -126,9 +143,9 @@ class DocumentsList extends Component {
                       Patvirtinti
                     </button>
                     <button className="btn btn-dark" onClick={modalClose}>
-                      Close
+                      Redaguoti
                     </button>
-                  </Modal.Footer> */}
+                  </Modal.Footer>
                 </Modal>
                 <SearchBar
                   {...props.searchProps}

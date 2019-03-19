@@ -102,7 +102,10 @@ class GroupAdministration extends Component {
             <button className="btn btn btn-sm">
               <FontAwesomeIcon icon="edit" className="text-dark" />
             </button>
-            <label htmlFor="rights" style={{ fontWeight: "bold" }}>
+            <label
+              htmlFor="rights"
+              style={{ fontWeight: "bold", marginRight: "5px" }}
+            >
               Grupei suteiktos teisės:{" "}
             </label>
             <div className=" form-check-inline">
@@ -111,8 +114,8 @@ class GroupAdministration extends Component {
                   <input
                     type="checkbox"
                     key={right.id}
-                    name={right.right.toLocaleLowerCase}
                     checked={right.isHaveRight}
+                    readOnly
                   />
                   {right.right}
                   <span className="checkmarkGroups" />

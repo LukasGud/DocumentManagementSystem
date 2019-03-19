@@ -142,13 +142,19 @@ class GroupView extends Component {
       pendingDocuments: [],
       declinedDocuments: [],
       selected: [],
-      isButtonClicked: false,
-      isGroupsButtonClicked: false
+      isDocumentsButtonClicked: false,
+      isGroupMembersButtonClicked: false,
+      isHandleAdminButtonClicked: false
     };
   }
 
   openDocumentsTable = selected => {
-    this.setState({ selected, isButtonClicked: true });
+    this.setState({
+      selected,
+      isDocumentsButtonClicked: true,
+      isGroupMembersButtonClicked: false,
+      isHandleAdminButtonClicked: false
+    });
   };
 
   componentDidMount() {
@@ -175,7 +181,19 @@ class GroupView extends Component {
   };
 
   handleButtonClick = e => {
-    this.setState({ isGroupsButtonClicked: true });
+    this.setState({
+      isGroupMembersButtonClicked: true,
+      isHandleAdminButtonClicked: false,
+      isDocumentsButtonClicked: false
+    });
+  };
+
+  handleAdminClick = e => {
+    this.setState({
+      isHandleAdminButtonClicked: true,
+      isGroupMembersButtonClicked: false,
+      isDocumentsButtonClicked: false
+    });
   };
 
   render() {
@@ -199,8 +217,9 @@ class GroupView extends Component {
             <ul className="nav">
               <li className="nav-item">
                 <button
-                  className="btn btn-dark"
                   onClick={this.handleButtonClick}
+                  type="button"
+                  className="btn btn-dark"
                 >
                   <FontAwesomeIcon icon="user" className="text-light" /> Grupės
                   nariai
@@ -244,7 +263,11 @@ class GroupView extends Component {
               </li>
               {hasRole(user, ["admin"]) && (
                 <li className="nav-item">
-                  <button className="btn btn-dark">
+                  <button
+                    type="button"
+                    className="btn btn-dark"
+                    onClick={this.handleAdminClick}
+                  >
                     <FontAwesomeIcon icon="cog" className="text-light" />{" "}
                     Administruoti grupę
                   </button>
@@ -253,12 +276,11 @@ class GroupView extends Component {
             </ul>
           </div>
         </div>
-        {this.state.isGroupsButtonClicked ? (
-          <GroupMembers />
-        ) : this.state.isButtonClicked ? (
+        {this.state.isGroupMembersButtonClicked && <GroupMembers />}
+        {this.state.isDocumentsButtonClicked && (
           <DocumentsList documents={this.state.selected} />
-        ) : null}
-        <GroupAdministration />
+        )}
+        {this.state.isHandleAdminButtonClicked && <GroupAdministration />}
       </div>
     );
   }
