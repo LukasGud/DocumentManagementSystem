@@ -2,6 +2,7 @@ package com.dalykai.entity;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -25,6 +26,9 @@ public class NewUser {
     private String password;
    @Column(name = "enabled")
     private int enabled;
+
+    @OneToMany(mappedBy = "newUsers", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    private List<NewDocumentDetails> newDocument;
 
    public NewUser() {
    }
@@ -101,6 +105,14 @@ public class NewUser {
 
     public void setEnabled(int enabled) {
         this.enabled = enabled;
+    }
+
+    public List<NewDocumentDetails> getNewDocument() {
+        return newDocument;
+    }
+
+    public void setNewDocument(List<NewDocumentDetails> newDocument) {
+        this.newDocument = newDocument;
     }
 
     @Override

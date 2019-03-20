@@ -16,86 +16,82 @@ import org.springframework.web.servlet.view.JstlView;
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
 import java.util.logging.Logger;
+
 @CrossOrigin
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages= "com.dalykai")
-@PropertySource("classpath:persistence-mysql.properties")
+@ComponentScan(basePackages = "com.dalykai")
+@PropertySource("classpath:application.properties")
 public class LoginAppConfig {
-	//setting up a var to hold mysql properties
-	//in other words "enviroment" holds data that is read at .properties file
+    //setting up a var to hold mysql properties
+    //in other words "enviroment" holds data that is read at .properties file
 
-	@Autowired
-	private Environment environment;
+    @Autowired
+    private Environment environment;
 
-	//Logger for diagnostics
+    //Logger for diagnostics
 
-	private Logger logger = Logger.getLogger(getClass().getName());
-
-
-	// define a bean for ViewResolver
-
-	@Bean
-	public ViewResolver viewResolver() {
-
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-
-		viewResolver.setPrefix("/view/jsp/");
-		viewResolver.setSuffix(".jsp");
-		viewResolver.setViewClass(JstlView.class);
-		return viewResolver;
-	}
-	//Defining  a bean for security datasource
-
-	@Bean
-	public DataSource securityDataSource() {
-
-		//create conn pool
-
-		ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
-
-		//jdbc driver
-
-		try {
-			securityDataSource.setDriverClass(environment.getProperty("jdbc.driver"));
-		} catch (PropertyVetoException e) {
-			throw new RuntimeException(e) ;
-		}
-
-		//log the conn props , to see if the correct files are read
-
-		logger.info("$$$$$ jdbc.url= "+ environment.getProperty("jdbc.url"));
-		logger.info("$$$$$ jdbc.user= "+ environment.getProperty("jdbc.user"));
-		// set db conn props
-
-		securityDataSource.setJdbcUrl(environment.getProperty("jdbc.url"));
-		securityDataSource.setUser(environment.getProperty("jdbc.user"));
-		securityDataSource.setPassword(environment.getProperty("jdbc.password"));
-
-		//set conn pool props
-//the "connection.pool.initialPoolSize" and others are in the .properties file that is imported in the line above @PropertySource("classpath:persistence-mysql.properties")
-		//and they are being read using the "getIntProperty" method written below
-		securityDataSource.setInitialPoolSize(getIntProperty("connection.pool.initialPoolSize"));
-		securityDataSource.setMinPoolSize(getIntProperty("connection.pool.minPoolSize"));
-		securityDataSource.setMaxPoolSize(getIntProperty("connection.pool.maxPoolSize"));
-		securityDataSource.setMaxIdleTime(getIntProperty("connection.pool.maxIdleTime"));
+    private Logger logger = Logger.getLogger(getClass().getName());
 
 
+    // define a bean for ViewResolver
+
+    @Bean
+    public ViewResolver viewResolver() {
+
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+
+        viewResolver.setPrefix("/view/jsp/");
+        viewResolver.setSuffix(".jsp");
+        viewResolver.setViewClass(JstlView.class);
+        return viewResolver;
+    }
+    //Defining  a bean for security datasource
+
+    @Bean
+    public DataSource securityDataSource() {
+
+        //create conn pool
+
+        ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
+
+        //jdbc driver
+
+        try {
+            securityDataSource.setDriverClass(environment.getProperty("spring.datasource.driver-class-name"));
+        } catch (PropertyVetoException e) {
+            throw new RuntimeException(e);
+        }
+
+        //log the conn props , to see if the correct files are read
+
+        logger.info("$$$$$ spring.datasource.url= " + environment.getProperty("spring.datasource.url"));
+        logger.info("$$$$$ spring.datasource.username= " + environment.getProperty("spring.datasource.username"));
+        // set db conn props
+
+        securityDataSource.setJdbcUrl(environment.getProperty("spring.datasource.url"));
+        securityDataSource.setUser(environment.getProperty("spring.datasource.username"));
+        securityDataSource.setPassword(environment.getProperty("spring.datasource.password"));
 
 
-		return securityDataSource;
-	}
+        securityDataSource.setInitialPoolSize(getIntProperty("spring.datasource.tomcat.initial-size"));
+        securityDataSource.setMinPoolSize(getIntProperty("spring.datasource.tomcat.min-idle"));
+        securityDataSource.setMaxPoolSize(getIntProperty("spring.datasource.tomcat.max-idle"));
+        securityDataSource.setMaxIdleTime(getIntProperty("spring.datasource.tomcat.max-wait"));
 
 
-//	read enviroment and convert it into int
-	private int getIntProperty(String propName) {
-		String propVal = environment.getProperty(propName);
+        return securityDataSource;
+    }
 
-		int intPropVal = Integer.parseInt(propVal);
 
-		return intPropVal;
-	}
+    //	read enviroment and convert it into int
+    private int getIntProperty(String propName) {
+        String propVal = environment.getProperty(propName);
 
+        int intPropVal = Integer.parseInt(propVal);
+
+        return intPropVal;
+    }
 
 
 }
