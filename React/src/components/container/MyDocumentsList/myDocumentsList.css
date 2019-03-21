@@ -1,26 +1,13 @@
-.groupviewContainer {
+.myDocsListContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 15px 0;
   width: 100%;
-  /* float: right; */
-}
-
-.navBar .nav .nav-item {
-  padding: 6px 12px;
-}
-.groupHeader {
-  text-align: center;
-  padding: 2px;
-}
-.navBar ul {
-  text-align: justify;
-}
-
-.contentTogether {
   float: right;
+}
+.docsListBox {
   width: 95%;
   display: flex;
   flex-direction: column;

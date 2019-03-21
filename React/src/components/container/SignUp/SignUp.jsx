@@ -76,10 +76,10 @@ class SignUp extends Component {
     event.preventDefault();
     this.emptyfields();
     this.validateForm() ? console.log("uzregistruota") : console.log("nepaejo");
+    this.fetchUserToDb();
   };
 
   validateForm() {
-    console.log("form is validated");
     const { firstname, lastname, email, password, repeatPassword } = this.state;
     return (
       this.lettersValidate(firstname) &&
@@ -108,6 +108,42 @@ class SignUp extends Component {
     return passwordRegex.test(password) && password !== "";
   }
 
+  emptyfields() {
+    const { firstname, lastname, email, password, repeatPassword } = this.state;
+
+    return (
+      firstname !== "" &&
+      lastname !== "" &&
+      email !== "" &&
+      password !== "" &&
+      repeatPassword !== ""
+    );
+  }
+
+  fetchUserToDb = async () => {
+    try {
+      const userData = await fetch("http://localhost:8080/api/auth/signup", {
+        method: "POST",
+        headers: {
+          accept: "application/json",
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          username: this.state.email,
+          name: this.state.firstname,
+          // lastName: this.state.lastname,
+          email: this.state.email,
+          password: this.state.repeatPassword
+        })
+      });
+      const data = await userData.json();
+      console.log(data);
+      this.props.history.push("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   render() {
     let {
       firstname,
@@ -121,9 +157,6 @@ class SignUp extends Component {
       <div className="containerSignUp">
         <form className="signUpForm" onSubmit={this.handleSubmitSignUp}>
           <h1>Sukurti paskyrą</h1>
-          {this.state.formErrors && (
-            <Alert variant="danger">Užpildykite visus laukus</Alert>
-          )}
           <div>
             <label htmlFor="firstName">Vardas</label>
             <input
@@ -217,7 +250,7 @@ class SignUp extends Component {
           <button type="submit" className="registrationButton">
             Registruotis
           </button>
-          <Link to="/prisijungti">
+          <Link to="/login">
             <small>Jau esate narys? Prisijunkite</small>
           </Link>
         </form>

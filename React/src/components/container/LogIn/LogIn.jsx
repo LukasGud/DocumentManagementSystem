@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
@@ -13,62 +13,43 @@ class LogIn extends Component {
     this.state = {
       email: "",
       password: "",
-      formErrors: {
-        email: "",
-        password: ""
-      }
+      errorMessage: "Neteisingi prisijungimo duomenys"
     };
   }
 
-  handleSubmitLogIn = e => {
+  handleSubmitLogIn = async e => {
     e.preventDefault();
-    // fetch("http://localhost:8080/LoginPage", {
-    //   method: "POST",
-    //   body: JSON.stringify(data),
-    //   headers: {
-    //     // Accept: "application/json",
-    //     "Content-Type": "application/json"
-    //   }
-    // })
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     console.log("success: " + data);
-    //   });
-    console.log(this.state);
+
+    try {
+      const loginData = await fetch("http://localhost:8080/api/auth/signin", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          usernameOrEmail: this.state.email,
+          password: this.state.password
+        })
+      });
+      const data = await loginData.json();
+      console.log(data);
+      alert("Sveikiname prisijungus");
+      this.props.history.push("/");
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   handleChange = e => {
     e.preventDefault();
     const { name, value } = e.target;
-    let formErrors = { ...this.state.formErrors };
-    //emailValidationRegex - example@example.lt - two letters after .
-    const emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-    //passValidationRegex - at least 8 characters, one capital, one regular letter and numebr
-    const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-    //error zinutes laikinos. Klaidos pranesimas bus kitoks, atsizvelgiant kaip pavyks pasiekt viska is db
-    switch (name) {
-      case "email":
-        formErrors.email = emailRegex.test(value)
-          ? ""
-          : "Neteisingas prisijungimo vardas";
-        break;
-      case "password":
-        formErrors.password = passwordRegex.test(value)
-          ? ""
-          : "Neteisingas slaptazodis";
-        break;
-      default:
-        break;
-    }
 
     this.setState({
-      formErrors,
       [name]: value
     });
   };
 
   render() {
-    const { formErrors } = this.state;
     return (
       <div className="containerLogIn">
         <h1>Prisijunkite prie sistemos</h1>
@@ -80,21 +61,17 @@ class LogIn extends Component {
             <input
               className="form-conrol"
               name="email"
-              type="email"
+              type="text"
               placeholder="El. paštas"
               aria-describedby="sizing-addon1"
               value={this.state.email}
               onChange={this.handleChange}
             />
-            {formErrors.email.length > 0 && (
-              <span className="loginErrorMessage">{formErrors.email}</span>
-            )}
           </div>
           <div className="form-group">
             <span>
               <FontAwesomeIcon className="icon" icon="key" />
             </span>
-
             <input
               className="form-conrol"
               name="password"
@@ -103,14 +80,11 @@ class LogIn extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
-            {formErrors.password.length > 0 && (
-              <span className="loginErrorMessage">{formErrors.password}</span>
-            )}
           </div>
           <button type="submit" className="logInButton">
             Prisijungti
           </button>
-          <Link to="/registruotis">
+          <Link to="/signup">
             <small>Naujas narys? Registruokis čia</small>
           </Link>
         </form>

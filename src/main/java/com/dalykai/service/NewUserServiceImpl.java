@@ -3,6 +3,8 @@ package com.dalykai.service;
 
 import com.dalykai.dao.NewUserDAO;
 import com.dalykai.entity.NewUser;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,6 +15,10 @@ import java.util.List;
 public class NewUserServiceImpl implements NewUserService {
 
     private NewUserDAO newUserDAO;
+
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
+
 
     public NewUserServiceImpl(NewUserDAO theNewUserDAO) {newUserDAO = theNewUserDAO;}
 
@@ -26,7 +32,11 @@ public class NewUserServiceImpl implements NewUserService {
     }
 
     @Override
-    public void save(NewUser theNewUser) { newUserDAO.save(theNewUser);
+    public void save(NewUser theNewUser) {
+
+        theNewUser.setPassword(passwordEncoder.encode(theNewUser.getPassword()));
+        newUserDAO.save(theNewUser);
+
 
     }
 

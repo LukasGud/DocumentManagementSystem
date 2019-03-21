@@ -1,20 +1,17 @@
 .containerGroupCreation {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(188, 207, 207, 0.479);
-  overflow: auto;
-  width: 80%;
-  float: right;
+  padding: 15px 0;
+  width: 100%;
 }
 
 .groupCreationForm {
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  padding: 15px 40px;
+  padding: 30px 60px;
   border-radius: 10px;
   box-shadow: 0px 10px 50px rgb(140, 185, 182);
   background-color: #ffffff;

@@ -1,9 +1,15 @@
 .documentsContainer {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
   background-color: rgba(188, 207, 207, 0.479);
-  padding-left: 20px;
+  margin-top: 63px;
+}
+
+.mydocumentsList {
+  float: right;
+  width: 80%;
+  margin-bottom: 150px;
+}
+.navigationList {
+  float: left;
+  width: 20%;
+  padding: 15px;
 }

@@ -63,7 +63,7 @@ class CreateGroup extends Component {
             <input
               type="text"
               className="groupName"
-              placeholder="Grupės pavainimas"
+              placeholder="Grupės pavadinimas"
               name="groupName"
               required
             />
@@ -109,7 +109,7 @@ class CreateGroup extends Component {
             ))}
           </div>
           <button type="submit" className="registrationButton">
-            Registruotis
+            Kurti grupę
           </button>
         </form>
       </div>

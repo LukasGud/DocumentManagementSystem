@@ -1,0 +1,79 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  float: right;
+}
+
+.listBox {
+  float: right;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px rgb(140, 185, 182);
+  background-color: #ffffff;
+}
+
+.inputContainerGroups {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.inputContainerGroups input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmarkGroups {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border-radius: 5px;
+  background-color: #eee;
+  padding: 5px;
+}
+
+.inputContainerGroups:hover input ~ .checkmarkGroups {
+  background-color: #ccc;
+}
+
+.inputContainerGroups input:checked ~ .checkmarkGroups {
+  background-color: #519e8a;
+}
+
+.checkmarkGroups:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.inputContainerGroups input:checked ~ .checkmarkGroups:after {
+  display: block;
+}
+
+.inputContainerGroups .checkmarkGroups:after {
+  left: 6px;
+  top: 1px;
+  width: 10px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
