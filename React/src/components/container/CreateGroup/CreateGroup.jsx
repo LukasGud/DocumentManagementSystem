@@ -43,21 +43,42 @@ class CreateGroup extends Component {
           lastName: "Rimka"
         }
       ],
-      membersSelected: []
+      membersSelected: [],
+      groupName: "",
+      description: "",
+      rightsSelected: []
     };
   }
 
-  selectMultipleOptions = value => {
+  handleChange = e => {
+    window.setTimeout(
+      function() {
+        this.setState({
+          [e.target.name]: e.target.value
+        });
+        console.log(this.state);
+      }.bind(this),
+      0
+    );
+  };
+
+  selectMembers = value => {
     console.count("onChange");
     console.log("vals", value);
     this.setState({ membersSelected: value });
+  };
+
+  selectRights = value => {
+    console.count("onChange");
+    console.log("vals", value);
+    this.setState({ rightsSelected: value });
   };
 
   render() {
     return (
       <div className="containerGroupCreation">
         <form className="groupCreationForm" onSubmit={this.handleGroupSubmit}>
-          <h1>Sukurti naują grupę</h1>
+          <h1>Kurti naują grupę</h1>
           <div>
             <label htmlFor="groupName">Grupės pavadinimas</label>
             <input
@@ -65,16 +86,22 @@ class CreateGroup extends Component {
               className="groupName"
               placeholder="Grupės pavadinimas"
               name="groupName"
+              onChange={this.handleChange}
               required
             />
           </div>
           <div>
             <label htmlFor="lastName">Trumpas aprašymas</label>
+            {/* <span style={{ fontStyle: "italic", color: "grey" }}>
+              {" "}
+              (Laukas neprivalomas)
+            </span> */}
             <textarea
               type="text"
               className="description"
               placeholder="Trumpai apie grupę.."
               name="description"
+              onChange={this.handleChange}
             />
           </div>
           <div>
@@ -82,31 +109,30 @@ class CreateGroup extends Component {
             <Picky
               options={this.state.members}
               value={this.state.membersSelected}
-              onChange={this.selectMultipleOptions}
+              onChange={this.selectMembers}
               open={false}
               valueKey="id"
               labelKey="firstName"
               multiple={true}
               includeSelectAll={true}
               includeFilter={true}
+              placeholder="Pasirinkite narius, kuriuos norite pridėti"
             />
           </div>
           <div>
-            <label htmlFor="rights">Teisės grupei:</label>
-            {this.state.rights.map(right => (
-              <label
-                htmlFor={right.right.toLocaleLowerCase}
-                className="inputContainer"
-              >
-                <input
-                  type="checkbox"
-                  key={right.id}
-                  name={right.right.toLocaleLowerCase}
-                />
-                {right.right}
-                <span className="checkmark" />
-              </label>
-            ))}
+            <label htmlFor="rights">Pasirinkti grupės teises:</label>
+            <Picky
+              options={this.state.rights}
+              value={this.state.rightsSelected}
+              onChange={this.selectRights}
+              open={false}
+              valueKey="id"
+              labelKey="right"
+              multiple={true}
+              includeSelectAll={true}
+              includeFilter={true}
+              placeholder="Pasirinkite teises grupei"
+            />
           </div>
           <button type="submit" className="registrationButton">
             Kurti grupę

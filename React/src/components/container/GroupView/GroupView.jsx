@@ -10,7 +10,7 @@ import {
   faCog
 } from "@fortawesome/free-solid-svg-icons";
 import DocumentsList from "../DocumentsList/DocumentsList";
-import { hasRole } from "../../presentational/Auth";
+import { hasRole } from "../../Auth";
 import GroupMembers from "../GroupMembers/GroupMembers";
 import GroupAdministration from "../GroupAdministration/GroupAdministration";
 

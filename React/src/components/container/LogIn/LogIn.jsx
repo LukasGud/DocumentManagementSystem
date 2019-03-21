@@ -4,6 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
 import "./logIn.css";
+import Alert from "react-bootstrap/Alert";
 
 library.add(faUser, faKey);
 

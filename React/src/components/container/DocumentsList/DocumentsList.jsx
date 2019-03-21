@@ -17,7 +17,12 @@ class DocumentsList extends Component {
 
   handleOnSelectDoc = (row, isSelect) => {
     if (isSelect) {
-      this.setState({ selectedDoc: row });
+      window.setTimeout(
+        function() {
+          this.setState({ selectedDoc: row });
+        }.bind(this),
+        0
+      );
     }
   };
 

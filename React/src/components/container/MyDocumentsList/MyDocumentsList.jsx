@@ -9,6 +9,7 @@ import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 import "./myDocumentsList.css";
 import Modal from "react-bootstrap/Modal";
 import "../../richTextEditor/RichTextEditor";
+import { Router } from "react-router";
 
 import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
@@ -26,7 +27,12 @@ class DocumentsList extends Component {
 
   handleOnSelect = (row, isSelect) => {
     if (isSelect) {
-      this.setState({ selected: row });
+      window.setTimeout(
+        function() {
+          this.setState({ selected: row });
+        }.bind(this),
+        0
+      );
     }
   };
 
@@ -136,12 +142,6 @@ class DocumentsList extends Component {
                     <p>Dokumento teksto laukas: {this.state.selected.text}</p>
                   </Modal.Body>
                   <Modal.Footer>
-                    <button className="btn btn-danger" onClick={modalClose}>
-                      Atmesti
-                    </button>
-                    <button className="btn btn-dark" onClick={modalClose}>
-                      Patvirtinti
-                    </button>
                     <button className="btn btn-dark" onClick={modalClose}>
                       Redaguoti
                     </button>

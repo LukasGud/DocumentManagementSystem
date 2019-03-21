@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./signUp.css";
-import Alert from "react-bootstrap/Alert";
 
 // letterValidationRegex - only letters
-const letterValidationRegex = /^[a-zA-Z]+$/;
+const letterValidationRegex = /^[a-zA-ZĄČĘĖĮŠŲŪąčęėįšųū]+$/;
 
 //emailValidationRegex - example@example.lt - two letters after .
-const emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+const emailRegex = /[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
 
 //passValidationRegex - at least 8 characters, one capital, one regular letter and numebr
 const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
@@ -164,7 +163,7 @@ class SignUp extends Component {
               className="firstname"
               placeholder="Vardas"
               name="firstname"
-              pattern="^[a-zA-Z]+$"
+              pattern="^[a-zA-Z][ĄČĘĖĮŠŲŪąčęėįšųū]+$"
               title="Jūsų vardą gali sudaryti tik raidės"
               value={firstname}
               onChange={this.handleChange}
@@ -182,7 +181,7 @@ class SignUp extends Component {
               className="lastname"
               placeholder="Pavardė"
               name="lastname"
-              pattern="^[A-Za-z]+$"
+              pattern="^[A-Za-z][ĄČĘĖĮŠŲŪąčęėįšųū]+$"
               title="Jūsų pavardę gali sudaryti tik raidės"
               maxLength="40"
               value={lastname}

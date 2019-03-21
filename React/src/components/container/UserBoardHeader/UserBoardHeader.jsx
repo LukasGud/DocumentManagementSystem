@@ -9,7 +9,7 @@ import {
   faUserCog
 } from "@fortawesome/free-solid-svg-icons";
 import "./userBoardNav.css";
-import { hasRole } from "../../presentational/Auth";
+import { hasRole } from "../../Auth";
 
 const user = {
   roles: ["user", "admin"]
