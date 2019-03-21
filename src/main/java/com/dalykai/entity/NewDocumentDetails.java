@@ -1,5 +1,7 @@
 package com.dalykai.entity;
 
+import com.dalykai.model.User;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
@@ -29,9 +31,9 @@ public class NewDocumentDetails implements Serializable {
 
     @OneToMany(mappedBy = "newDocumentDetails", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     private List<NewDocument> newDocumentList;
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}, targetEntity = NewUser.class)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH}, targetEntity = User.class)
     @JoinColumn(name = "document_user_id")
-    private List<NewUser> newUsers;
+    private List<User> newUsers;
 
     public NewDocumentDetails() {
     }
@@ -81,11 +83,11 @@ public class NewDocumentDetails implements Serializable {
         this.newDocumentList = newDocumentList;
     }
 
-    public List<NewUser> getNewUsers() {
+    public List<User> getNewUsers() {
         return newUsers;
     }
 
-    public void setNewUsers(List<NewUser> newUsers) {
+    public void setNewUsers(List<User> newUsers) {
         this.newUsers = newUsers;
     }
 

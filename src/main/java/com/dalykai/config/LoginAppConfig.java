@@ -1,106 +1,96 @@
 package com.dalykai.config;
 
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.dalykai.security.CustomUserDetailsService;
+import com.dalykai.security.JwtAuthenticationEntryPoint;
+import com.dalykai.security.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.BeanIds;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import javax.sql.DataSource;
-import java.beans.PropertyVetoException;
-import java.util.logging.Logger;
-
-@CrossOrigin
 @Configuration
-@EnableWebMvc
-@ComponentScan(basePackages = "com.dalykai")
-@PropertySource("classpath:application.properties")
-public class LoginAppConfig {
-    //setting up a var to hold mysql properties
-    //in other words "enviroment" holds data that is read at .properties file
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(
+        securedEnabled = true,
+        jsr250Enabled = true,
+        prePostEnabled = true
+)
+public class LoginAppConfig extends WebSecurityConfigurerAdapter {
+    @Autowired
+    CustomUserDetailsService customUserDetailsService;
 
     @Autowired
-    private Environment environment;
-
-    //Logger for diagnostics
-
-    private Logger logger = Logger.getLogger(getClass().getName());
-
-
-    // define a bean for ViewResolver
+    private JwtAuthenticationEntryPoint unauthorizedHandler;
 
     @Bean
-    public ViewResolver viewResolver() {
-
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-
-        viewResolver.setPrefix("/view/jsp/");
-        viewResolver.setSuffix(".jsp");
-        viewResolver.setViewClass(JstlView.class);
-        return viewResolver;
+    public JwtAuthenticationFilter jwtAuthenticationFilter() {
+        return new JwtAuthenticationFilter();
     }
-    //Defining  a bean for security datasource
+
+    @Override
+    public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+        authenticationManagerBuilder
+                .userDetailsService(customUserDetailsService)
+                .passwordEncoder(passwordEncoder());
+    }
+
+    @Bean(BeanIds.AUTHENTICATION_MANAGER)
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     @Bean
-    public DataSource securityDataSource() {
-
-        //create conn pool
-
-        ComboPooledDataSource securityDataSource = new ComboPooledDataSource();
-
-        //jdbc driver
-
-        try {
-            securityDataSource.setDriverClass(environment.getProperty("spring.datasource.driver-class-name"));
-        } catch (PropertyVetoException e) {
-            throw new RuntimeException(e);
-        }
-
-        //log the conn props , to see if the correct files are read
-
-        logger.info("$$$$$ spring.datasource.url= " + environment.getProperty("spring.datasource.url"));
-        logger.info("$$$$$ spring.datasource.username= " + environment.getProperty("spring.datasource.username"));
-        // set db conn props
-
-        securityDataSource.setJdbcUrl(environment.getProperty("spring.datasource.url"));
-        securityDataSource.setUser(environment.getProperty("spring.datasource.username"));
-        securityDataSource.setPassword(environment.getProperty("spring.datasource.password"));
-
-
-        securityDataSource.setInitialPoolSize(getIntProperty("spring.datasource.tomcat.initial-size"));
-        securityDataSource.setMinPoolSize(getIntProperty("spring.datasource.tomcat.min-idle"));
-        securityDataSource.setMaxPoolSize(getIntProperty("spring.datasource.tomcat.max-idle"));
-        securityDataSource.setMaxIdleTime(getIntProperty("spring.datasource.tomcat.max-wait"));
-
-
-        return securityDataSource;
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .cors()
+                .and()
+                .csrf()
+                .disable()
+                .exceptionHandling()
+                .authenticationEntryPoint(unauthorizedHandler)
+                .and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                .antMatchers("/",
+                        "/favicon.ico",
+                        "/**/*.png",
+                        "/**/*.gif",
+                        "/**/*.svg",
+                        "/**/*.jpg",
+                        "/**/*.html",
+                        "/**/*.css",
+                        "/**/*.js")
+                .permitAll()
+                .antMatchers("/api/auth/**")
+                .permitAll()
+                .antMatchers("/api/user/checkUsernameAvailability", "/api/user/checkEmailAvailability")
+                .permitAll()
+                .antMatchers(HttpMethod.GET, "/api/polls/**", "/api/users/**")
+                .permitAll()
+                .anyRequest()
+                .authenticated().antMatchers("/**").authenticated();
 
-    //	read enviroment and convert it into int
-    private int getIntProperty(String propName) {
-        String propVal = environment.getProperty(propName);
+        // Add  custom JWT security filter
+        http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
-        int intPropVal = Integer.parseInt(propVal);
-
-        return intPropVal;
     }
-
-
 }
-
-
-
-
-
-
-
-
-
