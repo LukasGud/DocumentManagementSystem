@@ -2,7 +2,9 @@ package com.dalykai.controller;
 
 import com.dalykai.exception.AppException;
 import com.dalykai.model.Role;
+import com.dalykai.model.Role_group;
 import com.dalykai.model.RoleName;
+import com.dalykai.model.Role_groupName;
 import com.dalykai.model.User;
 import com.dalykai.payload.ApiResponse;
 import com.dalykai.payload.JwtAuthenticationResponse;
@@ -10,6 +12,7 @@ import com.dalykai.payload.LoginRequest;
 import com.dalykai.payload.SignUpRequest;
 import com.dalykai.repository.RoleRepository;
 import com.dalykai.repository.UserRepository;
+import com.dalykai.repository.Role_groupRepository;
 import com.dalykai.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,6 +41,9 @@ public class AuthController {
 
     @Autowired
     RoleRepository roleRepository;
+
+    @Autowired
+    Role_groupRepository role_groupRepository;
 
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -87,6 +93,11 @@ public class AuthController {
                 .orElseThrow(() -> new AppException("User Role not set."));
 
         user.setRoles(Collections.singleton(userRole));
+
+        Role_group userRole_group = role_groupRepository.findByName(Role_groupName.ROLE_GROUP_EMPLOYEE)
+                .orElseThrow(() -> new AppException("User Group not set."));
+
+        user.setRole_groups(Collections.singleton(userRole_group));
 
         User result = userRepository.save(user);
 

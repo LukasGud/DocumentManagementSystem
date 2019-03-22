@@ -48,6 +48,12 @@ public class User extends DateAudit {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "user_role_groups",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_group_id"))
+    private Set<Role_group> role_groups = new HashSet<>();
+
     public User() {
 
     }
@@ -105,5 +111,13 @@ public class User extends DateAudit {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<Role_group> getRole_groups() {
+        return role_groups;
+    }
+
+    public void setRole_groups(Set<Role_group> role_groups) {
+        this.role_groups = role_groups;
     }
 }
