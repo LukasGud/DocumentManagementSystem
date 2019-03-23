@@ -14,7 +14,7 @@ class LogIn extends Component {
     this.state = {
       email: "",
       password: "",
-      errorMessage: "Neteisingi prisijungimo duomenys"
+      errorMessage: ""
     };
   }
 
@@ -22,7 +22,7 @@ class LogIn extends Component {
     e.preventDefault();
 
     try {
-      const loginData = await fetch("http://localhost:8080/api/auth/signin", {
+      const loginData = await fetch("http://localhost:8086/api/auth/signin", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -33,9 +33,13 @@ class LogIn extends Component {
         })
       });
       const data = await loginData.json();
+      const res = await loginData.status;
       console.log(data);
-      alert("Sveikiname prisijungus");
-      this.props.history.push("/");
+      if(res === 200){
+        this.props.history.push("/userboard");
+      }else{
+        this.setState({errorMessage: "Neteisingi prisijungimo duomenys"})
+      }
     } catch (error) {
       console.error(error);
     }
@@ -54,6 +58,9 @@ class LogIn extends Component {
     return (
       <div className="containerLogIn">
         <h1>Prisijunkite prie sistemos</h1>
+        {this.state.errorMessage.length > 0 && (
+          <span className="errorMessage">{this.state.errorMessage}</span>
+        )}
         <form onSubmit={this.handleSubmitLogIn} className="form-inline">
           <div className="form-group">
             <span className="input-group-addon" id="sizing-addon1">

@@ -34,39 +34,33 @@ class DocumentsList extends Component {
     const columns = [
       {
         dataField: "id",
-        text: "Doc. Nr.",
+        text: "Dokumento nr.",
         sort: true,
-        headerStyle: bgStyle
+        headerStyle: { backgroundColor: "#519e8a", width: "150px" }
       },
       {
         dataField: "name",
-        text: "Vardas",
-        sort: true,
-        headerStyle: bgStyle
-      },
-      {
-        dataField: "surname",
-        text: "Pavardė",
+        text: "Pateikėjas",
         sort: true,
         headerStyle: bgStyle
       },
       {
         dataField: "type",
-        text: "Šablonas",
+        text: "Dokumento tipas",
         sort: true,
         headerStyle: bgStyle
       },
       {
         dataField: "status",
-        text: "Statusas",
+        text: "Būsena",
         sort: true,
-        headerStyle: bgStyle
+        headerStyle: { backgroundColor: "#519e8a", width: "200px" }
       },
       {
         dataField: "date",
         text: "Data",
         sort: true,
-        headerStyle: bgStyle
+        headerStyle: { backgroundColor: "#519e8a", width: "150px" }
       }
     ];
     const selectRow = {

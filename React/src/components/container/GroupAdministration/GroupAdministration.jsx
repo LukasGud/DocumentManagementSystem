@@ -34,12 +34,14 @@ class GroupAdministration extends Component {
       ],
       users: [
         {
+          id: "1",
           name: "Jonas",
           surname: "Jonaitis",
           email: "jonaitis@gmail.com ",
           isActive: "Prisijungęs"
         },
         {
+          id: "1",
           name: "Petras",
           surname: "Petras",
           email: "petras@gmail.com ",
@@ -76,15 +78,23 @@ class GroupAdministration extends Component {
       },
       {
         dataField: "isActive",
-        text: "Prisijungimo statusas",
+        text: "Būsena",
         sort: true,
         headerStyle: bgStyle
       }
     ];
     const selectRow = {
-      mode: "checkbox",
+      mode: "radio",
       clickToSelect: true,
-      bgColor: "#edeeeebe"
+      bgColor: "#edeeeebe",
+      onSelect: (row, isSelect, rowIndex, e) => {
+        console.log(row.id);
+        console.log(isSelect);
+        console.log(rowIndex);
+        console.log(e);
+        console.error(e.error);
+        
+      },
     };
 
     return (
@@ -143,7 +153,7 @@ class GroupAdministration extends Component {
                     className="btn btn-dark btn-sm"
                     style={{ marginRight: "5px" }}
                   >
-                    Pašalinti vartotją
+                    Pašalinti vartotoją
                   </button>
                   <SearchBar
                     {...props.searchProps}

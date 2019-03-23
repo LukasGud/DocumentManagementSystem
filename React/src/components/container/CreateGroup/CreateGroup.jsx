@@ -15,10 +15,6 @@ class CreateGroup extends Component {
         {
           id: 2,
           right: "Dokumentų atmetimas"
-        },
-        {
-          id: 3,
-          right: "Naujų dokumentų šablonų kūrimas"
         }
       ],
       members: [
@@ -92,10 +88,6 @@ class CreateGroup extends Component {
           </div>
           <div>
             <label htmlFor="lastName">Trumpas aprašymas</label>
-            {/* <span style={{ fontStyle: "italic", color: "grey" }}>
-              {" "}
-              (Laukas neprivalomas)
-            </span> */}
             <textarea
               type="text"
               className="description"
@@ -129,8 +121,6 @@ class CreateGroup extends Component {
               valueKey="id"
               labelKey="right"
               multiple={true}
-              includeSelectAll={true}
-              includeFilter={true}
               placeholder="Pasirinkite teises grupei"
             />
           </div>

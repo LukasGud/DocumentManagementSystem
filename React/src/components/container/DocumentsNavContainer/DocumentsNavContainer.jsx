@@ -11,8 +11,7 @@ class DocumentsNavContainer extends Component {
       documents: [
         {
           id: 123,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Atostogos",
           status: "Pateiktas",
           date: "2018-09-06",
@@ -20,129 +19,112 @@ class DocumentsNavContainer extends Component {
         },
         {
           id: 191,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Sukurtas",
           date: "2019-01-06"
         },
         {
           id: 161,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "šaukimas",
           status: "Atmestas",
           date: "2019-03-04"
         },
         {
           id: 761,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Liga",
           status: "Atmestas",
           date: "2017-09-06"
         },
         {
           id: 91,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Patvirtintas",
           date: "2018-12-09"
         },
         {
           id: 171,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Atostogos",
           status: "Pateiktas",
           date: "2018-11-25"
         },
         {
           id: 133,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Atmestas",
           date: "2017-04-07"
         },
         {
           id: 871,
-          name: "Gedvilas",
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Atostogos",
           status: "Pateiktas",
           date: "2018-10-06"
         },
         {
           id: 124,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Atostogos",
           status: "Atmestas",
           date: "2018-11-23"
         },
         {
           id: 176,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Sukurtas",
           date: "2019-01-22"
         },
         {
           id: 177,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Sukurtas",
           date: "2019-01-22"
         },
         {
           id: 178,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Atmestas",
           date: "2019-01-22"
         },
         {
           id: 1700,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Sukurtas",
           date: "2019-01-22"
         },
         {
           id: 1096,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Pateiktas",
           date: "2019-01-22"
         },
         {
           id: 17876,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Atmestas",
           date: "2019-01-22"
         },
         {
           id: 11114,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Liga",
           status: "Atmestas",
           date: "2019-01-23"
         },
         {
           id: 4568,
-          name: "Vardenis",
-          surname: "Pavardenis",
+          name: "Pavardenis Vardenis",
           type: "Komandiruote",
           status: "Patvirtintas",
           date: "2019-01-24"

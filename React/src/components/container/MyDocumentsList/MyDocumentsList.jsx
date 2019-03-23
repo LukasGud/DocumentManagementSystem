@@ -44,46 +44,40 @@ class DocumentsList extends Component {
     const columns = [
       {
         dataField: "id",
-        text: "Doc Nr.",
+        text: "Dokumento Nr.",
         sort: true,
-        headerStyle: { backgroundColor: "#519e8a", width: "90px" }
+        headerStyle: { backgroundColor: "#519e8a", width: "150px" }
       },
       {
         dataField: "name",
-        text: "Vardas",
-        sort: true,
-        headerStyle: bgStyle
-      },
-      {
-        dataField: "surname",
-        text: "Pavardė",
+        text: "Vartotojas",
         sort: true,
         headerStyle: bgStyle
       },
       {
         dataField: "type",
-        text: "Šablonas",
+        text: "Dokumento tipas",
         sort: true,
         headerStyle: bgStyle
       },
       {
         dataField: "status",
-        text: "Statusas",
+        text: "Būsena",
         sort: true,
-        headerStyle: { backgroundColor: "#519e8a", width: "110px" }
+        headerStyle: { backgroundColor: "#519e8a", width: "200px" }
       },
       {
         dataField: "date",
         text: "Data",
         sort: true,
-        headerStyle: { backgroundColor: "#519e8a", width: "110px" }
+        headerStyle: { backgroundColor: "#519e8a", width: "150px" }
       }
     ];
     const selectRow = {
       mode: "radio",
       clickToSelect: true,
       bgColor: "#edeeeebe",
-      onSelect: (row, isSelect, rowIndex, e) => {
+      onSelect: (row, isSelect) => {
         this.handleOnSelect(row, isSelect);
       }
     };

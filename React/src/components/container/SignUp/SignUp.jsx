@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./signUp.css";
+import Alert from "react-bootstrap/Alert";
 
 // letterValidationRegex - only letters
-const letterValidationRegex = /^[a-zA-ZĄČĘĖĮŠŲŪąčęėįšųū]+$/;
+const letterValidationRegex = /^[a-zA-ZĄČĘĖĮŠŲŪąčęėįšųū]+$/; 
 
 //emailValidationRegex - example@example.lt - two letters after .
 const emailRegex = /[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
@@ -26,7 +27,8 @@ class SignUp extends Component {
         email: "",
         password: "",
         repeatPassword: ""
-      }
+      },
+      errorMessage: ""
     };
   }
 
@@ -74,7 +76,7 @@ class SignUp extends Component {
   handleSubmitSignUp = event => {
     event.preventDefault();
     this.emptyfields();
-    this.validateForm() ? console.log("uzregistruota") : console.log("nepaejo");
+    this.validateForm();
     this.fetchUserToDb();
   };
 
@@ -121,7 +123,7 @@ class SignUp extends Component {
 
   fetchUserToDb = async () => {
     try {
-      const userData = await fetch("http://localhost:8080/api/auth/signup", {
+      const userData = await fetch("http://localhost:8086/api/auth/signup", {
         method: "POST",
         headers: {
           accept: "application/json",
@@ -129,18 +131,25 @@ class SignUp extends Component {
         },
         body: JSON.stringify({
           username: this.state.email,
-          name: this.state.firstname,
-          // lastName: this.state.lastname,
+          name: this.state.lastname + " " + this.state.firstname,
           email: this.state.email,
           password: this.state.repeatPassword
         })
       });
       const data = await userData.json();
+      const res = await userData.status;
+      
       console.log(data);
-      this.props.history.push("/login");
-    } catch (error) {
-      console.log(error);
-    }
+      if(res >= 201 && res < 300){
+        this.props.history.push("/login");
+      }else{
+        
+        this.setState({errorMessage: "Vartotojas tokiu el. pašto adresu jau egzistuoja"})
+        console.log(userData)
+      }    
+      } catch (error) {
+        console.log(error);
+      }
   };
 
   render() {
@@ -156,6 +165,9 @@ class SignUp extends Component {
       <div className="containerSignUp">
         <form className="signUpForm" onSubmit={this.handleSubmitSignUp}>
           <h1>Sukurti paskyrą</h1>
+          {this.state.errorMessage.length > 0 && (
+              <Alert variant="danger" >{this.state.errorMessage}</Alert>
+          )}
           <div>
             <label htmlFor="firstName">Vardas</label>
             <input
@@ -163,11 +175,12 @@ class SignUp extends Component {
               className="firstname"
               placeholder="Vardas"
               name="firstname"
-              pattern="^[a-zA-Z][ĄČĘĖĮŠŲŪąčęėįšųū]+$"
+              pattern="^[a-zA-ZĄČĘĖĮŠŲŪąčęėįšųū]+$"
               title="Jūsų vardą gali sudaryti tik raidės"
               value={firstname}
               onChange={this.handleChange}
               maxLength="30"
+              minLength="2"
               required
             />
             {formErrors.firstname.length > 0 && (
@@ -181,9 +194,10 @@ class SignUp extends Component {
               className="lastname"
               placeholder="Pavardė"
               name="lastname"
-              pattern="^[A-Za-z][ĄČĘĖĮŠŲŪąčęėįšųū]+$"
+              pattern="^[A-Za-zĄČĘĖĮŠŲŪąčęėįšųū]+$"
               title="Jūsų pavardę gali sudaryti tik raidės"
-              maxLength="40"
+              maxLength="30"
+              minLength="2"
               value={lastname}
               onChange={this.handleChange}
               required
@@ -201,7 +215,8 @@ class SignUp extends Component {
               name="email"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               title="elektroninio pašto formatas yra pavyzdys@paštas.lt"
-              maxLength="50"
+              maxLength="40"
+              minLength="4"
               value={email}
               onChange={this.handleChange}
               required
@@ -218,7 +233,8 @@ class SignUp extends Component {
               placeholder="Slaptažodis"
               name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-              maxLength="40"
+              maxLength="30"
+              minLength="8"
               title="Slaptažodį turi sudaryti ne mažiau 8 simboliai iš jų viena bent didžioji raidė, viena mažoji ir skaičius"
               value={password}
               onChange={this.handleChange}
@@ -235,7 +251,8 @@ class SignUp extends Component {
               className="repeatPassword"
               placeholder="Pakartoti slaptažodį"
               name="repeatPassword"
-              maxLength="40"
+              maxLength="30"
+              minLength="8"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
               title="pakartokite slaptažodį"
               value={repeatPassword}

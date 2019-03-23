@@ -18,7 +18,7 @@ class GroupMemeber extends Component {
 
   async componentDidMount() {
     try {
-      const response = await fetch("http://localhost:8080/api/users", {
+      const response = await fetch("http://localhost:8086/api/users/", {
         method: "GET",
         headers: {
           "content-type": "application/json"
@@ -30,16 +30,6 @@ class GroupMemeber extends Component {
       console.error(error);
     }
     console.log(this.state.users);
-    this.setState({
-      users: [
-        {
-          firstName: "Jonas",
-          lastName: "Jonis",
-          email: "email@email.com",
-          enabled: "1"
-        }
-      ]
-    });
   }
 
   render() {
@@ -50,17 +40,10 @@ class GroupMemeber extends Component {
     const columns = [
       {
         dataField: "name",
-        text: "Vardas",
+        text: "Vartotojas",
         sort: true,
         headerStyle: bgStyle
       },
-      {
-        dataField: "surname",
-        text: "Pavardė",
-        sort: true,
-        headerStyle: bgStyle
-      },
-
       {
         dataField: "email",
         text: "El paštas",
@@ -68,8 +51,8 @@ class GroupMemeber extends Component {
         headerStyle: bgStyle
       },
       {
-        dataField: "isActive",
-        text: "Prisijungimo statusas",
+        dataField: "updatedAt",
+        text: "Prisijungta paskutinį kartą",
         sort: true,
         headerStyle: bgStyle
       }
@@ -80,14 +63,7 @@ class GroupMemeber extends Component {
         <div className="listBox">
           <ToolkitProvider
             keyField="id"
-            data={this.state.users.map(user => {
-              return {
-                name: user.firstName,
-                surname: user.lastName,
-                email: user.email,
-                isActive: user.enabled
-              };
-            })}
+            data={this.state.users}
             columns={columns}
             search
           >

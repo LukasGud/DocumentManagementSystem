@@ -16,23 +16,23 @@ class CreateGroup extends Component {
       docTypes: [
         {
           id: "1",
-          docName: "Atostogų prašymas"
+          docName: "Prašymas dėl kasmetinių atostogų"
         },
         {
           id: "2",
-          docName: "Komandiruotė"
+          docName: "Prašymas dėl komandiruotės"
         },
         {
           id: "3",
-          docName: "Motinystės atostogos"
+          docName: "Prašymas dėl vaiko priežiūros atostogų"
         },
         {
           id: "4",
-          docName: "Prašymas dėl ligos"
+          docName: "Prašymas dėl darbo laiko nustatymo"
         },
         {
           id: "5",
-          docName: "Pravaikšta"
+          docName: "Prašymas dėl atleidimo iš pareigų"
         },
         {
           id: "6",
@@ -40,7 +40,8 @@ class CreateGroup extends Component {
         }
       ],
       docSelected: "",
-      displayEditor: false
+      displayEditor: false,
+      errorMessage: ""
     };
   }
 
@@ -50,7 +51,12 @@ class CreateGroup extends Component {
 
   handleDocsSubmit = e => {
     e.preventDefault();
-    this.setState({ displayEditor: true });
+    if(this.state.docSelected){
+      this.setState({ displayEditor: true, errorMessage: "" });
+    }else{
+      this.setState({errorMessage: "Pasirinkite dokumento šabloną" })
+    }
+    
   };
 
   render() {
@@ -70,6 +76,9 @@ class CreateGroup extends Component {
               multiple={false}
               includeFilter={true}
             />
+            {this.state.errorMessage.length > 0 && (
+              <span className="errorMessage">{this.state.errorMessage}</span>
+            )}
           </div>
           {hasRole(user, ["admin"]) && (
             <button className="creationButton">
