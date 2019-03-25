@@ -7,20 +7,24 @@ import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
 import "./groupMembers.css";
+import { link } from "fs";
 
 class GroupMemeber extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      users: [],
+      user: {}
     };
   }
 
   async componentDidMount() {
+    const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:8080/api/users/", {
+      const response = await fetch(`http://localhost:8080/api/users/`, {
         method: "GET",
         headers: {
+          Authorization: "Bearer" + token,
           "content-type": "application/json"
         }
       });

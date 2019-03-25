@@ -9,10 +9,14 @@
     <list default="true" id="d5f3ea91-c4b2-43eb-9011-94caee217b1b" name="Default Changelist" comment="Added an encryption of password when creating a new user &#10;and a @Bean for BCrypt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/React/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/React/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/GroupAdministration/GroupAdministration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/GroupAdministration/GroupAdministration.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/React/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/components/container/DocumentsNavContainer/DocumentsNavContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/DocumentsNavContainer/DocumentsNavContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/React/src/components/container/GroupMembers/GroupMembers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/GroupMembers/GroupMembers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/React/src/components/container/LogIn/LogIn.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/LogIn/LogIn.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/SignUp/SignUp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/SignUp/SignUp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/src/components/container/UserBoardHeader/UserBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/UserBoardHeader/UserBoardHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
@@ -161,19 +165,34 @@
     <session id="-1902226361">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.144" value="1" />
           <entry key="project.open.time.190" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.94" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="java" value="97" />
           <entry key="properties" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="JAVA" value="97" />
           <entry key="Properties" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -183,33 +202,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+            <state relative-caret-position="612">
+              <caret line="48" column="136" selection-start-line="48" selection-start-column="136" selection-end-line="48" selection-end-column="136" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserProfile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -293,7 +331,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/WEB-INF/view/list-customers.jsp" />
         <option value="$PROJECT_DIR$/WEB-INF/application-context.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/mchange/v2/c3p0/ComboPooledDataSource.java" />
@@ -343,6 +380,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserProfile.java" />
       </list>
     </option>
   </component>
@@ -390,7 +429,7 @@
       <path value="$PROJECT_DIR$/React/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -401,22 +440,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -434,6 +457,22 @@
               <item name="projektas" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -489,7 +528,17 @@
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="config" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="payload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -720,7 +769,9 @@
       <workItem from="1553155496022" duration="4426000" />
       <workItem from="1553162046912" duration="443000" />
       <workItem from="1553416422333" duration="1460000" />
-      <workItem from="1553442287963" duration="1414000" />
+      <workItem from="1553442287963" duration="2013000" />
+      <workItem from="1553527914052" duration="1494000" />
+      <workItem from="1553549739399" duration="215000" />
     </task>
     <task id="LOCAL-00001" summary="roles, no csrf">
       <created>1550920453306</created>
@@ -761,7 +812,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81473000" />
+    <option name="totallyTimeSpent" value="83781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -776,7 +827,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.1429652" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.21331316" />
       <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -787,7 +838,7 @@
       <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.30327868" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.30327868" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -916,8 +967,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/dao/NewUserDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/service/NewUserService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/HomeController.java" />
     <entry file="file://$PROJECT_DIR$/this is a gitgnore">
       <provider selected="true" editor-type-id="text-editor">
@@ -1071,9 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1081,17 +1127,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="48" column="136" selection-start-line="48" selection-start-column="136" selection-end-line="48" selection-end-column="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/BadRequestException.java">
       <provider selected="true" editor-type-id="text-editor" />
@@ -1109,6 +1177,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

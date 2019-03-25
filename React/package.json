@@ -12,6 +12,8 @@
     "draft-js-alignment-plugin": "^2.0.5",
     "draft-js-focus-plugin": "^2.2.0",
     "draft-js-plugins-editor": "^2.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
     "npm": "^6.9.0",
     "react": "^16.8.1",
     "react-bootstrap": "^1.0.0-beta.5",

@@ -134,7 +134,8 @@ class DocumentsNavContainer extends Component {
       acceptedDocuments: [],
       pendingDocuments: [],
       declinedDocuments: [],
-      selected: []
+      selected: [],
+      documentsDb: []
     };
   }
 
@@ -194,6 +195,24 @@ class DocumentsNavContainer extends Component {
       },
       { id: 5, status: "Visi dokumentai", document: this.state.documents }
     ];
+   
+
+      const getDocsFromDb = async () => {
+        const token = localStorage.getItem('token')
+        const docs = await fetch('http://localhost:8080/api/documents/all', {
+          method: 'GET', 
+          headers: {
+            'Authorization': 'Bearer' + token,
+            'content-type':'application/json'
+          }
+        });
+        const data = await docs.json();
+
+        this.setState({
+          documentsDb: data
+        })
+        
+      }
 
     return (
       <div className="documentsContainer">

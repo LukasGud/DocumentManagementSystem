@@ -12,7 +12,7 @@ import "./userBoardNav.css";
 import { hasRole } from "../../Auth";
 
 const user = {
-  roles: ["user", "admin"]
+  roles: ["ROLE_USER", "ROLE_ADMIN"]
 };
 
 library.add(faHome, faFileAlt, faUsers, faUserCog);
@@ -22,6 +22,11 @@ class UserBoardHeader extends Component {
     super(props);
     this.state = {};
   }
+
+  logout = () => {
+    localStorage.removeItem('token');
+  }
+
   render() {
     return (
       <nav className="headerNavBar navbar fixed-top bg-dark">
@@ -35,7 +40,7 @@ class UserBoardHeader extends Component {
           <Link to="/groups">
             <FontAwesomeIcon icon="users" className="text-light" />
           </Link>
-          {hasRole(user, ["admin"]) && (
+          {hasRole(user, ["ROLE_ADMIN"]) && (
             <Link to="/members">
               <FontAwesomeIcon icon="users-cog" className="text-light" />
             </Link>
@@ -44,7 +49,7 @@ class UserBoardHeader extends Component {
         <div className="navBar">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/login">
+              <Link className="nav-link text-light" to="/login" onClick={this.logout} >
                 Atsijungti
               </Link>
             </li>
