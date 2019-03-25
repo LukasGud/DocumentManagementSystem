@@ -12,16 +12,22 @@ public class Role_group {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(EnumType.STRING)
+    @Column(name = "description", length = 255)
+    private String description;
+
+//    @Enumerated(EnumType.STRING)
     @NaturalId
     @Column(length = 60)
-    private Role_groupName name;
+    private String name;
+
+
+
 
     public Role_group() {
 
     }
 
-    public Role_group(Role_groupName name) {
+    public Role_group(String name) {
         this.name = name;
     }
 
@@ -33,12 +39,20 @@ public class Role_group {
         this.id = id;
     }
 
-    public Role_groupName getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Role_groupName name) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
 

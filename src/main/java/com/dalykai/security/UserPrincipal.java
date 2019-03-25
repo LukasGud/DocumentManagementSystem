@@ -1,7 +1,9 @@
 package com.dalykai.security;
 
 
+import com.dalykai.model.Role_group;
 import com.dalykai.model.User;
+import com.dalykai.repository.Role_groupRepository;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -36,13 +38,15 @@ public class UserPrincipal implements UserDetails {
         this.authorities = authorities;
     }
 
+
+
     public static UserPrincipal create(User user) {
         List<GrantedAuthority> authorities = user.getRoles().stream().map(role ->
                 new SimpleGrantedAuthority(role.getName().name())
         ).collect(Collectors.toList());
-        List<GrantedAuthority> authorities2 = user.getRole_groups().stream().map(role_group ->
-                new SimpleGrantedAuthority(role_group.getName().name())
-        ).collect(Collectors.toList());
+//        List<GrantedAuthority> authorities2 = user.getRole_groups().stream().map(role_group ->
+//                new SimpleGrantedAuthority(role_group.getName().name())
+//        ).collect(Collectors.toList());
 
 
         return new UserPrincipal(

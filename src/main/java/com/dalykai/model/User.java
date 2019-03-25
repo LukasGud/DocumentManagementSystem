@@ -19,6 +19,7 @@ import java.util.Set;
                 "email"
         })
 })
+
 public class User extends DateAudit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

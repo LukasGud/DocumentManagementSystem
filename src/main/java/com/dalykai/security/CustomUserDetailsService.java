@@ -1,6 +1,8 @@
 package com.dalykai.security;
 
+import com.dalykai.model.Role_group;
 import com.dalykai.model.User;
+import com.dalykai.repository.Role_groupRepository;
 import com.dalykai.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -27,6 +29,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         return UserPrincipal.create(user);
     }
+
+
 
     // This method is used by JWTAuthenticationFilter
     @Transactional

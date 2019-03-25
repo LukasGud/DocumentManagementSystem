@@ -4,7 +4,7 @@ import com.dalykai.exception.AppException;
 import com.dalykai.model.Role;
 import com.dalykai.model.Role_group;
 import com.dalykai.model.RoleName;
-import com.dalykai.model.Role_groupName;
+//import com.dalykai.model.Role_groupName;
 import com.dalykai.model.User;
 import com.dalykai.payload.ApiResponse;
 import com.dalykai.payload.JwtAuthenticationResponse;
@@ -94,7 +94,7 @@ public class AuthController {
 
         user.setRoles(Collections.singleton(userRole));
 
-        Role_group userRole_group = role_groupRepository.findByName(Role_groupName.ROLE_GROUP_EMPLOYEE)
+        Role_group userRole_group = role_groupRepository.findByName("ROLE_GROUP_EMPLOYEE")
                 .orElseThrow(() -> new AppException("User Group not set."));
 
         user.setRole_groups(Collections.singleton(userRole_group));
