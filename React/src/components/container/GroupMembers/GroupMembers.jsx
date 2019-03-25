@@ -18,7 +18,7 @@ class GroupMemeber extends Component {
 
   async componentDidMount() {
     try {
-      const response = await fetch("http://localhost:8086/api/users/", {
+      const response = await fetch("http://localhost:8080/api/users/", {
         method: "GET",
         headers: {
           "content-type": "application/json"

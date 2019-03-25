@@ -22,7 +22,7 @@ class LogIn extends Component {
     e.preventDefault();
 
     try {
-      const loginData = await fetch("http://localhost:8086/api/auth/signin", {
+      const loginData = await fetch("http://localhost:8080/api/auth/signin", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -35,10 +35,10 @@ class LogIn extends Component {
       const data = await loginData.json();
       const res = await loginData.status;
       console.log(data);
-      if(res === 200){
+      if (res === 200) {
         this.props.history.push("/userboard");
-      }else{
-        this.setState({errorMessage: "Neteisingi prisijungimo duomenys"})
+      } else {
+        this.setState({ errorMessage: "Neteisingi prisijungimo duomenys" });
       }
     } catch (error) {
       console.error(error);
