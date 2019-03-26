@@ -7,27 +7,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5f3ea91-c4b2-43eb-9011-94caee217b1b" name="Default Changelist" comment="Added an encryption of password when creating a new user &#10;and a @Bean for BCrypt">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/config/AuditingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/config/WebMvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/exception/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/JwtAuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/SignUpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/security/CurrentUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/security/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtTokenProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dalykai/security/UserPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/request/PostNewDocumentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projektas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/ProjektasApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/config/AuditingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/config/AuditingConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/config/LoginAppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/config/LoginAppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/controller/NewDocumentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/DocumentStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/AppException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/exception/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/RoleName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/audit/DateAudit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/payload/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/JwtAuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/payload/JwtAuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/payload/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/payload/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserIdentityAvailability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/payload/UserIdentityAvailability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/payload/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/payload/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentDetailsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentStatusRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/security/CurrentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/CurrentUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/security/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/JwtTokenProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dalykai/security/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/UserPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/this is a gitgnore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitgnore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,190 +72,122 @@
     <expand />
     <select />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="234808565">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-          <entry key="properties" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="Properties" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="7" />
-          <entry key="properties" value="24" />
-          <entry key="txt" value="95" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="7" />
-          <entry key="PLAIN_TEXT" value="95" />
-          <entry key="Properties" value="24" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1484902620">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.287" value="1" />
-          <entry key="project.open.time.91" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1542881306">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="44" />
-          <entry key="properties" value="1" />
-          <entry key="xml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="44" />
-          <entry key="Properties" value="1" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="92" />
-          <entry key="properties" value="11" />
-          <entry key="xml" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="92" />
-          <entry key="Properties" value="11" />
-          <entry key="XML" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1343589906">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="26" />
-          <entry key="properties" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="26" />
-          <entry key="Properties" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="properties" value="26" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Properties" value="26" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="projektas" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="62" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="62" />
+            <state relative-caret-position="437">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/BadRequestException.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/AuthController.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/WebMvcConfig.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/AuditingConfig.java">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/RoleName.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+            <state relative-caret-position="46">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="897">
+              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1302#1303#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1361#1362#0" expanded="true" />
+                <element signature="e#1389#1390#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1457#1458#0" expanded="true" />
+                <element signature="e#1507#1508#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+                <element signature="e#1588#1589#0" expanded="true" />
+                <element signature="e#1619#1620#0" expanded="true" />
+                <element signature="e#1671#1672#0" expanded="true" />
+                <element signature="e#1711#1712#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/Document.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentStatusRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/DocumentStatus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/request/PostNewDocumentRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -244,8 +198,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -265,6 +219,7 @@
       <find>webapp</find>
       <find>user</find>
       <find>doc</find>
+      <find>ProjektasApplication</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\tomas\Desktop\projektas\src</dir>
@@ -287,26 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/CustomerController.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/view/list-customers.jsp" />
-        <option value="$PROJECT_DIR$/WEB-INF/application-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mchange/v2/c3p0/ComboPooledDataSource.java" />
-        <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/entity/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/service/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/service/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/dao/EmployeeDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/config/SpringMvcDispatcherServletInitializer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/jsp/leaders.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/view/jsp/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/LeadersController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/dao/EmployeeDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/dao/AuthorityDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/entity/Authority.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/dao/NewUserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/dao/NewUserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/service/NewUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/NewUserController.java" />
@@ -314,37 +249,52 @@
         <option value="$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/config/LoginSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/service/NewUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/config/AuditingConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/payload/ApiResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/RoleRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/config/LoginAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/security/UserPrincipal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/NewDocumentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocument.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentDetailsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentStatusRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/security/CustomUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/AuthController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtTokenProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/RoleRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentStatusRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentDetailsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/ResourceNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/domain/NewDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/entities/NewDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/NewDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/NewDocumentStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/NewDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/NewDocumentDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/security/UserPrincipal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/NewDocumentDetailsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/NewDocumentStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/NewDocumentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentStatusRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/DocumentStatus.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/Document.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/request/PostNewDocumentRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -376,38 +326,17 @@
       <select />
     </treeState>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/React/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="728" />
+    <option name="x" value="873" />
+    <option name="width" value="1030" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -526,19 +455,24 @@
         <subPane>
           <expand>
             <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
+              <item name="DMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DMS" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
             </path>
             <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projektas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projektas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -555,16 +489,27 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553162541472" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553609023819" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\React\src" />
+      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final" />
+      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\src\React" />
+      <recent name="C:\Users\tomas\Desktop\projektas\SQL" />
+      <recent name="C:\Users\tomas\Desktop\projektas\src\main\webapp\view\jsp" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.dalykai" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dalykai.controller" />
+      <recent name="com.dalykai.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\config" />
@@ -573,19 +518,13 @@
       <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\repository" />
       <recent name="C:\Users\Public\Documents\pr2\projektas\src\main\java\com\dalykai" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dalykai.controller" />
-      <recent name="com.dalykai.config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\React\src" />
-      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final" />
-      <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\src\React" />
-      <recent name="C:\Users\tomas\Desktop\projektas\SQL" />
-      <recent name="C:\Users\tomas\Desktop\projektas\src\main\webapp\view\jsp" />
-    </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -596,17 +535,17 @@
         </RuleState>
       </list>
     </option>
+    <option name="contentProportion" value="0.14875595" />
   </component>
-  <component name="RunManager" selected="Spring Boot.ProjektasApplication">
-    <configuration name="ProjektasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RunManager" selected="Spring Boot.ProjektasApplication (1)">
+    <configuration name="ProjektasApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="projektas" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dalykai.ProjektasApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.docuservice.ProjektasApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 8.5.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.38" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/projektas_Web_exploded/" />
+    <configuration name="Tomcat 9.0.13" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.13" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="projektas:Web exploded">
@@ -618,11 +557,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_38_projektas" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="53122" />
       </RunnerSettings>
@@ -682,11 +621,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="_projektas" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="53122" />
       </RunnerSettings>
@@ -740,8 +679,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.ProjektasApplication" />
-      <item itemvalue="Tomcat Server.Tomcat 8.5.38" />
+      <item itemvalue="Spring Boot.ProjektasApplication (1)" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.13" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -768,6 +707,11 @@
       <workItem from="1551176460419" duration="1049000" />
       <workItem from="1553155496022" duration="4426000" />
       <workItem from="1553162046912" duration="443000" />
+      <workItem from="1553452211992" duration="11553000" />
+      <workItem from="1553503632533" duration="5579000" />
+      <workItem from="1553512951757" duration="2252000" />
+      <workItem from="1553517561853" duration="3263000" />
+      <workItem from="1553608249543" duration="753000" />
     </task>
     <task id="LOCAL-00001" summary="roles, no csrf">
       <created>1550920453306</created>
@@ -808,7 +752,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78599000" />
+    <option name="totallyTimeSpent" value="101999000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,84 +764,46 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.21633889" />
-      <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17537314" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
-      <window_info id="Web" order="7" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
-      <window_info id="Learn" order="8" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.30441898" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32937366" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32998884" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.32913387" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" />
+      <window_info anchor="bottom" id="Spring" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.20890938" />
-      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32733223" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.22131148" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.1962096" />
+      <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.18923241" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32889125" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32905295" />
-      <window_info anchor="right" id="Maven Projects" order="10" weight="0.30497593" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Bean Validation" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.46101695" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.24962178" />
-      <window_info id="Structure" order="1" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
-      <window_info id="Web" order="7" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
-      <window_info id="Learn" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.30568355" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32872504" />
-      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32998884" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.32913387" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.20890938" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32872504" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" visible="true" weight="0.22131148" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.18923241" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32889125" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32905295" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -947,14 +853,20 @@
         </entry>
       </map>
     </option>
-    <option name="OPEN_TABS">
-      <set>
-        <option value="1" />
-      </set>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="roles, no csrf" />
@@ -963,259 +875,295 @@
     <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/dao/NewUserDAO.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/service/NewUserService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/HomeController.java" />
-    <entry file="file://$PROJECT_DIR$/this is a gitgnore">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        <state relative-caret-position="147">
+          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/SpringMvcDispatcherServletInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/Authority.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/SQL/Tables and DB for testing a project.sql">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="147">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/React/README.md" />
-    <entry file="file://$PROJECT_DIR$/projektas.iml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE.jar!/org/springframework/data/repository/Repository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2326">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        <state relative-caret-position="147">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw.cmd">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mvnw">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE-sources.jar!/org/springframework/data/repository/Repository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/AppException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3519" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/LoginSecurityConfig.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/service/NewUserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/persistence-mysql.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/EmployeeController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewUser.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="126">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/ResourceNotFoundException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/BadRequestException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="84">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/ResourceNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/NewUserController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/LoginAppConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/config/AuditingConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/config/LoginAppConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/NewDocumentController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/GenerationType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1131#1132#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentDetailsRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/GenerationType.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/ManyToOne.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/JoinColumn.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/NewDocumentDetails.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/EnumType.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/Enumerated.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java" />
+    <entry file="jar://C:/dev/jdk_1.8.0/src.zip!/java/security/Principal.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/JwtAuthenticationEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" selection-end-line="9" />
+        <state relative-caret-position="105">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/JwtAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="49" selection-end-line="9" />
+        <state relative-caret-position="441">
+          <caret line="35" column="64" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocument.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/JwtTokenProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2119#2120#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2223#2224#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#2281#2282#0" expanded="true" />
-            <element signature="e#2321#2322#0" expanded="true" />
-            <element signature="e#2353#2354#0" expanded="true" />
-            <element signature="e#2393#2394#0" expanded="true" />
-            <element signature="e#2431#2432#0" expanded="true" />
-            <element signature="e#2491#2492#0" expanded="true" />
-            <element signature="e#2545#2546#0" expanded="true" />
-            <element signature="e#2585#2586#0" expanded="true" />
-            <element signature="e#2623#2624#0" expanded="true" />
-            <element signature="e#2683#2684#0" expanded="true" />
-            <element signature="e#2737#2738#0" expanded="true" />
-            <element signature="e#2800#2801#0" expanded="true" />
-            <element signature="e#2841#2842#0" expanded="true" />
-            <element signature="e#3050#3051#0" expanded="true" />
-            <element signature="e#3090#3091#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentStatusRepository.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetailsService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentStatus.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="22" selection-end-line="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#984#985#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1112#1113#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1256#1257#0" expanded="true" />
-            <element signature="e#1296#1297#0" expanded="true" />
-            <element signature="e#1328#1329#0" expanded="true" />
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1444#1445#0" expanded="true" />
-            <element signature="e#1493#1494#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1592#1593#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="126">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="89" column="37" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="147">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtTokenProvider.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/security/UserPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/security/JwtAuthenticationEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/security/CurrentUser.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/security/CustomUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/RoleRepository.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/payload/SignUpRequest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/payload/JwtAuthenticationResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/payload/LoginRequest.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/payload/ApiResponse.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/UserRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/UserPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        <state relative-caret-position="336">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/User.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/RoleName.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/audit/DateAudit.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/model/Role.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/AppException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/exception/BadRequestException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/config/AuditingConfig.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/ProjektasApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/CurrentUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="168">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/OneToMany.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.5.RELEASE/spring-data-jpa-2.1.5.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.5.RELEASE/spring-data-commons-2.1.5.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/NewDocumentDetailsRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/NewDocumentRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/NewDocumentStatusRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/RoleRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/ProjektasApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/CustomUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="62" />
+        <state relative-caret-position="187">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/RoleName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="52" column="37" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1361#1362#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1457#1458#0" expanded="true" />
+            <element signature="e#1507#1508#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1619#1620#0" expanded="true" />
+            <element signature="e#1671#1672#0" expanded="true" />
+            <element signature="e#1711#1712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/Document.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentStatusRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/DocumentStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/request/PostNewDocumentRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1238,7 +1186,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Invalid</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1261,7 +1209,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
