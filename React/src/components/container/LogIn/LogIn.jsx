@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
 import "./logIn.css";
 import Alert from "react-bootstrap/Alert";
+import decode from "jwt-decode";
 
 library.add(faUser, faKey);
 
@@ -22,7 +23,7 @@ class LogIn extends Component {
     e.preventDefault();
 
     try {
-      const loginData = await fetch("http://localhost:8086/api/auth/signin", {
+      const loginData = await fetch("http://localhost:8080/api/auth/signin", {
         method: "POST",
         headers: {
           "content-type": "application/json"
@@ -33,16 +34,35 @@ class LogIn extends Component {
         })
       });
       const data = await loginData.json();
-      const res = await loginData.status;
-      console.log(data);
-      if(res === 200){
+
+      localStorage.setItem("token", data.accessToken);
+
+      //tikrinimas ar veikia local storrage
+      const tokenas = localStorage.getItem("token");
+      console.log(tokenas);
+
+      if (loginData.status === 200) {
+        // this.sendUserNameToParent();
         this.props.history.push("/userboard");
-      }else{
-        this.setState({errorMessage: "Neteisingi prisijungimo duomenys"})
+      } else {
+        this.setState({ errorMessage: "Neteisingi prisijungimo duomenys" });
       }
     } catch (error) {
       console.error(error);
     }
+  };
+
+  // sendUserNameToParent = () => {
+  //   this.props.getUserName(this.state.email);
+  // };
+
+  getToken = () => {
+    // Gets user token from localStorage
+    return localStorage.getItem("token");
+  };
+
+  getProfile = () => {
+    return decode(this.getToken);
   };
 
   handleChange = e => {

@@ -4,7 +4,7 @@ import "./signUp.css";
 import Alert from "react-bootstrap/Alert";
 
 // letterValidationRegex - only letters
-const letterValidationRegex = /^[a-zA-ZĄČĘĖĮŠŲŪąčęėįšųū]+$/; 
+const letterValidationRegex = /^[a-zA-ZĄČĘĖĮŠŲŪąčęėįšųū]+$/;
 
 //emailValidationRegex - example@example.lt - two letters after .
 const emailRegex = /[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
@@ -123,7 +123,7 @@ class SignUp extends Component {
 
   fetchUserToDb = async () => {
     try {
-      const userData = await fetch("http://localhost:8086/api/auth/signup", {
+      const userData = await fetch("http://localhost:8080/api/auth/signup", {
         method: "POST",
         headers: {
           accept: "application/json",
@@ -138,18 +138,19 @@ class SignUp extends Component {
       });
       const data = await userData.json();
       const res = await userData.status;
-      
+
       console.log(data);
-      if(res >= 201 && res < 300){
+      if (res >= 201 && res < 300) {
         this.props.history.push("/login");
-      }else{
-        
-        this.setState({errorMessage: "Vartotojas tokiu el. pašto adresu jau egzistuoja"})
-        console.log(userData)
-      }    
-      } catch (error) {
-        console.log(error);
+      } else {
+        this.setState({
+          errorMessage: "Vartotojas tokiu el. pašto adresu jau egzistuoja"
+        });
+        console.log(userData);
       }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   render() {
@@ -166,7 +167,7 @@ class SignUp extends Component {
         <form className="signUpForm" onSubmit={this.handleSubmitSignUp}>
           <h1>Sukurti paskyrą</h1>
           {this.state.errorMessage.length > 0 && (
-              <Alert variant="danger" >{this.state.errorMessage}</Alert>
+            <Alert variant="danger">{this.state.errorMessage}</Alert>
           )}
           <div>
             <label htmlFor="firstName">Vardas</label>

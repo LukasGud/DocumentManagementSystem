@@ -8,6 +8,9 @@ import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import filterFactory from "react-bootstrap-table2-filter";
 import "react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";
 import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css";
+import Picky from "react-picky";
+import "react-picky/dist/picky.css";
+import Modal from "react-bootstrap/Modal";
 
 library.add(faEdit);
 
@@ -25,31 +28,79 @@ class GroupAdministration extends Component {
           id: 2,
           right: "Dokumentų atmetimas",
           isHaveRight: true
-        },
-        {
-          id: 3,
-          right: "Naujų dokumentų šablonų kūrimas",
-          isHaveRight: false
         }
       ],
       users: [
         {
           id: "1",
-          name: "Jonas",
-          surname: "Jonaitis",
+          name: "Jonaitis Jonas",
           email: "jonaitis@gmail.com ",
-          isActive: "Prisijungęs"
+          updatedAt: "Prisijungęs"
         },
         {
-          id: "1",
-          name: "Petras",
-          surname: "Petras",
+          id: "2",
+          name: "Petras Petras",
           email: "petras@gmail.com ",
-          isActive: "Prisijungęs"
+          updatedAt: "Prisijungęs"
         }
-      ]
+      ],
+      selectedUser: {},
+      members: [
+        {
+          id: "5",
+          name: "Rimaitis Rimas",
+          email: "riri@gmail.com ",
+          updatedAt: "Prisijungęs"
+        },
+        {
+          id: "6",
+          name: "Jonis Jonas",
+          email: "jnjon@gmail.com ",
+          updatedAt: "Prisijungęs"
+        },
+        {
+          id: "3",
+          name: "Angelienė Angelė",
+          email: "angis@gmail.com ",
+          updatedAt: "Prisijungęs"
+        },
+        {
+          id: "4",
+          name: "Rimka Rimutė",
+          email: "rama@gmail.com ",
+          updatedAt: "Prisijungęs"
+        }
+      ],
+      selectedMembers: [],
+      smallModalShow: false,
+      modalShow: false
     };
   }
+
+  addMembers = value => {
+    console.count("onChange");
+    console.log("vals", value);
+    this.setState({ selectedMembers: value });
+  };
+
+  handleOnSelectUser = (row, isSelect) => {
+    if (isSelect) {
+      window.setTimeout(
+        function() {
+          this.setState({ selectedUser: row });
+        }.bind(this),
+        0
+      );
+    }
+  };
+
+  addMembersToGroup = () => {
+    this.setState(prevState => ({
+      users: [...prevState.users, ...this.state.selectedMembers],
+      modalShow: false,
+      smallModalShow: false
+    }));
+  };
 
   render() {
     const bgStyle = {
@@ -59,17 +110,10 @@ class GroupAdministration extends Component {
     const columns = [
       {
         dataField: "name",
-        text: "Vardas",
+        text: "Vartotojas",
         sort: true,
         headerStyle: bgStyle
       },
-      {
-        dataField: "surname",
-        text: "Pavardė",
-        sort: true,
-        headerStyle: bgStyle
-      },
-
       {
         dataField: "email",
         text: "El paštas",
@@ -77,25 +121,23 @@ class GroupAdministration extends Component {
         headerStyle: bgStyle
       },
       {
-        dataField: "isActive",
-        text: "Būsena",
+        dataField: "updatedAt",
+        text: "Prisijungta paskutinį kartą",
         sort: true,
         headerStyle: bgStyle
       }
     ];
+
     const selectRow = {
-      mode: "radio",
+      mode: "checkbox",
       clickToSelect: true,
       bgColor: "#edeeeebe",
-      onSelect: (row, isSelect, rowIndex, e) => {
-        console.log(row.id);
-        console.log(isSelect);
-        console.log(rowIndex);
-        console.log(e);
-        console.error(e.error);
-        
-      },
+      onSelect: (row, isSelect, rowIndex) => {
+        this.handleOnSelectUser(row, isSelect);
+      }
     };
+
+    let modalClose = () => this.setState({ modalShow: false });
 
     return (
       <div className="listContainer">
@@ -134,9 +176,76 @@ class GroupAdministration extends Component {
             </div>
           </div>
           <div />
+          <Modal
+            size="lg"
+            show={this.state.modalShow}
+            onHide={modalClose}
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter">
+                Pasirinkite narius, kuriuos norite pridėti
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Picky
+                options={this.state.members}
+                value={this.state.selectedMembers}
+                onChange={this.addMembers}
+                open={false}
+                valueKey="id"
+                labelKey="name"
+                multiple={true}
+                includeSelectAll={true}
+                includeFilter={true}
+                placeholder="Pasirinkite narius, kuriuos norite pridėti"
+              />
+            </Modal.Body>
+            <Modal.Footer>
+              <button
+                className="btn btn-dark"
+                onClick={() => this.setState({ smallModalShow: true })}
+              >
+                Pridėti
+              </button>
+            </Modal.Footer>
+          </Modal>
+          <Modal
+            size="lg"
+            show={this.state.smallModalShow}
+            onHide={() => {
+              this.setState({ smallModalShow: false });
+            }}
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+          >
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter" />
+            </Modal.Header>
+            <Modal.Body>
+              <div style={{ textAlign: "center", padding: "10px" }}>
+                <p>Ar tikrai norite pridėti šiuos narius?</p>
+                <button
+                  className="btn btn-success sm"
+                  style={{ marginRight: "5px" }}
+                  onClick={this.addMembersToGroup}
+                >
+                  Taip
+                </button>
+                <button
+                  className="btn btn-danger sm"
+                  onClick={() => this.setState({ smallModalShow: false })}
+                >
+                  Ne
+                </button>
+              </div>
+            </Modal.Body>
+            <Modal.Footer />
+          </Modal>
           <div>
             <ToolkitProvider
-              keyField="id"
+              keyField="name"
               data={this.state.users}
               columns={columns}
               search
@@ -146,12 +255,14 @@ class GroupAdministration extends Component {
                   <button
                     className="btn btn-dark btn-sm"
                     style={{ marginRight: "5px" }}
+                    onClick={() => this.setState({ modalShow: true })}
                   >
                     + Pridėti naują vartotoją
                   </button>
                   <button
                     className="btn btn-dark btn-sm"
                     style={{ marginRight: "5px" }}
+                    onClick={this.removeUser}
                   >
                     Pašalinti vartotoją
                   </button>
