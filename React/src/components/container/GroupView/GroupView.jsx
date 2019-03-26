@@ -14,9 +14,7 @@ import { hasRole } from "../../Auth";
 import GroupMembers from "../GroupMembers/GroupMembers";
 import GroupAdministration from "../GroupAdministration/GroupAdministration";
 
-const user = {
-  roles: ["user", "admin"]
-};
+
 
 library.add(faUsers, faUser, faFolderOpen, faCog);
 
@@ -144,7 +142,8 @@ class GroupView extends Component {
       selected: [],
       isDocumentsButtonClicked: false,
       isGroupMembersButtonClicked: false,
-      isHandleAdminButtonClicked: false
+      isHandleAdminButtonClicked: false,
+      canAdministerGroup: false,
     };
   }
 
@@ -159,6 +158,7 @@ class GroupView extends Component {
 
   componentDidMount() {
     this.setDifferentDocType();
+    this.settingUserRole();
   }
 
   setDifferentDocType = e => {
@@ -196,6 +196,21 @@ class GroupView extends Component {
     });
   };
 
+  settingUserRole = () => {
+    const userRole = localStorage.getItem('role')
+    
+    if(userRole === "ROLE_ADMIN"){
+      this.setState({
+        canAdministerGroup: true
+      })
+    }else if(userRole === "ROLE_USER"){
+      this.setState({
+        canAdministerGroup: false
+      })
+    }
+    
+  }
+
   render() {
     const {
       acceptedDocuments,
@@ -203,6 +218,10 @@ class GroupView extends Component {
       declinedDocuments,
       documents
     } = this.state;
+
+    const user = {
+      roles: this.state.role
+    };
 
     return (
       <div className="groupviewContainer">
@@ -261,7 +280,7 @@ class GroupView extends Component {
                   Visi dokumentai
                 </button>
               </li>
-              {hasRole(user, ["admin"]) && (
+              {this.state.canAdministerGroup && (
                 <li className="nav-item">
                   <button
                     type="button"

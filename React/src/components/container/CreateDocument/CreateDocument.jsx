@@ -5,10 +5,6 @@ import "react-picky/dist/picky.css";
 import RichTextEditor from "../../richTextEditor/RichTextEditor";
 import { hasRole } from "../../Auth";
 
-const user = {
-  roles: ["user", "admin"]
-};
-
 class CreateGroup extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +37,9 @@ class CreateGroup extends Component {
       ],
       docSelected: "",
       displayEditor: false,
-      errorMessage: ""
+      errorMessage: "",
+      canCreateDoc: false,
+      displayEmptyEditor: false
     };
   }
 
@@ -49,17 +47,38 @@ class CreateGroup extends Component {
     this.setState({ docSelected: value });
   };
 
+  settingUserRole = () => {
+    const userRole = localStorage.getItem('role')
+    if(userRole === "ROLE_ADMIN"){
+      this.setState({
+        canCreateDoc: true
+      })
+    }else if(userRole === "ROLE_USER"){
+      this.setState({
+        canCreateDoc: false
+      })
+    }
+  }
+
+  componentDidMount = () => {
+    this.settingUserRole();
+  }
+
   handleDocsSubmit = e => {
     e.preventDefault();
     if(this.state.docSelected){
-      this.setState({ displayEditor: true, errorMessage: "" });
+      this.setState({ displayEditor: true, errorMessage: "", displayEmptyEditor: false });
     }else{
       this.setState({errorMessage: "Pasirinkite dokumento šabloną" })
     }
-    
   };
 
+  createDocType = e => {
+    this.setState({ displayEditor: false, errorMessage: "", displayEmptyEditor: true });
+  }
+
   render() {
+
     return (
       <div className="containerDocumentCreation">
         <form className="documentCreationForm" onSubmit={this.handleDocsSubmit}>
@@ -80,8 +99,8 @@ class CreateGroup extends Component {
               <span className="errorMessage">{this.state.errorMessage}</span>
             )}
           </div>
-          {hasRole(user, ["admin"]) && (
-            <button className="creationButton">
+          {this.state.canCreateDoc && (
+            <button className="creationButton" onClick={this.createDocType}>
               Kurti naują dokumento šabloną
             </button>
           )}
@@ -90,6 +109,9 @@ class CreateGroup extends Component {
           </button>
         </form>
         {this.state.displayEditor && (
+          <RichTextEditor style={{ float: "right", width: "60%" }} />
+        )}
+        {this.state.displayEmptyEditor && (
           <RichTextEditor style={{ float: "right", width: "60%" }} />
         )}
       </div>

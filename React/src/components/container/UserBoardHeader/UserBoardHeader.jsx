@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter  } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,23 +11,31 @@ import {
 import "./userBoardNav.css";
 import { hasRole } from "../../Auth";
 
-const user = {
-  roles: ["ROLE_USER", "ROLE_ADMIN"]
-};
 
 library.add(faHome, faFileAlt, faUsers, faUserCog);
 
 class UserBoardHeader extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+   
   }
 
-  logout = () => {
-    localStorage.removeItem('token');
+  
+
+  handleLogout = async event => {
+    event.preventDefault();
+    await this.logout();
+    this.props.history.push("/login");
+  }
+
+  logout = async () => {
+   await localStorage.removeItem('token');
+   await localStorage.removeItem('username')
+   await localStorage.removeItem('role')
   }
 
   render() {
+    
     return (
       <nav className="headerNavBar navbar fixed-top bg-dark">
         <div className="userNavBar">
@@ -40,16 +48,11 @@ class UserBoardHeader extends Component {
           <Link to="/groups">
             <FontAwesomeIcon icon="users" className="text-light" />
           </Link>
-          {hasRole(user, ["ROLE_ADMIN"]) && (
-            <Link to="/members">
-              <FontAwesomeIcon icon="users-cog" className="text-light" />
-            </Link>
-          )}
         </div>
         <div className="navBar">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/login" onClick={this.logout} >
+              <Link className="nav-link text-light" to="/login" onClick={this.handleLogout} >
                 Atsijungti
               </Link>
             </li>
@@ -60,4 +63,4 @@ class UserBoardHeader extends Component {
   }
 }
 
-export default UserBoardHeader;
+export default withRouter(UserBoardHeader);

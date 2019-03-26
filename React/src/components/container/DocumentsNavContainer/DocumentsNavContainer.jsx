@@ -172,6 +172,7 @@ class DocumentsNavContainer extends Component {
   };
 
   render() {
+
     const documentsStatusList = [
       {
         id: 1,
@@ -195,7 +196,6 @@ class DocumentsNavContainer extends Component {
       },
       { id: 5, status: "Visi dokumentai", document: this.state.documents }
     ];
-   
 
       const getDocsFromDb = async () => {
         const token = localStorage.getItem('token')
@@ -213,6 +213,7 @@ class DocumentsNavContainer extends Component {
         })
         
       }
+      
 
     return (
       <div className="documentsContainer">
@@ -229,6 +230,7 @@ class DocumentsNavContainer extends Component {
                 <button
                   type="button"
                   className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+
                 >
                   <strong>+ Kurti dokumentą</strong>
                 </button>
