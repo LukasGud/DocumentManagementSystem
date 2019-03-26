@@ -3,6 +3,7 @@ import "./groupsList.css";
 import { Link } from "react-router-dom";
 import GroupView from "../GroupView/GroupView";
 import CreateGroup from "../CreateGroup/CreateGroup";
+import { hasRole } from "../../Auth";
 
 class GroupsList extends Component {
   constructor(props) {
@@ -37,7 +38,8 @@ class GroupsList extends Component {
         }
       ],
       groupSelected: "",
-      isGroupViewButtonClicked: false
+      isGroupViewButtonClicked: false,
+      isUser: false,
     };
   }
 
@@ -56,7 +58,27 @@ class GroupsList extends Component {
     });
   };
 
+  componentDidMount = () => {
+    this.settingUserRole();
+  }
+
+  settingUserRole = () => {
+    const userRole = localStorage.getItem('role')
+    
+    if(userRole === "ROLE_ADMIN"){
+      this.setState({
+        isUser: false
+      })
+    }else if(userRole === "ROLE_USER"){
+      this.setState({
+        isUser: true
+      })
+    }
+    
+  }
+
   render() {
+
     return (
       <div className="groupsView groups">
         <div className="groupTableContainer">
@@ -74,7 +96,7 @@ class GroupsList extends Component {
               <button
                 type="button"
                 className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
-                disabled={false}
+                disabled={this.state.isUser}
                 style={{ fontWeight: "bold" }}
                 onClick={this.handleClick}
               >

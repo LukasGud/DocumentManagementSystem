@@ -4,12 +4,17 @@ import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./textEditor.css";
 
-class RichTextEditor extends Component {
+// convertToRaw(this.state.editorState.getCurrentContent()) -- this could be sent to backend / arba JSON.stringify(convertToRaw(content))
+
+class TextEditor extends Component {
   constructor(props) {
     super(props);
-    this.state = { editorState: EditorState.createEmpty() };
+    this.state = { 
+      editorState: EditorState.createEmpty(),
+      
+    };
 
-    const content = window.localStorage.getItem("content");
+    const content = localStorage.getItem("content");
 
     if (content) {
       this.state.editorState = EditorState.createWithContent(
@@ -21,11 +26,12 @@ class RichTextEditor extends Component {
   }
 
   saveContent = content => {
-    window.localStorage.setItem(
+    localStorage.setItem(
       "content",
       JSON.stringify(convertToRaw(content))
     );
   };
+
 
   onChange = editorState => {
     const contentState = editorState.getCurrentContent();
@@ -44,6 +50,7 @@ class RichTextEditor extends Component {
             type="button"
             className="btn btn-light btn-sm"
             style={{ margin: "0 5px 5px 0" }}
+            onClick={this.saveContentToJSON}
           >
             Saugoti
           </button>
@@ -69,6 +76,7 @@ class RichTextEditor extends Component {
             editorClassName="editer-content"
             onEditorStateChange={this.onChange}
             spellCheck={true}
+            editorStyle={{lineHeight: '30%'}}
           />
         </div>
       </div>
@@ -76,4 +84,4 @@ class RichTextEditor extends Component {
   }
 }
 
-export default RichTextEditor;
+export default TextEditor;

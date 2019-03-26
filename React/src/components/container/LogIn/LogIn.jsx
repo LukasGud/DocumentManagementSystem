@@ -42,7 +42,7 @@ class LogIn extends Component {
       console.log(tokenas);
 
       if (loginData.status === 200) {
-        // this.sendUserNameToParent();
+        localStorage.setItem('username', this.state.email)
         this.props.history.push("/userboard");
       } else {
         this.setState({ errorMessage: "Neteisingi prisijungimo duomenys" });
@@ -51,10 +51,6 @@ class LogIn extends Component {
       console.error(error);
     }
   };
-
-  // sendUserNameToParent = () => {
-  //   this.props.getUserName(this.state.email);
-  // };
 
   getToken = () => {
     // Gets user token from localStorage

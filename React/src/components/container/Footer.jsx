@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <footer className="page-footer fixed-bottom font-small bg-dark">
         <div className="footer-copyright text-center py-2">
-          <p className="text-light"> © 2019 Copyright: Varguoliai #2</p>
+          <p className="text-light"> © 2019 Copyright: UAB "Rinktiniai" (by Varguoliai #2)</p>
         </div>
       </footer>
     );

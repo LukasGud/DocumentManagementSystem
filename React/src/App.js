@@ -14,82 +14,76 @@ import GroupsList from "./components/container/GroupsList/GroupsList";
 import { Router } from "react-router";
 import createBrowserHistory from "history/createBrowserHistory";
 import decode from "jwt-decode";
-
+import AdminBoardHeader from "./components/container/AdminBoardHeader/AdminBoardHeader";
 const history = createBrowserHistory();
 
-const user = {
-  roles: ["ROLE_USER", "ROLE_ADMIN"],
-  rights: ["can_view_articles", "can_view_users"]
-};
+// const user = {
+//   roles: ["ROLE_USER", "ROLE_ADMIN"],
+//   rights: ["can_view_articles", "can_view_users"]
+// };
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     fetchedRole: [],
-  //     role: [],
-  //     username: ""
-  //   };
-  // }
+  constructor(props){
+    super();
+    this.state = {
+      role: []
+    }
+  }
 
-  // componentDidMount = async () => {
-  //   const token = localStorage.getItem("token");
-  //   const username = this.state.username;
-  //   console.log(username);
-  //   try {
-  //     const response = await fetch(
-  //       `http://localhost:8080/api/users/${username}`,
-  //       {
-  //         method: "GET",
-  //         headers: {
-  //           Authorization: "Bearer" + token,
-  //           "content-type": "application/json"
-  //         }
-  //       }
-  //     );
-  //     const data = await response.json();
-  //     this.setState({ role: data.roles[0].name });
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  //   console.log(this.state.role);
-  // };
-
-  // getUserName = username => {
-  //   this.setState({
-  //     username
-  //   });
-  // };
+  componentDidMount = async () => {
+    const token = localStorage.getItem("token");
+    const username = localStorage.getItem('username')
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/users/${username}`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: "Bearer" + token,
+            "content-type": "application/json"
+          }
+        }
+      );
+      const data = await response.json();
+      localStorage.setItem('role', data.roles[0].name )
+      const userRole = localStorage.getItem('role')
+      this.setState({ role: userRole })
+    } catch (error) {
+      console.error(error);
+    }
+    const role = localStorage.getItem('role')
+    console.log(role);
+  };
   render() {
-    // const user = {
-    //   roles: this.state.role
-    // };
+    
+    const user = {
+      roles: this.state.role
+    };
     return (
       <div>
         <Router history={history}>
           <div>
             <Header />
-            {hasRole(user, ["ROLE_USER"]) && <UserBoardHeader />}
+            {hasRole(user, ["ROLE_USER", "ROLE_ADMIN"]) && <UserBoardHeader />}
+            {hasRole(user, ["ROLE_ADMIN"]) && <AdminBoardHeader />}
+
             <Switch>
               <Route exact path="/" component={DefaultBody} />
               <Route
                 path="/login"
-                render={props => (
-                  <LogIn {...props} getUserName={this.getUserName} />
-                )}
-                // component={LogIn}
+                component={LogIn}
               />
               <Route path="/signup" component={SignUp} />
-              {hasRole(user, ["ROLE_USER"]) && (
+              {hasRole(user, ["ROLE_USER", "ROLE_ADMIN"]) && (
                 <Route path="/createdocument" component={CreateDocument} />
               )}
-              {hasRole(user, ["ROLE_USER"]) && (
+              {hasRole(user, ["ROLE_USER", "ROLE_ADMIN"]) && (
                 <Route path="/userboard" component={DefaultBody} />
               )}
-              {hasRole(user, ["ROLE_USER"]) && (
+              {hasRole(user, ["ROLE_USER", "ROLE_ADMIN"]) && (
                 <Route path="/mydocuments" component={DocumentsNavContainer} />
               )}
-              {hasRole(user, ["ROLE_USER"]) && (
+              {hasRole(user, ["ROLE_USER", "ROLE_ADMIN"]) && (
                 <Route path="/groups" component={GroupsList} />
               )}
               {hasRole(user, ["ROLE_ADMIN"]) && (
