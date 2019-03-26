@@ -50,11 +50,12 @@ public class NewDocumentController {
 
         Document postedDocument = new Document();
         postedDocument.setTitle(newDocumentRequest.title);
-
+        postedDocument.setText(newDocumentRequest.text);
         currentUser.addUploadedDocument(postedDocument);
         userRepository.save(currentUser);
+        documentRepository.save(postedDocument);
 
         return postedDocument;
 
-   }
+    }
 }
