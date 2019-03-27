@@ -1,4 +1,4 @@
-package com.dalykai.projektas;
+package com.docuservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
