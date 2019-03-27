@@ -20,18 +20,11 @@ class UserBoardHeader extends Component {
    
   }
 
-  
-
-  handleLogout = async event => {
-    event.preventDefault();
-    await this.logout();
-    this.props.history.push("/login");
-  }
-
-  logout = async () => {
-   await localStorage.removeItem('token');
-   await localStorage.removeItem('username')
-   await localStorage.removeItem('role')
+  logout = () => {
+   localStorage.removeItem('token');
+   localStorage.removeItem('username');
+   localStorage.removeItem('role');
+   this.props.history.push("/login");
   }
 
   render() {
@@ -52,7 +45,7 @@ class UserBoardHeader extends Component {
         <div className="navBar">
           <ul className="nav justify-content-end">
             <li className="nav-item">
-              <Link className="nav-link text-light" to="/login" onClick={this.handleLogout} >
+              <Link className="nav-link text-light" to="/login" onClick={this.logout} >
                 Atsijungti
               </Link>
             </li>

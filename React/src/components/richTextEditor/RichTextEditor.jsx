@@ -3,6 +3,7 @@ import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./textEditor.css";
+import { get } from "http";
 
 // convertToRaw(this.state.editorState.getCurrentContent()) -- this could be sent to backend / arba JSON.stringify(convertToRaw(content))
 
@@ -11,32 +12,74 @@ class TextEditor extends Component {
     super(props);
     this.state = { 
       editorState: EditorState.createEmpty(),
-      
+      docText: ""      
     };
 
-    const content = localStorage.getItem("content");
+    // const content = localStorage.getItem("content");
 
-    if (content) {
-      this.state.editorState = EditorState.createWithContent(
-        convertFromRaw(JSON.parse(content))
-      );
-    } else {
-      this.state.editorState = EditorState.createEmpty();
-    }
+    // if (content) {
+    //   this.state.editorState = EditorState.createWithContent(
+    //     convertFromRaw(JSON.parse(content))
+    //   );
+    // } else {
+    //   this.state.editorState = EditorState.createEmpty();
+    // }
   }
 
-  saveContent = content => {
-    localStorage.setItem(
-      "content",
-      JSON.stringify(convertToRaw(content))
+  // saveContent = content => {
+  //   localStorage.setItem(
+  //     "content",
+  //     JSON.stringify(convertToRaw(content))
+  //   );
+  // };
+
+  createDocument = async () => {
+    const token = localStorage.getItem("token");
+    const postDoc = await fetch(
+      "http://localhost:8080/api/documents/newdocument",
+      {
+        method: "POST",
+        headers: {
+          "accept": "application/json",
+          "content-type": "application/json",
+          "authorization": "Bearer " + token
+        },
+        body: JSON.stringify({
+          title: "Prasymas del kasmetiniu atostogu",
+          text: JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()))
+        })
+      }
     );
+    const res = await postDoc.status;
+    console.log(res);
   };
 
+  // getDocument = async () => {
+  //   const token = localStorage.getItem("token");
+  //   console.log(token)
+  //   const getDoc = await fetch(
+  //     "http://localhost:8080/api/documents",
+  //     {
+  //       method: "GET",
+  //       headers: {
+  //         "accept": "application/json",
+  //         "content-type": "application/json",
+  //         "authorization": "Bearer " + token
+  //       }
+  //     }
+  //   );
+
+  //   const data = await getDoc.json();
+  //   this.setState({
+  //     docText: data.content[1].text
+  //   })
+  //      this.state.editorState = EditorState.createWithContent(convertFromRaw(JSON.parse(this.state.docText)))
+
+  // };
 
   onChange = editorState => {
     const contentState = editorState.getCurrentContent();
-    console.log("content state", convertToRaw(contentState));
-    this.saveContent(contentState);
+    console.log("content state", JSON.stringify(convertToRaw(contentState)));
     this.setState({ editorState });
   };
 
@@ -50,7 +93,7 @@ class TextEditor extends Component {
             type="button"
             className="btn btn-light btn-sm"
             style={{ margin: "0 5px 5px 0" }}
-            onClick={this.saveContentToJSON}
+            onClick={this.createDocument}
           >
             Saugoti
           </button>

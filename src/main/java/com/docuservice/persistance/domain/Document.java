@@ -32,8 +32,8 @@ public class Document implements Serializable {
     private Long id;
 
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @NotBlank
-    @Column(name = "document_number", unique = true, nullable = false, updatable = false)
+//    @NotBlank
+    @Column(name = "document_number", unique = true, nullable = true, updatable = false)
     private String documentNumber;
 
     @ManyToOne

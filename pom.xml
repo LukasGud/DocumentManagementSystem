@@ -8,10 +8,10 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dalykai</groupId>
-	<artifactId>projektas</artifactId>
+	<groupId>com.docuservice</groupId>
+	<artifactId>dms</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>projektas</name>
+	<name>DocumentManagementSystem</name>
 	<description>DMC</description>
 
 	<properties>

@@ -15,6 +15,7 @@ import { Router } from "react-router";
 import createBrowserHistory from "history/createBrowserHistory";
 import decode from "jwt-decode";
 import AdminBoardHeader from "./components/container/AdminBoardHeader/AdminBoardHeader";
+
 const history = createBrowserHistory();
 
 // const user = {
@@ -31,7 +32,7 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem('token');
     const username = localStorage.getItem('username')
     try {
       const response = await fetch(
@@ -39,7 +40,7 @@ class App extends Component {
         {
           method: "GET",
           headers: {
-            Authorization: "Bearer" + token,
+            "authorization": "Bearer " + token,
             "content-type": "application/json"
           }
         }

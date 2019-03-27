@@ -2,20 +2,25 @@ package com.docuservice.security.payload;
 
 
 
+import com.docuservice.security.model.Role;
+
 import java.time.Instant;
+import java.util.Set;
 
 public class UserProfile {
     private Long id;
     private String username;
     private String name;
     private Instant joinedAt;
+    private Set<Role> roles;
 
 
-    public UserProfile(Long id, String username, String name, Instant joinedAt) {
+    public UserProfile(Long id, String username, String name, Instant joinedAt, Set<Role> roles) {
         this.id = id;
         this.username = username;
         this.name = name;
         this.joinedAt = joinedAt;
+        this.roles = roles;
 
     }
 
@@ -51,4 +56,7 @@ public class UserProfile {
         this.joinedAt = joinedAt;
     }
 
+    public Set<Role> getRoles() {
+        return roles;
+    }
 }
