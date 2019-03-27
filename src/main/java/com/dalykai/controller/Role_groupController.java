@@ -61,5 +61,14 @@ public class Role_groupController {
         User_role_groups updatedUserRole_group = user_role_groupRepository.save(user_role_groups);
         return updatedUserRole_group;
     }
+
+    @PostMapping("/userRole_groups")
+    public User_role_groups insertUserAndGroup(@Valid @RequestBody User_role_groups user_role_groups){
+//        user_role_groups.setUser_id(user_role_groups.getUser_id());
+//        user_role_groups.setRole_group_id(user_role_groups.getRole_group_id());
+        return user_role_groupRepository.save(user_role_groups);
+
+    }
+
 }
 
