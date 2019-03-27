@@ -25,11 +25,12 @@ Server Build      | Maven
 - cd blog-backend
 - name your database schema `documentsdb`
 - Run: `mvnw spring-boot:run`
+- Run SQL script in SQL folder to populate tables with necessary data
 
 ### Frontend
 - Go to your project folder from your terminal
 - cd blog-frontend
 - Run: `npm install`
-- After install, run: `npm run start` or `yarn start`
+- After install, run: `npm run start` 
 - It will open your browser(http://localhost:3000)
 

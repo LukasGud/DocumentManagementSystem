@@ -30,7 +30,7 @@ public class UserGroup {
 
     @ManyToMany
     @JoinTable(
-            name = "group_uses",
+            name = "group_users",
             joinColumns = { @JoinColumn(name = "group_id") },
             inverseJoinColumns = { @JoinColumn(name = "user_id") }
     )

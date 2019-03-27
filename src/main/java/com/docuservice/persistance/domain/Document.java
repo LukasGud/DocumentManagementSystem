@@ -63,7 +63,7 @@ public class Document implements Serializable {
     @Column(name = "document_title")
     private String title;
 
-    @Column(name = "document_text")
+    @Column(name = "document_text",columnDefinition = "TEXT")
     private String text;
 
     @Column(nullable = false, updatable = false)
