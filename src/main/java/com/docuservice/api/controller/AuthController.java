@@ -1,6 +1,8 @@
 package com.docuservice.api.controller;
 
 import com.docuservice.api.controller.exception.AppException;
+import com.docuservice.persistance.domain.UserGroup;
+import com.docuservice.persistance.repository.GroupRepository;
 import com.docuservice.security.model.Role;
 import com.docuservice.security.model.RoleName;
 import com.docuservice.security.model.User;
@@ -38,6 +40,9 @@ public class AuthController {
 
     @Autowired
     RoleRepository roleRepository;
+
+    @Autowired
+    GroupRepository groupRepository;
 
     @Autowired
     PasswordEncoder passwordEncoder;
@@ -87,6 +92,11 @@ public class AuthController {
                 .orElseThrow(() -> new AppException("User Role not set."));
 
         user.setRoles(Collections.singleton(userRole));
+
+        UserGroup userGroup = groupRepository.findByGroupName("employee")
+                .orElseThrow(() -> new AppException("User Group not set."));
+
+        user.setUserGroups(Collections.singleton(userGroup));
 
         User result = userRepository.save(user);
 

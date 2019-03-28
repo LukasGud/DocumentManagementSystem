@@ -1,7 +1,9 @@
 package com.docuservice.security.model;
 
 import com.docuservice.persistance.domain.Document;
+import com.docuservice.persistance.domain.UserGroup;
 import com.docuservice.security.model.audit.DateAudit;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -49,6 +51,14 @@ public class User extends DateAudit {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
+
+
+    @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name = "group_users",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "group_id"))
+    private Set<UserGroup> userGroups = new HashSet<>();
 
     @OneToMany(mappedBy = "approvedBy",fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Document> uploadedDocuments;
@@ -114,5 +124,21 @@ public class User extends DateAudit {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<UserGroup> getUserGroups() {
+        return userGroups;
+    }
+
+    public void setUserGroups(Set<UserGroup> userGroups) {
+        this.userGroups = userGroups;
+    }
+
+    public List<Document> getUploadedDocuments() {
+        return uploadedDocuments;
+    }
+
+    public void setUploadedDocuments(List<Document> uploadedDocuments) {
+        this.uploadedDocuments = uploadedDocuments;
     }
 }

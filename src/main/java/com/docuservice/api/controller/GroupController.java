@@ -31,14 +31,17 @@ public class GroupController {
         return groupRepository.findAll();
     }
 
-    @GetMapping("/usergroups/{user_id}")
-    public UserGroupMerged getAllUserGroupsById(@PathVariable (value = "user_id") Long userId ){
-        return userGroupMergedRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("user_group_id", "user_id", userId));
+    @GetMapping("/usergroups/{group_id}")
+    public UserGroup getUserGroup (@PathVariable (value = "group_id") Long groupId){
+        return groupRepository.findById(groupId)
+                .orElseThrow(() -> new ResourceNotFoundException("user_id", "group_id", groupId));
     }
+
+
 
     @PostMapping("/groups")
     public UserGroup createGroup(@Valid @RequestBody UserGroup userGroup) {
+
         return groupRepository.save(userGroup);
     }
 
@@ -46,4 +49,8 @@ public class GroupController {
     public UserGroupMerged insertUserAndGroup(@Valid @RequestBody UserGroupMerged userGroupMerged){
         return userGroupMergedRepository.save(userGroupMerged);
     }
+
+
+
+
 }

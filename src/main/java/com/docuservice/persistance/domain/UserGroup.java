@@ -3,16 +3,7 @@ package com.docuservice.persistance.domain;
 import com.docuservice.security.model.User;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -32,21 +23,21 @@ public class UserGroup {
     private String groupDescription;
 
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "group_users",
-//            joinColumns = { @JoinColumn(name = "group_id") },
-//            inverseJoinColumns = { @JoinColumn(name = "user_id") }
-//    )
-//    private List<User> userList;
+    @ManyToMany (cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "group_users",
+            joinColumns = { @JoinColumn(name = "group_id") },
+            inverseJoinColumns = { @JoinColumn(name = "user_id") }
+    )
+    private List<User> userList;
 
-//    public UserGroup() {
-//    }
-//
-//    public UserGroup(String groupName, List<User> userList) {
-//        this.groupName = groupName;
-//        this.userList = userList;
-//    }
+    public UserGroup() {
+    }
+
+    public UserGroup(String groupName, List<User> userList) {
+        this.groupName = groupName;
+        this.userList = userList;
+    }
 
     public Long getId() {
         return id;
@@ -72,11 +63,11 @@ public class UserGroup {
         this.groupDescription = groupDescription;
     }
 
-    //    public List<User> getUserList() {
-//        return userList;
-//    }
-//
-//    public void setUserList(List<User> userList) {
-//        this.userList = userList;
-//    }
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
 }
