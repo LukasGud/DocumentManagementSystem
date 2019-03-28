@@ -28,21 +28,22 @@ public class UserGroup {
     @Column(name = "group_name",nullable = false, unique = true)
     private String groupName;
 
-    @ManyToMany
-    @JoinTable(
-            name = "group_users",
-            joinColumns = { @JoinColumn(name = "group_id") },
-            inverseJoinColumns = { @JoinColumn(name = "user_id") }
-    )
-    private List<User> userList;
 
-    public UserGroup() {
-    }
+//    @ManyToMany
+//    @JoinTable(
+//            name = "group_users",
+//            joinColumns = { @JoinColumn(name = "group_id") },
+//            inverseJoinColumns = { @JoinColumn(name = "user_id") }
+//    )
+//    private List<User> userList;
 
-    public UserGroup(String groupName, List<User> userList) {
-        this.groupName = groupName;
-        this.userList = userList;
-    }
+//    public UserGroup() {
+//    }
+//
+//    public UserGroup(String groupName, List<User> userList) {
+//        this.groupName = groupName;
+//        this.userList = userList;
+//    }
 
     public Long getId() {
         return id;
@@ -60,11 +61,11 @@ public class UserGroup {
         this.groupName = groupName;
     }
 
-    public List<User> getUserList() {
-        return userList;
-    }
-
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
-    }
+//    public List<User> getUserList() {
+//        return userList;
+//    }
+//
+//    public void setUserList(List<User> userList) {
+//        this.userList = userList;
+//    }
 }

@@ -7,50 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5f3ea91-c4b2-43eb-9011-94caee217b1b" name="Default Changelist" comment="Added dataSources for SQL file injection">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/DMSApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/AuthController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/NewDocumentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/exception/AppException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/exception/BadRequestException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/exception/ResourceNotFoundException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/api/controller/request/PostNewDocumentRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/config/AuditingConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/config/LoginAppConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/config/WebMvcConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/persistance/domain/Document$DOCUMENT_STATUS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/persistance/domain/Document.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/persistance/domain/UserGroup.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/persistance/repository/DocumentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/persistance/repository/RoleRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/persistance/repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/CurrentUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/CustomUserDetailsService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/JwtAuthenticationEntryPoint.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/JwtAuthenticationFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/JwtTokenProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/UserPrincipal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/model/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/model/RoleName.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/model/audit/DateAudit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/payload/ApiResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/payload/JwtAuthenticationResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/payload/LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/payload/SignUpRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/payload/UserIdentityAvailability.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/docuservice/security/payload/UserProfile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/docuservice/DMSApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/React/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/React/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/AdminBoardHeader/AdminBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/AdminBoardHeader/AdminBoardHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/AdminMembers/AdminMemebers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/AdminMembers/AdminMemebers.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/AdminMembers/adminMembers.css" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/AdminMembers/adminMembers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/CreateDocument/CreateDocument.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/CreateDocument/CreateDocument.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/container/UserBoardHeader/UserBoardHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/container/UserBoardHeader/UserBoardHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/React/src/components/richTextEditor/RichTextEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/React/src/components/richTextEditor/RichTextEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/React/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -89,11 +50,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Add this to DB after application start.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Add this to DB after application start.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/Add this to DB after application start.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserGroupMergedRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="GroupRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/GroupRepository.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="UserGroup.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="24" column="28" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1357#1358#0" expanded="true" />
+                <element signature="e#1391#1392#0" expanded="true" />
+                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1537#1538#0" expanded="true" />
+                <element signature="e#1579#1580#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserGroupMerged.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -147,9 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/service/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/service/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dalykai/dao/EmployeeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/config/SpringMvcDispatcherServletInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dalykai/controller/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/view/jsp/leaders.jsp" />
@@ -195,9 +204,12 @@
         <option value="$PROJECT_DIR$/target/classes/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/Document.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/GroupRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" />
       </list>
     </option>
   </component>
@@ -245,9 +257,9 @@
       <path value="$PROJECT_DIR$/React/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="873" />
-    <option name="width" value="1030" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -256,6 +268,89 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="payload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -394,89 +489,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="controller" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="projektas" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="projektas" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="dalykai" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="payload" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -489,33 +501,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553720684262" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.dalykai" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\config" />
-      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\exception" />
-      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai" />
-      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\repository" />
-      <recent name="C:\Users\Public\Documents\pr2\projektas\src\main\java\com\dalykai" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.dalykai.controller" />
-      <recent name="com.dalykai.config" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\React\src" />
       <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final" />
       <recent name="C:\Users\Lukas\Desktop\Projects\Projektas-final\src\React" />
       <recent name="C:\Users\tomas\Desktop\projektas\SQL" />
       <recent name="C:\Users\tomas\Desktop\projektas\src\main\webapp\view\jsp" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.dalykai" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.docuservice.persistance.domain" />
+      <recent name="com.docuservice.api.controller" />
+      <recent name="com.dalykai.controller" />
+      <recent name="com.dalykai.config" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\moksleivis\Documents\aaaaaaaaasa\DocumentManagementSystem\src\main\java\com\docuservice\persistance\repository" />
+      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\config" />
+      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\exception" />
+      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai" />
+      <recent name="C:\Users\Public\Documents\pr3\projektas\src\main\java\com\dalykai\repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -714,6 +728,7 @@
       <workItem from="1553758277467" duration="664000" />
       <workItem from="1553762407850" duration="851000" />
       <workItem from="1553766765934" duration="1270000" />
+      <workItem from="1553775513786" duration="1962000" />
     </task>
     <task id="LOCAL-00001" summary="roles, no csrf">
       <created>1550920453306</created>
@@ -789,7 +804,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94059000" />
+    <option name="totallyTimeSpent" value="96021000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -801,7 +816,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.20890938" />
@@ -821,12 +837,12 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.32946146" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.22073579" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3224401" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.22222222" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.303233" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32913387" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.1796875" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.1913646" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32905295" />
       <window_info id="Web" order="7" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
       <window_info anchor="right" id="Theme Preview" order="8" />
@@ -944,22 +960,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added dataSources for SQL file injection" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SQL/Add this to DB after application start.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/controller/NewDocumentController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentDetailsRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocument.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentStatusRepository.java" />
@@ -1048,13 +1048,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/RoleName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1097,6 +1090,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/GroupRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1579#1580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
