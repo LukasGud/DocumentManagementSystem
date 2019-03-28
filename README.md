@@ -31,6 +31,6 @@ Server Build      | Maven
 - Go to your project folder from your terminal
 - cd blog-frontend
 - Run: `npm install`
-- After install, run: `npm run start` 
+- After install, run: `npm start` 
 - It will open your browser(http://localhost:3000)
 
