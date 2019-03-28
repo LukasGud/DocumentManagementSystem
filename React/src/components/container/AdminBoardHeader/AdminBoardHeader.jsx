@@ -9,6 +9,7 @@ import {
   faUsersCog
 } from "@fortawesome/free-solid-svg-icons";
 import "./adminBoardHeader.css";
+import Dropdown from 'react-bootstrap/Dropdown'
 
 
 library.add(faHome, faFileAlt, faUsers, faUsersCog);
@@ -17,7 +18,7 @@ class UserBoardHeader extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      role: []
+      name: ""
     };
   }
 
@@ -29,22 +30,38 @@ class UserBoardHeader extends Component {
     console.log(this.state.role)
   }
 
-  handleLogout = async event => {
-    event.preventDefault();
-    await this.logout();
+  logout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    localStorage.removeItem('role');
     this.props.history.push("/login");
+    this.setState({
+       name: ""
+    })
   }
 
-  logout = async () => {
-   await localStorage.removeItem('token');
-   await localStorage.removeItem('username')
-   await localStorage.removeItem('role')
-  }
+  componentDidMount = async () => {
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('username')
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/users/${username}`,
+        {
+          method: "GET",
+          headers: {
+            "authorization": "Bearer " + token,
+            "content-type": "application/json"
+          }
+        }
+      );
+      const data = await response.json();
+      this.setState({ name: data.name })
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   render() {
-    const user = {
-      roles: this.state.role
-    };
     return (
       <nav className="headerNavBar navbar fixed-top bg-dark">
         <div className="userNavBar">
@@ -61,14 +78,17 @@ class UserBoardHeader extends Component {
               <FontAwesomeIcon icon="users-cog" className="text-light" />
           </Link>
         </div>
-        <div className="navBar">
-          <ul className="nav justify-content-end">
-            <li className="nav-item">
-              <Link className="nav-link text-light" to="/login" onClick={this.handleLogout} >
-                Atsijungti
-              </Link>
-            </li>
-          </ul>
+        <div className="navBar nav justify-content-end">
+          <Dropdown>
+            <Dropdown.Toggle variant="dark" id="dropdown-basic">
+              {this.state.name}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item to="/login" onClick={this.logout}>
+                  Atsijungti
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </div>
       </nav>
     );

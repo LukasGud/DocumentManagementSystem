@@ -4,34 +4,31 @@ import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./textEditor.css";
 import { get } from "http";
+import Modal from "react-bootstrap/Modal";
 
 // convertToRaw(this.state.editorState.getCurrentContent()) -- this could be sent to backend / arba JSON.stringify(convertToRaw(content))
 
 class TextEditor extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       editorState: EditorState.createEmpty(),
-      docText: ""      
+      docText: "",
+      canCreateNewDocType: true,
+      documentTitle: "",
+      modalShow: false
     };
 
-    // const content = localStorage.getItem("content");
+    const content = localStorage.getItem("doc");
 
-    // if (content) {
-    //   this.state.editorState = EditorState.createWithContent(
-    //     convertFromRaw(JSON.parse(content))
-    //   );
-    // } else {
-    //   this.state.editorState = EditorState.createEmpty();
-    // }
+    if (content) {
+      this.state.editorState = EditorState.createWithContent(
+        convertFromRaw(JSON.parse(content))
+      );
+    } else {
+      this.state.editorState = EditorState.createEmpty();
+    }
   }
-
-  // saveContent = content => {
-  //   localStorage.setItem(
-  //     "content",
-  //     JSON.stringify(convertToRaw(content))
-  //   );
-  // };
 
   createDocument = async () => {
     const token = localStorage.getItem("token");
@@ -45,37 +42,37 @@ class TextEditor extends Component {
           "authorization": "Bearer " + token
         },
         body: JSON.stringify({
-          title: "Prasymas del kasmetiniu atostogu",
+          title: this.state.documentTitle,
           text: JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent()))
         })
       }
     );
     const res = await postDoc.status;
     console.log(res);
+    
+    if(res === 200){
+      this.setState({
+        modalShow: false
+      })
+    }
   };
 
-  // getDocument = async () => {
-  //   const token = localStorage.getItem("token");
-  //   console.log(token)
-  //   const getDoc = await fetch(
-  //     "http://localhost:8080/api/documents",
-  //     {
-  //       method: "GET",
-  //       headers: {
-  //         "accept": "application/json",
-  //         "content-type": "application/json",
-  //         "authorization": "Bearer " + token
-  //       }
-  //     }
-  //   );
+  settingUserRole = () => {
+    const userRole = localStorage.getItem('role')
+    if (userRole === "ROLE_ADMIN") {
+      this.setState({
+        canCreateNewDocType: true
+      })
+    } else if (userRole === "ROLE_USER") {
+      this.setState({
+        canCreateNewDocType: false
+      })
+    }
+  }
 
-  //   const data = await getDoc.json();
-  //   this.setState({
-  //     docText: data.content[1].text
-  //   })
-  //      this.state.editorState = EditorState.createWithContent(convertFromRaw(JSON.parse(this.state.docText)))
-
-  // };
+  componentDidMount = () => {
+    this.settingUserRole()
+  }
 
   onChange = editorState => {
     const contentState = editorState.getCurrentContent();
@@ -83,8 +80,16 @@ class TextEditor extends Component {
     this.setState({ editorState });
   };
 
+  handleInput = (e) => {
+    this.setState({
+      documentTitle: e.target.value
+    })
+  }  
+
   render() {
     const { editorState } = this.state;
+
+    let modalClose = () => this.setState({ modalShow: false });
 
     return (
       <div className="editorWrapper">
@@ -93,10 +98,17 @@ class TextEditor extends Component {
             type="button"
             className="btn btn-light btn-sm"
             style={{ margin: "0 5px 5px 0" }}
-            onClick={this.createDocument}
           >
             Saugoti
           </button>
+          {this.state.canCreateNewDocType && (<button
+            type="button"
+            className="btn btn-light btn-sm"
+            style={{ margin: "0 5px 5px 0" }}
+            onClick={() => this.setState({ modalShow: true })}
+          >
+            Saugoti šabloną
+          </button>)}
           <button
             type="button"
             className="btn btn-light btn-sm"
@@ -111,6 +123,29 @@ class TextEditor extends Component {
           >
             Atšaukti
           </button>
+            <Modal
+              size="md"
+              show={this.state.modalShow}
+              onHide={modalClose}
+              aria-labelledby="contained-modal-title-vcenter"
+              centered
+            >
+              <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                  Įveskite dokumento pavadinimą
+                </Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <div className="form-group">
+                  <input className="form-conrol" type="text" name='documentTitle' value={this.state.title} onChange={this.handleInput} style={{width: "100%"}}/>
+                </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <button className="btn btn-dark" onClick={this.createDocument}>
+                  Saugoti
+                </button>
+              </Modal.Footer>
+            </Modal>
         </div>
         <div className="editorStyle">
           <Editor
@@ -119,7 +154,7 @@ class TextEditor extends Component {
             editorClassName="editer-content"
             onEditorStateChange={this.onChange}
             spellCheck={true}
-            editorStyle={{lineHeight: '30%'}}
+          // editorStyle={{ lineHeight: '87%' }}
           />
         </div>
       </div>

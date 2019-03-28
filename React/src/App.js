@@ -15,6 +15,7 @@ import { Router } from "react-router";
 import createBrowserHistory from "history/createBrowserHistory";
 import decode from "jwt-decode";
 import AdminBoardHeader from "./components/container/AdminBoardHeader/AdminBoardHeader";
+import AdminMembers from "./components/container/AdminMembers/AdminMemebers";
 
 const history = createBrowserHistory();
 
@@ -92,6 +93,9 @@ class App extends Component {
               )}
               {hasRole(user, ["ROLE_ADMIN"]) && (
                 <Route path="/adminboard" component={DefaultBody} />
+              )}
+              {hasRole(user, ["ROLE_ADMIN"]) && (
+                <Route path="/members" component={AdminMembers} />
               )}
             </Switch>
             <Footer />
