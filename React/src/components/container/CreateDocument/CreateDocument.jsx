@@ -48,7 +48,7 @@ class CreateGroup extends Component {
     const token = localStorage.getItem("token");
     console.log(token)
     const getDoc = await fetch(
-      "http://localhost:8080/api/documents/all",
+      "http://localhost:8080/api/templates/all",
       {
         method: "GET",
         headers: {
@@ -59,10 +59,11 @@ class CreateGroup extends Component {
       }
     );
     const data = await getDoc.json();
+    console.log(data)
     this.setState({
-      docTypes: data.content
+      docTypes: data
     })
-    console.log(data.content)
+    console.log(data)
   };
 
   selectOption = value => {

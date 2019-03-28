@@ -8,6 +8,7 @@ import "react-bootstrap-table2-filter/dist/react-bootstrap-table2-filter.min.css
 import "react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css";
 import "./groupMembers.css";
 import { link } from "fs";
+import { Link, withRouter  } from "react-router-dom";
 
 class GroupMemeber extends Component {
   constructor(props) {
@@ -91,4 +92,4 @@ class GroupMemeber extends Component {
   }
 }
 
-export default GroupMemeber;
+export default withRouter(GroupMemeber);

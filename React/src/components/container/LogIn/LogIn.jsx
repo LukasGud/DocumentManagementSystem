@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faKey } from "@fortawesome/free-solid-svg-icons";
@@ -21,7 +21,6 @@ class LogIn extends Component {
 
   handleSubmitLogIn = async e => {
     e.preventDefault();
-
     try {
       const loginData = await fetch("http://localhost:8080/api/auth/signin", {
         method: "POST",
@@ -117,4 +116,4 @@ class LogIn extends Component {
   }
 }
 
-export default LogIn;
+export default withRouter(LogIn);

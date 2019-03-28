@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, withRouter  } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import filterFactory from "react-bootstrap-table2-filter";
@@ -160,4 +161,4 @@ class DocumentsList extends Component {
   }
 }
 
-export default DocumentsList;
+export default withRouter(DocumentsList);

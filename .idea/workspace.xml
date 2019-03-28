@@ -7,13 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5f3ea91-c4b2-43eb-9011-94caee217b1b" name="Default Changelist" comment="Groups update2.0">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,29 +38,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Add this to DB after application start.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SQL/Add this to DB after application start.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GroupController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="204">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,23 +59,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserGroup.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserGroup.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="-38">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/exception/AppException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -96,8 +83,26 @@
       <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+            <state relative-caret-position="302">
+              <caret line="92" column="71" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewDocumentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewTemplateController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewTemplateController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -114,7 +119,7 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
+            <state relative-caret-position="-89">
               <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
                 <element signature="e#3134#3135#0" expanded="true" />
@@ -124,19 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserGroupMerged.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserGroupMergedRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="136">
               <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -244,8 +240,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/GroupRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java" />
       </list>
     </option>
   </component>
@@ -290,7 +286,7 @@
       <path value="$PROJECT_DIR$/React/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -301,6 +297,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projektas" type="616d4139:PackageViewModuleNode" />
+              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -434,23 +447,6 @@
               <item name="docuservice" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
               <item name="payload" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="projektas" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projektas" type="616d4139:PackageViewModuleNode" />
-              <item name="com.dalykai" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -763,6 +759,7 @@
       <workItem from="1553766765934" duration="1270000" />
       <workItem from="1553775513786" duration="2766000" />
       <workItem from="1553787183350" duration="829000" />
+      <workItem from="1553788687750" duration="3725000" />
     </task>
     <task id="LOCAL-00001" summary="roles, no csrf">
       <created>1550920453306</created>
@@ -845,7 +842,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97654000" />
+    <option name="totallyTimeSpent" value="101379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -878,18 +875,18 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3224401" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.303233" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3220697" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.22222222" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.303233" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32913387" />
       <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.19349681" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49885058" visible="true" weight="0.19322917" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32905295" />
       <window_info id="Web" order="7" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="6" sideWeight="0.5011494" side_tool="true" weight="0.37720707" />
-      <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Learn" order="8" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Maven" order="3" weight="0.18923241" />
@@ -1003,7 +1000,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Groups update2.0" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocument.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/repository/NewDocumentStatusRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentStatus.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dalykai/entity/NewDocumentDetails.java" />
@@ -1054,13 +1050,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/DocumentStatusRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/ProjektasApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/DocumentStatus.java" />
     <entry file="file://$PROJECT_DIR$/target/classes/application.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -1100,24 +1089,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQL/Add this to DB after application start.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="45" selection-start-line="1" selection-start-column="45" selection-end-line="1" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1128,26 +1103,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroupMerged.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
+        <state relative-caret-position="476">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/repository/UserGroupMergedRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="136">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1162,16 +1127,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQL/Add this to DB after application start.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewDocumentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/NewTemplateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/AuthController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+        <state relative-caret-position="302">
+          <caret line="92" column="71" selection-start-line="92" selection-start-column="71" selection-end-line="92" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/security/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
+        <state relative-caret-position="-89">
           <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
           <folding>
             <element signature="e#3134#3135#0" expanded="true" />
@@ -1180,10 +1183,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/api/controller/GroupController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/docuservice/persistance/domain/UserGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="-38">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

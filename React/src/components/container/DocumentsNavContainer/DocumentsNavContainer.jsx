@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./docNavContainer.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import MyDocumentsList from "../MyDocumentsList/MyDocumentsList";
 
 class DocumentsNavContainer extends Component {
@@ -256,4 +256,4 @@ class DocumentsNavContainer extends Component {
   }
 }
 
-export default DocumentsNavContainer;
+export default withRouter(DocumentsNavContainer);

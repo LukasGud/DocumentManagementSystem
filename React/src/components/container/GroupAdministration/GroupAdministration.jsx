@@ -3,6 +3,7 @@ import "./groupAdministration.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { Link, withRouter  } from "react-router-dom";
 import BootstrapTable from "react-bootstrap-table-next";
 import ToolkitProvider, { Search } from "react-bootstrap-table2-toolkit";
 import filterFactory from "react-bootstrap-table2-filter";
@@ -290,4 +291,4 @@ class GroupAdministration extends Component {
   }
 }
 
-export default GroupAdministration;
+export default withRouter(GroupAdministration);

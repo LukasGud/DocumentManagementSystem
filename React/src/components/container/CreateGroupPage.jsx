@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, withRouter  } from "react-router-dom";
 import Footer from "./Footer";
 import AdminBoardHeader from "./AdminBoardHeader/AdminBoardHeader";
 import CreateGroup from "./CreateGroup/CreateGroup";
@@ -14,4 +15,4 @@ class GroupsListTable extends Component {
   }
 }
 
-export default GroupsListTable;
+export default withRouter(GroupsListTable);

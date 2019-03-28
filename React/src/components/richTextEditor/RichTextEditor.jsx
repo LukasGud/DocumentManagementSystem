@@ -5,6 +5,7 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import "./textEditor.css";
 import { get } from "http";
 import Modal from "react-bootstrap/Modal";
+import { Link, withRouter  } from "react-router-dom";
 
 // convertToRaw(this.state.editorState.getCurrentContent()) -- this could be sent to backend / arba JSON.stringify(convertToRaw(content))
 
@@ -33,7 +34,7 @@ class TextEditor extends Component {
   createDocument = async () => {
     const token = localStorage.getItem("token");
     const postDoc = await fetch(
-      "http://localhost:8080/api/documents/newdocument",
+      "http://localhost:8080/api/templates/newtemplate",
       {
         method: "POST",
         headers: {
@@ -162,4 +163,4 @@ class TextEditor extends Component {
   }
 }
 
-export default TextEditor;
+export default withRouter(TextEditor);

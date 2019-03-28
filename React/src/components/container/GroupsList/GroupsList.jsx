@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./groupsList.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import GroupView from "../GroupView/GroupView";
 import CreateGroup from "../CreateGroup/CreateGroup";
 import { hasRole } from "../../Auth";
@@ -121,4 +121,4 @@ class GroupsList extends Component {
   }
 }
 
-export default GroupsList;
+export default withRouter(GroupsList);
