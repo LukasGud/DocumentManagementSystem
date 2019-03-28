@@ -28,6 +28,9 @@ public class UserGroup {
     @Column(name = "group_name",nullable = false, unique = true)
     private String groupName;
 
+    @Column(name = "group_description")
+    private String groupDescription;
+
 
 //    @ManyToMany
 //    @JoinTable(
@@ -61,7 +64,15 @@ public class UserGroup {
         this.groupName = groupName;
     }
 
-//    public List<User> getUserList() {
+    public String getGroupDescription() {
+        return groupDescription;
+    }
+
+    public void setGroupDescription(String groupDescription) {
+        this.groupDescription = groupDescription;
+    }
+
+    //    public List<User> getUserList() {
 //        return userList;
 //    }
 //
